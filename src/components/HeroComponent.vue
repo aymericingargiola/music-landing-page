@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div v-if="playlists" class="hero-component">
       <div class="background"
       :style="{ backgroundImage: `url(${heroBgFolder+currentItem.id}.webp)`}"></div>
       <div class="container">
@@ -13,45 +13,45 @@
 </template>
 
 <script>
-import playlistJson from '../../public/jsons/playlist.json';
-import playlistLosslessJson from '../../public/jsons/playlistLossless.json';
-import playlistVideoJson from '../../public/jsons/playlistVideo.json';
 
 export default {
   props: {
+    playlists: Object,
     selectedContent: String,
   },
   name: 'HeroComponent',
   components: {
   },
-  data() {
-    return {
-      playlist: playlistJson,
-      playlistLossless: playlistLosslessJson,
-      playlistVideo: playlistVideoJson,
-      heroBgFolder: '/imgs/heroes/',
-      pushedContent: ['Tm9hIEtpcmVsIC0gVGhvdWdodCBBYm91dCBUaGF0IChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=='],
-    };
+  setup(props, context) {
+    const heroBgFolder = '/imgs/heroes/';
+    const pushedContent = ['Tm9hIEtpcmVsIC0gVGhvdWdodCBBYm91dCBUaGF0IChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=='];
+    if (!props.selectedContent) {
+      context.emit('update:selectedContent', pushedContent[0]);
+    }
+    return { heroBgFolder, pushedContent };
   },
   mounted() {
-    if (!this.selectedContent) {
-      this.$emit('update:selectedContent', this.pushedContent[0]);
-    }
   },
   computed: {
     currentItem() {
       const id = this.selectedContent ? this.selectedContent : this.pushedContent[0];
-      const current = this.playlist.find((music) => (music.id === id))
-        ? this.playlist.find((music) => (music.id === id))
-        : this.playlistVideo.find((music) => (music.id === id));
-      return current;
+      if (this.playlists.mp3.find((music) => (music.id === id))) {
+        return this.playlists.mp3.find((music) => (music.id === id));
+      }
+      if (this.playlists.video.find((music) => (music.id === id))) {
+        return this.playlists.video.find((music) => (music.id === id));
+      }
+      if (this.playlists.wav.find((music) => (music.id === id))) {
+        return this.playlists.wav.find((music) => (music.id === id));
+      }
+      return null;
     },
   },
 };
 </script>
 
 <style lang="scss">
-.hero {
+.hero-component {
   position: relative;
   .background {
     position: absolute;

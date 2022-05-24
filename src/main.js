@@ -1,4 +1,8 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+
+app.config.globalProperties.$isDev = process.env.NODE_ENV === 'development';
+
+app.mount('#app');

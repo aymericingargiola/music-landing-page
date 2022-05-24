@@ -1,5 +1,5 @@
 <template>
-  <li class="item" :class="{selected: selectedContent === music.id}"
+  <li class="playlist-item" :class="{selected: selectedContent === music.id}"
   @click="updateSelectedContent(music.id)" @keydown="updateSelectedContent(music.id)">
     <div class="item-container" :type="music.extension">
       <div class="info-bar">
@@ -40,9 +40,8 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-.item {
+.playlist-item {
   position: relative;
   background-color: color($color: $background2);
   border-radius: 6px;
@@ -112,7 +111,7 @@ export default {
         margin-right: 24px;
         border-radius: 50px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-        transition: 1s ease;
+        transition: 0.5s ease;
         &::after {
           content: "";
           position: absolute;
@@ -123,7 +122,7 @@ export default {
           background-image: url(simpleIcon($icon: download, $color: $text));
           background-size: 50%;
           background-repeat: no-repeat;
-          transition: 1s ease;
+          transition: 0.5s ease;
           opacity: 0;
           background-position: center;
           transform: scale(0);
