@@ -1,0 +1,4 @@
+@function color($color: $background, $opacity: 1) {
+    $thisColor: rgba($color, $opacity);
+    @return $thisColor;
+}

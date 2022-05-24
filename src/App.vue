@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<HeroComponent :selectedContent="selectedContent"
+@update:selectedContent="selectedContent = $event"/>
+<div class="container">
+  <PlaylistComponent :selectedContent="selectedContent"
+@update:selectedContent="selectedContent = $event"/>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroComponent from './components/HeroComponent.vue';
+import PlaylistComponent from './components/Playlist/PlaylistComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeroComponent,
+    PlaylistComponent,
+  },
+  data() {
+    return {
+      selectedContent: null,
+    };
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import './src/styles/bootstrap-grid';
+@import './src/styles/main';
 </style>

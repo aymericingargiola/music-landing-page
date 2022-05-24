@@ -1,0 +1,5 @@
+@function simpleIcon($icon: music, $color: $active-purple) {
+    $thisIcon: map-get(map-get($simpleIcons, $icon), start) + rgba($color,0.999) +
+        map-get(map-get($simpleIcons, $icon), end);
+    @return $thisIcon;
+}
