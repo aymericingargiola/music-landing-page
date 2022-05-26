@@ -1,14 +1,14 @@
 <template>
-  <HeroComponent :playlists="playlists" :selectedContent="selectedContent"
+  <HeroComponent :playlists="playlists" :selectedContent="this.selectedContent"
   @update:selectedContent="selectedContent = $event"/>
   <div class="container">
-    <PlaylistComponent :playlists="playlists" :selectedContent="selectedContent"
+    <PlaylistComponent :playlists="playlists" :selectedContent="this.selectedContent"
   @update:selectedContent="selectedContent = $event"/>
   </div>
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 import playlistJson from '../public/jsons/playlist.json';
 import playlistLosslessJson from '../public/jsons/playlistLossless.json';
 import playlistVideoJson from '../public/jsons/playlistVideo.json';
@@ -22,7 +22,7 @@ export default {
     PlaylistComponent,
   },
   setup() {
-    const selectedContent = null;
+    const selectedContent = ref(null);
     const playlists = reactive({
       mp3: playlistJson,
       wav: playlistLosslessJson,

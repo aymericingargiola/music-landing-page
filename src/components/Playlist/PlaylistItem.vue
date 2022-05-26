@@ -31,7 +31,7 @@ export default {
     },
     updateSelectedContent(id) {
       if (!this.selectedContent || this.selectedContent !== id) {
-        this.$emit('update:selectedContent', this.music.id);
+        this.$emit('update:selectedContent', id);
       } else if (this.selectedContent === id) {
         this.$emit('update:selectedContent', null);
       }
