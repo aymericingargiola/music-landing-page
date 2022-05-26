@@ -7,9 +7,9 @@
     "build": "npm run buildPlaylistAll && vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lintFix": "vue-cli-service lint --fix",
-    "buildPlaylist": "node background\\builders\\playlist_builder\\playlist.js --write-json",
-    "buildPlaylistLossless": "node background\\builders\\playlist_builder\\playlist.js --write-json-lossless",
-    "buildPlaylistVideo": "node background\\builders\\playlist_builder\\playlist.js --write-json-video",
+    "buildPlaylist": "node background/builders/playlist_builder/playlist.js --write-json",
+    "buildPlaylistLossless": "node background/builders/playlist_builder/playlist.js --write-json-lossless",
+    "buildPlaylistVideo": "node background/builders/playlist_builder/playlist.js --write-json-video",
     "buildPlaylistAll" : "npm run buildPlaylistVideo && npm run buildPlaylistLossless && npm run buildPlaylist"
   },
   "dependencies": {
