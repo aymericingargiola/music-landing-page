@@ -32,7 +32,7 @@ function writeJson(newFileList, savePath) {
   * @desc This function will check the new file list with any already existing json file with same name
   * @param object newFilelist - File list build from original Owncloud file list with buildJson()
 */
-const checkFiles = async function (newFileList, savePath) {
+function checkFiles(newFileList, savePath) {
     if (newFileList.error) {
         return console.log("New file list request returned an error");
     } else if (globalFunctions.fileExist(savePath) && savePath != "") {
@@ -123,7 +123,7 @@ async function buildJson(filelist) {
   * @param object url - Url where to get the file list
   * @return function buildJson() -> Build custom file list based on Owncloud's file list object
 */
-const getFileList = async function(url) {
+async function getFileList(url) {
     console.time("Time")
     console.group("\nRequest: " + globalFunctions.dateDisplay());
     const fileList = await axios.get(url).then(async (response) => {
@@ -142,6 +142,24 @@ const getFileList = async function(url) {
 }
 
 /**
+  * @desc Init app based on init options
+  * @param object initOptions - Init options
+*/
+async function init(initOptions) {
+    if (initOptions.checkFiles) {
+        const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
+        const savePath = initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath;
+        if (url && url != "") {
+            getFileList(url).then((newFileList) => {
+                checkFiles(newFileList, savePath);
+            });
+        } else {
+            console.log("No default url set in config.json, please set an url in config.json");
+        }
+    }
+}
+
+/**
   * @desc Check if command line contains a first parameter
   * @param string process.argv[2] -> First command line parameter
   * @param string process.argv[2] === "--write-json" -> Only write json to directory configured in config.json
@@ -152,29 +170,10 @@ switch (process.argv[2]) {
         break;
     case "--write-json-lossless":
         init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless"));
+        break
     case "--write-json-video":
         init(globalFunctions.initOptions(checkFilesParam = true, format = "video"));
+        break
     default:
         init(globalFunctions.initOptions());
-}
-
-module.exports = {
-    /**
-     * @desc Init app based on init options
-     * @param object initOptions - Init options
-    */
-     init: async function(initOptions) {
-        if (initOptions.checkFiles) {
-            const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
-            const savePath = initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath;
-            if (url && url != "") {
-                const fileList = await getFileList(url)
-                const checkFiles = await checkFiles(fileList, savePath)
-                return true
-            } else {
-                console.log("No default url set in config.json, please set an url in config.json");
-                return false
-            }
-        }
-    }
 }
