@@ -134,8 +134,9 @@ async function getFileList(url) {
         let files = []
         $('a').each(function (i, e) {
             if (i === 0) return
+            console.log(url, $(e).attr('href'), e)
             files.push({
-                name: decodeURI($(e).attr('href')).replaceAll("%26", "&").replaceAll("%2C", ","),
+                name: decodeURI($(e).attr('href')).replace(/%26/g, "&").replace(/%2C/g, ","),
                 url: `${url}${$(e).attr('href')}`
             })
         })
