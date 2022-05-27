@@ -3,10 +3,6 @@
         "defaultUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne/",
         "losslessUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Lossless/",
         "videoUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/",
-        "thumbnail": {
-            "path": "imgs/covers/",
-            "extension": ".jpg"
-        },
         "saveJsonPath": "./public/jsons/playlist.json",
         "losslessSaveJsonPath": "./public/jsons/playlistLossless.json",
         "videoSaveJsonPath": "./public/jsons/playlistVideo.json"
