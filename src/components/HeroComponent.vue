@@ -1,5 +1,5 @@
 <template>
-  <div v-if="playlists" class="hero-component">
+  <div v-if="playlists.mp3 && playlists.wav && playlists.video" class="hero-component">
       <div class="background"
       :style="{ backgroundImage: `url(${heroBgFolder+currentItem.id}.webp)`}"></div>
       <div class="container">

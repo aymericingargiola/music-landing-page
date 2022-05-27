@@ -10,8 +10,8 @@ const videoUrl = config.userSettings.videoUrl;
 const saveJsonPath = config.userSettings.saveJsonPath;
 const losslessSaveJsonPath = config.userSettings.losslessSaveJsonPath;
 const videoSaveJsonPath = config.userSettings.videoSaveJsonPath;
-const thumbnailPath = config.userSettings.thumbnail.path;
-const thumbnailExtension = config.userSettings.thumbnail.extension;
+const buildSavePath = config.userSettings.buildSavePath;
+const distSavePath = config.userSettings.distSavePath;
 
 /**
   * @desc This function will write the json file on specified path from "saveJsonPath" in config.json,
@@ -40,11 +40,16 @@ function checkFiles(newFileList, savePath) {
         console.time("Time");
         var newFiles = 0;
         var oldFiles = 0;
+        var updatedFiles = 0;
         oldFileList = JSON.parse(fs.readFileSync(savePath, 'utf8'));
         newFileList.forEach(function (item, index) {
-            if (oldFileList.map(function (items) { return items['id']; }).indexOf(item.id) === -1) {
+            const idx = oldFileList.findIndex(i => i.id === item.id);
+            if (idx === -1) {
                 console.log("New file : " + item.fileName);
                 ++newFiles;
+            } else if (oldFileList[idx] !== item) {
+                console.log("Updated file : " + item.fileName);
+                ++updatedFiles
             }
         });
         oldFileList.forEach(function (item, index) {
@@ -57,7 +62,7 @@ function checkFiles(newFileList, savePath) {
         console.log("Removed file(s) : " + oldFiles);
         console.timeEnd("Time");
         console.groupEnd();
-        if (newFiles != 0 || oldFiles != 0) {
+        if (newFiles > 0 || oldFiles > 0 || updatedFiles > 0) {
             writeJson(newFileList, savePath);
         }
     } else if (savePath && savePath != "") {
@@ -76,12 +81,11 @@ async function buildJson(filelist) {
     console.time("Json build");
     var newFileList = [];
     await globalFunctions.asyncForEach(filelist, async function (item, index) {
-        let name, cleanName, extension, artist, artistfilter, titlefilter, title, filter, url, bytes, mimetype;
-        await axios(item.url, {method: 'head'}).then(async (response) => { bytes = response.headers['content-length']; mimetype = response.headers['content-type'] })
+        let name, cleanName, extension, artist, artistfilter, titlefilter, title, filter, url, bytes, modified;
+        await axios(item.url, {method: 'head'}).then(async (response) => { bytes = response.headers['content-length']; modified = response.headers['last-modified'] })
         name = item.name.replace(/ +/g, " ").replace(/\n/g, "").trim();
         cleanName = name.lastIndexOf(".") != -1 ? name.substr(0, name.lastIndexOf(".")).trim() : name;
         filter = cleanName.normalize("NFD").replace(/[\u0300-\u036f-.()]/g, "").replace(/ +/g, ' ').toLowerCase();
-        thumbnailName = filter.replace(/[']/g, "").replace(/ /g,"-");
         extension = name.lastIndexOf(".") != -1 ? name.substr(name.lastIndexOf(".") + 1).trim() : item.mimetype.match(/^(httpd\/unix-directory)$/) ? "zip" : "";
         url = item.url;
         if (extension.match(/^(mp3|wav|ogg|flac|wma|mid|mp4|mkv)$/)) {
@@ -96,19 +100,18 @@ async function buildJson(filelist) {
         }
         itemDatas = {
             "id": Buffer.from(cleanName).toString('base64'),
-            "fileName": name,
             "name": cleanName,
+            "artist": (artist ? artist : undefined),
+            "title": (title ? title : undefined),
+            "artistfilter": (artist ? artistfilter : undefined),
+            "titlefilter": (artist ? titlefilter : title ? filter : undefined),
             "filter": filter,
+            "fileName": name,
             "extension": extension,
-            "mimetype": mimetype,
             "url": url,
             "bytes": bytes,
             "size": globalFunctions.bytesToSize(bytes),
-            "thumbnail": (thumbnailPath != "" && thumbnailExtension != "" ? thumbnailPath + thumbnailName + thumbnailExtension : undefined),
-            "artist": (artist ? artist : undefined),
-            "artistfilter": (artist ? artistfilter : undefined),
-            "title": (title ? title : undefined),
-            "titlefilter": (artist ? titlefilter : title ? filter : undefined),
+            "modified": modified
         }
         newFileList.push(itemDatas);
     });
@@ -145,16 +148,17 @@ async function getFileList(url) {
   * @desc Init app based on init options
   * @param object initOptions - Init options
 */
-async function init(initOptions) {
+const init = async function (initOptions) {
     if (initOptions.checkFiles) {
         const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
-        const savePath = initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath;
+        const savePath = `${initOptions.dist ? distSavePath : buildSavePath}${initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath}`;
         if (url && url != "") {
-            getFileList(url).then((newFileList) => {
-                checkFiles(newFileList, savePath);
-            });
+            const newFileList = await getFileList(url);
+            checkFiles(newFileList, savePath);
+            return true
         } else {
             console.log("No default url set in config.json, please set an url in config.json");
+            return false
         }
     }
 }
@@ -176,4 +180,13 @@ switch (process.argv[2]) {
         break
     default:
         init(globalFunctions.initOptions());
+}
+
+module.exports = {
+    buildAll: async function (dist) {
+        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist))
+        return console.log("Jsons updated")
+    }
 }

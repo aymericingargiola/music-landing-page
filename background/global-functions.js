@@ -27,10 +27,11 @@ module.exports = {
             message: message
         }
     },
-    initOptions: function (checkFilesParam = false, format = false) {
+    initOptions: function (checkFilesParam = false, format = false, dist = false) {
         return {
             format: format,
-            checkFiles: checkFilesParam
+            checkFiles: checkFilesParam,
+            dist: dist
         }
     },
     fileExist: function (filePath) {

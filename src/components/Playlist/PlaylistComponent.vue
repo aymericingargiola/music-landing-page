@@ -1,5 +1,5 @@
 <template>
-  <div v-if="playlists" class="playlist-component col-12">
+  <div v-if="playlists.mp3 && playlists.wav && playlists.video" class="playlist-component col-12">
     <div class="row">
       <div class="col-12 col-md-4">
         <h3>MP3</h3>
