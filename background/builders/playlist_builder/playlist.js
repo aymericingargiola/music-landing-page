@@ -126,7 +126,7 @@ async function buildJson(filelist) {
   * @param object url - Url where to get the file list
   * @return function buildJson() -> Build custom file list based on Owncloud's file list object
 */
-async function getFileList(url) {
+async function getFileList(url, extraLogs) {
     console.time("Time")
     console.group("\nRequest: " + globalFunctions.dateDisplay());
     const fileList = await axios.get(url).then(async (response) => {
@@ -134,7 +134,7 @@ async function getFileList(url) {
         let files = []
         $('a').each(function (i, e) {
             if (i === 0) return
-            console.log(url, $(e).attr('href'), e)
+            if(extraLogs) console.log(url, $(e).attr('href'), decodeURI($(e).attr('href')))
             files.push({
                 name: decodeURI($(e).attr('href')).replace(/%26/g, "&").replace(/%2C/g, ","),
                 url: `${url}${$(e).attr('href')}`
@@ -149,12 +149,12 @@ async function getFileList(url) {
   * @desc Init app based on init options
   * @param object initOptions - Init options
 */
-const init = async function (initOptions) {
+const init = async function (initOptions, extraLogs) {
     if (initOptions.checkFiles) {
         const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
         const savePath = `${initOptions.dist ? distSavePath : buildSavePath}${initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath}`;
         if (url && url != "") {
-            const newFileList = await getFileList(url);
+            const newFileList = await getFileList(url, extraLogs);
             checkFiles(newFileList, savePath);
             return true
         } else {
@@ -185,9 +185,9 @@ switch (process.argv[2]) {
 
 module.exports = {
     buildAll: async function (dist) {
-        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist))
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist))
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist), true)
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist), true)
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist), true)
         return console.log("Jsons updated")
     }
 }
