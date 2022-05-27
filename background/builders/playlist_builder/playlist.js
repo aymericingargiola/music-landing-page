@@ -23,7 +23,7 @@ function writeJson(newFileList, savePath) {
         if (error) {
             console.error("Error:  " + error.message);
         } else {
-            console.log("File writed on " + path.resolve(saveJsonPath));
+            console.log("File writed on " + path.resolve(savePath));
         }
     });
 }
@@ -185,9 +185,9 @@ switch (process.argv[2]) {
 
 module.exports = {
     buildAll: async function (dist) {
-        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist), true)
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist), true)
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist), true)
+        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist))
         return console.log("Jsons updated")
     }
 }
