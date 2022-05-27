@@ -10,6 +10,8 @@ const videoUrl = config.userSettings.videoUrl;
 const saveJsonPath = config.userSettings.saveJsonPath;
 const losslessSaveJsonPath = config.userSettings.losslessSaveJsonPath;
 const videoSaveJsonPath = config.userSettings.videoSaveJsonPath;
+const buildSavePath = config.userSettings.buildSavePath;
+const distSavePath = config.userSettings.distSavePath;
 
 /**
   * @desc This function will write the json file on specified path from "saveJsonPath" in config.json,
@@ -146,16 +148,17 @@ async function getFileList(url) {
   * @desc Init app based on init options
   * @param object initOptions - Init options
 */
-async function init(initOptions) {
+const init = async function (initOptions) {
     if (initOptions.checkFiles) {
         const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
-        const savePath = initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath;
+        const savePath = `${initOptions.dist ? distSavePath : buildSavePath}${initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath}`;
         if (url && url != "") {
-            getFileList(url).then((newFileList) => {
-                checkFiles(newFileList, savePath);
-            });
+            const newFileList = await getFileList(url);
+            checkFiles(newFileList, savePath);
+            return true
         } else {
             console.log("No default url set in config.json, please set an url in config.json");
+            return false
         }
     }
 }
@@ -177,4 +180,13 @@ switch (process.argv[2]) {
         break
     default:
         init(globalFunctions.initOptions());
+}
+
+module.exports = {
+    buildAll: async function (dist) {
+        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist))
+        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist))
+        return console.log("Jsons updated")
+    }
 }
