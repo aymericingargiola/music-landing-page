@@ -1,5 +1,8 @@
 <template>
-  <div v-if="playlists.mp3 && playlists.wav && playlists.video" class="hero-component">
+  <div v-if="playlists.mp3
+  && playlists.wav
+  && playlists.video
+  && currentItem" class="hero-component">
       <div class="background"
       :style="{ backgroundImage: `url(${heroBgFolder+currentItem.id}.webp)`}"></div>
       <div class="container">
@@ -18,6 +21,7 @@ export default {
   props: {
     playlists: Object,
     selectedContent: String,
+    filtering: Boolean,
   },
   name: 'HeroComponent',
   components: {
@@ -35,16 +39,15 @@ export default {
   computed: {
     currentItem() {
       const id = this.selectedContent ? this.selectedContent : this.pushedContent[0];
-      if (this.playlists.mp3.find((music) => (music.id === id))) {
-        return this.playlists.mp3.find((music) => (music.id === id));
+      const current = this.playlists.mp3.find((music) => (music.id === id))
+      || this.playlists.video.find((music) => (music.id === id))
+      || this.playlists.wav.find((music) => (music.id === id));
+      if (!current) {
+        return this.playlists.mp3[0]
+        || this.playlists.video[0]
+        || this.playlists.wav[0];
       }
-      if (this.playlists.video.find((music) => (music.id === id))) {
-        return this.playlists.video.find((music) => (music.id === id));
-      }
-      if (this.playlists.wav.find((music) => (music.id === id))) {
-        return this.playlists.wav.find((music) => (music.id === id));
-      }
-      return null;
+      return current;
     },
   },
 };
