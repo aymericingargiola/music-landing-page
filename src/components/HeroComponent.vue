@@ -21,7 +21,14 @@
               <div class="video-container">
                 <div class="video-content">
                   <transition name="fade" mode="out-in">
-                    <iframe :key="currentItemExtra" v-if="currentItemExtra && currentItemExtra.youtubeId" :src="`https://www.youtube-nocookie.com/embed/${currentItemExtra.youtubeId}`"
+                    <videoPlayer v-if="currentItemVideo"
+                    :poster="backgroundImage"
+                    :sources="[
+                    {src:currentItemVideo.url,type:`video/${currentItemVideo.extension}`}
+                    ]" />
+                    <iframe :key="currentItemExtra"
+                    v-else-if="currentItemExtra && currentItemExtra.youtubeId"
+                    :src="`https://www.youtube-nocookie.com/embed/${currentItemExtra.youtubeId}`"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer;gyroscope"
                     allowfullscreen></iframe>
@@ -68,6 +75,7 @@
 
 <script>
 import images from '@/helpers/images';
+import VideoPlayer from '@/components/Medias/VideoPlayer.vue';
 
 export default {
   props: {
@@ -77,6 +85,7 @@ export default {
   },
   name: 'HeroComponent',
   components: {
+    VideoPlayer,
   },
   setup(props, context) {
     const heroBgFolder = '/imgs/heroes/';
@@ -134,7 +143,8 @@ export default {
       return date.toLocaleDateString('en-US', options);
     },
     backgroundImage() {
-      const imgUrl = `${this.heroBgFolder}${this.currentItemExtra?.remapBgImage ? this.currentItemExtra.remapBgImage : this.selectedId}.webp`;
+      const imgIdMap = this.currentItemExtra?.remapBgImage || this.currentItemExtra?.id || 'unknow';
+      const imgUrl = `${this.heroBgFolder}${imgIdMap}.webp`;
       this.preLoadImage(imgUrl);
       return imgUrl;
     },
@@ -147,6 +157,7 @@ export default {
   position: relative;
   .hero-content {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 30px;
     border-radius: 5px;
     background-color: color($background3, 0.5);
@@ -237,7 +248,7 @@ export default {
       height: 100%;
       left: 0;
       top: 0;
-      iframe {
+      iframe, video {
         border-radius: 5px;
         width: 100%;
         height: 100%;
