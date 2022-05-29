@@ -81,7 +81,9 @@ export default {
           : true;
         return filterIncludeSearch && filterArtistIncludeSearch && filterTitleIncludeSearch;
       }));
-      if (textFilter.value?.length >= 3) {
+      if (textFilter.value?.length >= 3
+      || textFilterArtist.value?.length >= 3
+      || textFilterTitle.value?.length >= 3) {
         selectedContent.value = arr.mp3[0]?.id || arr.wav[0]?.id || arr.video[0]?.id;
       }
       return arr;
