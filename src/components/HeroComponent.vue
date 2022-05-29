@@ -22,6 +22,7 @@
                 <div class="video-content">
                   <transition name="fade" mode="out-in">
                     <videoPlayer v-if="currentItemVideo"
+                    :poster="backgroundImage"
                     :sources="[
                     {src:currentItemVideo.url,type:`video/${currentItemVideo.extension}`}
                     ]" />
@@ -156,6 +157,7 @@ export default {
   position: relative;
   .hero-content {
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 30px;
     border-radius: 5px;
     background-color: color($background3, 0.5);
