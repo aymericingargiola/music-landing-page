@@ -25,7 +25,7 @@
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer;gyroscope"
                     allowfullscreen></iframe>
-                    <div :key="currentItemExtra" v-else class="empty-video">
+                    <div v-else class="empty-video">
                       <svg enable-background="new 0 0 520 520" version="1.1" viewBox="0 0 520 520" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m505.29 157.62c-9.005-5.568-20.585-6.075-30.037-1.342l-78.253 38.964v-42.185c0-16.862-13.256-30.136-30.118-30.136h-183.15l-68.365-80.99c-10.883-12.866-30.131-14.591-43.027-3.685-12.866 10.892-14.476 30.112-3.578 42.985l335.87 396.91c6.038 7.134 14.641 10.797 23.318 10.797 6.962 0 13.97-2.377 19.71-7.23 12.866-10.891 14.276-30.164 3.378-43.038l-54.037-63.626v-19.903l78.136 38.964c4.309 2.154 9.098 3.22 13.764 3.22 5.576 0 11.435-1.528 16.34-4.562 8.99-5.561 14.76-15.386 14.76-25.971v-183.2c0-10.586-5.72-20.41-14.71-25.971z"/><path d="M0,153.059v244.267c0,16.862,14.138,30.597,31,30.597h260.756L29.879,122.647C13.443,123.128,0,136.499,0,153.059z"/></svg>
                     </div>
                   </transition>
@@ -146,6 +146,7 @@ export default {
 .hero-component {
   position: relative;
   .hero-content {
+    margin-top: 20px;
     padding: 30px;
     border-radius: 5px;
     background-color: color($background3, 0.5);
