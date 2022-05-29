@@ -1,0 +1,27 @@
+[
+    {
+        "id": "Tm9hIEtpcmVsIC0gVGhvdWdodCBBYm91dCBUaGF0IChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "Noa Kirel - Thought About That (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter":"noa kirel",
+        "titlefilter":"thought about that dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "oWnHHYKDdz4",
+        "releaseTimestamp": "1649628000"
+    },
+    {
+		"id": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+		"name": "Alvaro Soler ft. Flo Rida, TINI - La Cintura (LazerzF!ne Bootleg Edit)",
+		"artistfilter": "alvaro soler ft flo rida, tini",
+		"titlefilter": "la cintura lazerzf!ne bootleg edit",
+        "youtubeId": "TBZIuko7-b0",
+        "releaseTimestamp": "1541804409"
+	},
+    {
+		"id": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBNaXgp",
+		"name": "Alvaro Soler ft. Flo Rida, TINI - La Cintura (LazerzF!ne Bootleg Mix)",
+		"artistfilter": "alvaro soler ft flo rida, tini",
+		"titlefilter": "la cintura lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1541804409",
+        "remapBgImage": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "remapCoverImage": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
+	}
+]

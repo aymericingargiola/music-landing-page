@@ -47,7 +47,7 @@ export default {
   border-radius: 6px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
   transition: 1s ease;
-  animation: show 1.5s;
+  //animation: show 1.5s;
   cursor: pointer;
   &.selected {
     background-color: color($color: $active-purple-hover);
