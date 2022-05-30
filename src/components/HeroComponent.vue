@@ -21,10 +21,12 @@
               <div class="video-container">
                 <div class="video-content">
                   <transition name="fade" mode="out-in">
-                    <videoPlayer v-if="currentItemVideo"
+                    <videoPlayer v-if="currentItemVideo
+                    && currentItemExtra
+                    && currentItemExtra.optiweb"
                     :poster="backgroundImage"
                     :sources="[
-                    {src:currentItemVideo.url,type:`video/${currentItemVideo.extension}`}
+                    {src:optiWebVideoUrl,type:`video/${currentItemVideo.extension}`}
                     ]" />
                     <iframe :key="currentItemExtra"
                     v-else-if="currentItemExtra && currentItemExtra.youtubeId"
@@ -143,10 +145,15 @@ export default {
       return date.toLocaleDateString('en-US', options);
     },
     backgroundImage() {
-      const imgIdMap = this.currentItemExtra?.remapBgImage || this.currentItemExtra?.id || 'unknow';
+      const imgIdMap = this.currentItemExtra?.remapImages || this.currentItemExtra?.id || 'unknow';
       const imgUrl = `${this.heroBgFolder}${imgIdMap}.webp`;
       this.preLoadImage(imgUrl);
       return imgUrl;
+    },
+    optiWebVideoUrl() {
+      const videoUrl = this.currentItemVideo?.url;
+      const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.${this.currentItemVideo.extension}`;
+      return optUrl;
     },
   },
 };
