@@ -3,10 +3,11 @@
   && playlists.wav
   && playlists.video
   && currentItem" class="hero-component">
-      <transition name="fade" mode="out-in">
-        <div :key="backgroundImageLoaded" class="background"
-        :style="{ backgroundImage: `url(${backgroundImage})`}"></div>
-      </transition>
+        <div class="background">
+          <transition name="fade" mode="out-in">
+            <img :key="backgroundImage" :alt="currentItem.name" :src="backgroundImage">
+          </transition>
+        </div>
       <div class="container">
         <div class="col-12 hero-content">
           <div class="row">
@@ -21,10 +22,13 @@
               <div class="video-container">
                 <div class="video-content">
                   <transition name="fade" mode="out-in">
-                    <videoPlayer v-if="currentItemVideo"
+                    <videoPlayer :key="optiWebVideoUrl"
+                    v-if="currentItemVideo
+                    && currentItemExtra
+                    && currentItemExtra.optiweb"
                     :poster="backgroundImage"
                     :sources="[
-                    {src:currentItemVideo.url,type:`video/${currentItemVideo.extension}`}
+                    {src:optiWebVideoUrl,type:`video/${currentItemVideo.extension}`}
                     ]" />
                     <iframe :key="currentItemExtra"
                     v-else-if="currentItemExtra && currentItemExtra.youtubeId"
@@ -40,32 +44,29 @@
               </div>
             </div>
             <div class="col-12 col-lg-4">
-              <ul>
-                <transition name="fade" mode="out-in">
-                <li v-if="releaseDate" class="info-item">
-                  <span class="item-title">Release date :</span>
-                  {{releaseDate}}
-                </li>
-                </transition>
-                <transition name="fade" mode="out-in">
-                <li v-if="currentItemMp3 && currentItemMp3.url" class="info-item">
-                  <span class="item-title">MP3 : </span>
-                  <a class="download" :href="currentItemMp3.url" target="_blank">Download</a>
-                </li>
-                </transition>
-                <transition name="fade" mode="out-in">
-                <li v-if="currentItemLossless && currentItemLossless.url" class="info-item">
-                  <span class="item-title">WAV : </span>
-                  <a class="download" :href="currentItemLossless.url" target="_blank">Download</a>
-                </li>
-                </transition>
-                <transition name="fade" mode="out-in">
-                <li v-if="currentItemVideo && currentItemVideo.url" class="info-item">
-                  <span class="item-title">Video : </span>
-                  <a class="download" :href="currentItemVideo.url" target="_blank">Download</a>
-                </li>
-                </transition>
-              </ul>
+              <transition name="fade" mode="out-in">
+                <ul :key="currentItemMp3">
+                  <li v-if="releaseDate" class="info-item">
+                    <span class="item-title">Release date :</span>
+                    {{releaseDate}}
+                  </li>
+                  <li v-if="currentItemMp3 && currentItemMp3.url"
+                  class="info-item">
+                    <span class="item-title">MP3 : </span>
+                    <a class="download" :href="currentItemMp3.url" target="_blank">Download</a>
+                  </li>
+                  <li v-if="currentItemLossless && currentItemLossless.url"
+                  class="info-item">
+                    <span class="item-title">WAV : </span>
+                    <a class="download" :href="currentItemLossless.url" target="_blank">Download</a>
+                  </li>
+                  <li v-if="currentItemVideo && currentItemVideo.url"
+                  class="info-item">
+                    <span class="item-title">Video : </span>
+                    <a class="download" :href="currentItemVideo.url" target="_blank">Download</a>
+                  </li>
+                </ul>
+              </transition>
             </div>
           </div>
         </div>
@@ -143,10 +144,15 @@ export default {
       return date.toLocaleDateString('en-US', options);
     },
     backgroundImage() {
-      const imgIdMap = this.currentItemExtra?.remapBgImage || this.currentItemExtra?.id || 'unknow';
+      const imgIdMap = this.currentItemExtra?.remapImages || this.currentItemExtra?.id || 'unknow';
       const imgUrl = `${this.heroBgFolder}${imgIdMap}.webp`;
       this.preLoadImage(imgUrl);
       return imgUrl;
+    },
+    optiWebVideoUrl() {
+      const videoUrl = this.currentItemVideo?.url;
+      const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.${this.currentItemVideo.extension}`;
+      return optUrl;
     },
   },
 };
@@ -223,6 +229,13 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
+    img {
+      position: absolute;
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
     &::after {
       content: '';
       position: absolute;

@@ -1,5 +1,5 @@
 <template>
-  <video controls width="250" :key="sources[0].src" :poster="poster">
+  <video controls width="250" :poster="poster">
       <template v-for="source in sources" :key="source.src">
         <source :src="source.src"
         :type="source.type">

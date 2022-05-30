@@ -5,7 +5,249 @@
         "artistfilter":"noa kirel",
         "titlefilter":"thought about that dj ks & lazerzf!ne bootleg edit",
         "youtubeId": "oWnHHYKDdz4",
+        "soundcloudId": "/aymeric_ingargiola/noa-kirel-thought-about-that-dj-ks-lazerzfne-bootleg-edit",
+        "optiweb": true,
         "releaseTimestamp": "1649628000"
+    },
+    {
+        "id": "Q2FzY2FkYSAtIEV2ZXJ5dGltZSB3ZSB0b3VjaCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Cascada - Everytime we touch (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "cascada",
+        "titlefilter": "everytime we touch lazerzf!ne bootleg edit",
+        "filter": "cascada everytime we touch lazerzf!ne bootleg edit",
+        "youtubeId": "j0q_513_x9k",
+        "optiweb": true,
+        "releaseTimestamp": "1647730800"
+    },
+    {
+        "id": "Q2FzY2FkYSAtIEV2ZXJ5dGltZSB3ZSB0b3VjaCAoTGF6ZXJ6RiFuZSBCb290bGVnIE1peCk=",
+        "name": "Cascada - Everytime we touch (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "cascada",
+        "titlefilter": "everytime we touch lazerzf!ne bootleg mix",
+        "filter": "cascada everytime we touch lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1647730800",
+        "remapImages": "Q2FzY2FkYSAtIEV2ZXJ5dGltZSB3ZSB0b3VjaCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp"
+    },
+    {
+        "id": "TGl0dGxlIFNpcyBOb3JhIC0gTGltb3VzaW5lIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "Little Sis Nora - Limousine (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "little sis nora",
+        "titlefilter": "limousine lazerzf!ne bootleg edit",
+        "filter": "little sis nora limousine lazerzf!ne bootleg edit",
+        "youtubeId": "K-i5RzRrRQg",
+        "soundcloudId": "/aymeric_ingargiola/little-sis-nora-limousine-lazerzfne-bootleg-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1645398000"
+    },
+    {
+        "id": "TGl0dGxlIFNpcyBOb3JhIC0gTGltb3VzaW5lIChMYXplcnpGIW5lIEJvb3RsZWcgTWl4KQ==",
+        "name": "Little Sis Nora - Limousine (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "little sis nora",
+        "titlefilter": "limousine lazerzf!ne bootleg mix",
+        "filter": "little sis nora limousine lazerzf!ne bootleg mix",
+        "soundcloudId": "/aymeric_ingargiola/little-sis-nora-limousine-lazerzfne-bootleg-mix",
+        "releaseTimestamp": "1645398000"
+    },
+    {
+        "id": "R3Jvb3ZlIENvdmVyYWdlIC0gR29kIElzIEEgR2lybCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Groove Coverage - God Is A Girl (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "groove coverage",
+        "titlefilter": "god is a girl lazerzf!ne bootleg edit",
+        "filter": "groove coverage god is a girl lazerzf!ne bootleg edit",
+        "youtubeId": "_yjXSIpx1Yc",
+        "soundcloudId": "/aymeric_ingargiola/groove-coverage-god-is-a-girl-lazerzfne-bootleg-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1645225200"
+    },
+    {
+        "id": "R3Jvb3ZlIENvdmVyYWdlIC0gR29kIElzIEEgR2lybCAoTGF6ZXJ6RiFuZSBCb290bGVnIE1peCk=",
+        "name": "Groove Coverage - God Is A Girl (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "groove coverage",
+        "titlefilter": "god is a girl lazerzf!ne bootleg mix",
+        "filter": "groove coverage god is a girl lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1645225200",
+        "remapImages": "R3Jvb3ZlIENvdmVyYWdlIC0gR29kIElzIEEgR2lybCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp"
+    },
+    {
+        "id": "REogU3B5cm9vZiAtIE5vdyBPciBOZXZlciAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0KQ==",
+        "title": "Now Or Never (LazerzF!ne Remix Edit)",
+        "artistfilter": "dj spyroof",
+        "titlefilter": "now or never lazerzf!ne remix edit",
+        "filter": "dj spyroof now or never lazerzf!ne remix edit",
+        "youtubeId": "k3n1VJnfc3M",
+        "soundcloudId": "/aymeric_ingargiola/dj-spyroof-now-or-never-lazerzfne-remix-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1642806000"
+    },
+    {
+        "id": "REogU3B5cm9vZiAtIE5vdyBPciBOZXZlciAoTGF6ZXJ6RiFuZSBSZW1peCk=",
+        "name": "DJ Spyroof - Now Or Never (LazerzF!ne Remix)",
+        "artistfilter": "dj spyroof",
+        "titlefilter": "now or never lazerzf!ne remix",
+        "filter": "dj spyroof now or never lazerzf!ne remix",
+        "spotify": "/track/5Vgu3hH70J76hbTPPih1ax?si=229a38e9262741d1",
+        "releaseTimestamp": "1642806000",
+        "remapImages": "REogU3B5cm9vZiAtIE5vdyBPciBOZXZlciAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0KQ=="
+    },
+    {
+        "id": "QnJpY2sgJiBMYWNlIC0gTG92ZSBJcyBXaWNrZWQgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0IDIwMjEp",
+        "name": "Brick & Lace - Love Is Wicked (LazerzF!ne Bootleg Edit 2021)",
+        "artistfilter": "brick & lace",
+        "titlefilter": "love is wicked lazerzf!ne bootleg edit 2021",
+        "filter": "brick & lace love is wicked lazerzf!ne bootleg edit 2021",
+        "youtubeId": "d3Rrjo90b_Q",
+        "soundcloudId": "/aymeric_ingargiola/brick-lace-love-is-wicked-lazerzfne-bootleg-edit-2021",
+        "optiweb": true,
+        "releaseTimestamp": "1636153200"
+    },
+    {
+        "id": "UmVpayAmIFJvY2NvIEh1bnQgJiBBbmEgTWVuYSAtIEEgVW4gUGFzbyBEZSBMYSBMdW5hIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "Reik & Rocco Hunt & Ana Mena - A Un Paso De La Luna (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "reik & rocco hunt & ana mena",
+        "titlefilter": "a un paso de la luna lazerzf!ne bootleg edit",
+        "filter": "reik & rocco hunt & ana mena a un paso de la luna lazerzf!ne bootleg edit",
+        "youtubeId": "qP2XCKYJf9M",
+        "soundcloudId": "/aymeric_ingargiola/reik-rocco-hunt-ana-mena-a-un-paso-de-la-luna-lazerzfne-bootleg-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1631397600"
+    },
+    {
+        "id": "UmVpayAmIFJvY2NvIEh1bnQgJiBBbmEgTWVuYSAtIEEgVW4gUGFzbyBEZSBMYSBMdW5hIChMYXplcnpGIW5lIEJvb3RsZWcgTWl4KQ==",
+        "artist": "Reik & Rocco Hunt & Ana Mena",
+        "title": "A Un Paso De La Luna (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "reik & rocco hunt & ana mena",
+        "titlefilter": "a un paso de la luna lazerzf!ne bootleg mix",
+        "filter": "reik & rocco hunt & ana mena a un paso de la luna lazerzf!ne bootleg mix",
+        "soundcloudId": "/aymeric_ingargiola/reik-rocco-hunt-ana-mena-a-un-paso-de-la-luna-lazerzfne-bootleg-mix",
+        "releaseTimestamp": "1631397600",
+        "remapImages": "UmVpayAmIFJvY2NvIEh1bnQgJiBBbmEgTWVuYSAtIEEgVW4gUGFzbyBEZSBMYSBMdW5hIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk="
+    },
+    {
+        "id": "RGogQXNzYWQgRnQgQWxhaW4gUmFtYW5pc3VtICYgV2lsbHkgV2lsbGlhbSAtIExpIFRvdXJuZXIgKExhemVyekYhbmUgJiBESktTIEJvb3RsZWcgRWRpdCk=",
+        "name": "Dj Assad Ft Alain Ramanisum & Willy William - Li Tourner (LazerzF!ne & DJKS Bootleg Edit)",
+        "artistfilter": "dj assad ft alain ramanisum & willy william",
+        "titlefilter": "li tourner lazerzf!ne & djks bootleg edit",
+        "filter": "dj assad ft alain ramanisum & willy william li tourner lazerzf!ne & djks bootleg edit",
+        "youtubeId": "UZ3V62tplMY",
+        "soundcloudId": "/aymeric_ingargiola/dj-assad-ft-alain-ramanisum-willy-william-li-tourner-lazerzfne-djks-bootleg-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1629496800"
+    },
+    {
+        "id": "TGl0dGxlIFNpcyBOb3JhIC0gTURNQSAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Little Sis Nora - MDMA (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "little sis nora",
+        "titlefilter": "mdma lazerzf!ne bootleg edit",
+        "filter": "little sis nora mdma lazerzf!ne bootleg edit",
+        "youtubeId": "6MaEjn0fhug",
+        "soundcloudId": "/aymeric_ingargiola/little-sis-nora-mdma-lazerzfne-bootleg-edit",
+        "optiweb": true,
+        "releaseTimestamp": "1622239200"
+    },
+    {
+        "id": "TGl0dGxlIFNpcyBOb3JhIC0gTURNQSAoTGF6ZXJ6RiFuZSBCb290bGVnIE1peCk=",
+        "name": "Little Sis Nora - MDMA (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "little sis nora",
+        "titlefilter": "mdma lazerzf!ne bootleg mix",
+        "filter": "little sis nora mdma lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1622239200",
+        "soundcloudId": "/aymeric_ingargiola/little-sis-nora-mdma-lazerzfne-bootleg-mix",
+        "remapImages": "UmVpayAmIFJvY2NvIEh1bnQgJiBBbmEgTWVuYSAtIEEgVW4gUGFzbyBEZSBMYSBMdW5hIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk="
+    },
+    {
+        "id": "QXF1YSAtIFJvc2VzIEFyZSBSZWQgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0IDIwMjEp",
+        "name": "Aqua - Roses Are Red (LazerzF!ne Bootleg Edit 2021)",
+        "artistfilter": "aqua",
+        "titlefilter": "roses are red lazerzf!ne bootleg edit 2021",
+        "filter": "aqua roses are red lazerzf!ne bootleg edit 2021",
+        "youtubeId": "l4W4AfNG52Q",
+        "soundcloudId": "/aymeric_ingargiola/aqua-roses-are-red-lazerzfne-bootleg-edit-2021",
+        "optiweb": true,
+        "releaseTimestamp": "1619301600"
+    },
+    {
+        "id": "QXF1YSAtIFJvc2VzIEFyZSBSZWQgKExhemVyekYhbmUgQm9vdGxlZyBNaXggMjAyMSk=",
+        "name": "Aqua - Roses Are Red (LazerzF!ne Bootleg Mix 2021)",
+        "artistfilter": "aqua",
+        "titlefilter": "roses are red lazerzf!ne bootleg mix 2021",
+        "filter": "aqua roses are red lazerzf!ne bootleg mix 2021",
+        "releaseTimestamp": "1619301600",
+        "remapImages": "QXF1YSAtIFJvc2VzIEFyZSBSZWQgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0IDIwMjEp"
+    },
+    {
+        "id": "U3RleXl4IGZlYXQuIFJvYmJpZSBSb3NlbiAtIFNvbWVib2R5IExvdmVzIFlvdSAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0KQ==",
+        "name": "Steyyx feat. Robbie Rosen - Somebody Loves You (LazerzF!ne Remix Edit)",
+        "artistfilter": "steyyx feat robbie rosen",
+        "titlefilter": "somebody loves you lazerzf!ne remix edit",
+        "filter": "steyyx feat robbie rosen somebody loves you lazerzf!ne remix edit",
+        "youtubeId": "VVC3ootjLME",
+        "releaseTimestamp": "1607209200"
+    },
+    {
+        "id": "TEZaICYgTWVpa2FsIC0gRXllIE9wZW5lciAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0KQ==",
+        "name": "LFZ & Meikal - Eye Opener (LazerzF!ne Remix Edit)",
+        "artistfilter": "lfz & meikal",
+        "titlefilter": "eye opener lazerzf!ne remix edit",
+        "filter": "lfz & meikal eye opener lazerzf!ne remix edit",
+        "youtubeId": "k_QgqP2ILQU",
+        "releaseTimestamp": "1606777200",
+        "todo": true
+    },
+    {
+        "id": "R8O8bnRoZXIgJiBUaGUgU3Vuc2hpbmUgR2lybHMgLSBEaW5nIERvbmcgU29uZyAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0IDIwMjAp",
+        "name": "Günther & The Sunshine Girls - Ding Dong Song (LazerzF!ne Remix Edit 2020)",
+        "artistfilter": "gunther & the sunshine girls",
+        "titlefilter": "ding dong song lazerzf!ne remix edit 2020",
+        "filter": "gunther & the sunshine girls ding dong song lazerzf!ne remix edit 2020",
+        "youtube": "fJ0T-ezdnkQ",
+        "releaseTimestamp": "1603490400"
+    },
+    {
+        "id": "R8O8bnRoZXIgJiBUaGUgU3Vuc2hpbmUgR2lybHMgLSBEaW5nIERvbmcgU29uZyAoTGF6ZXJ6RiFuZSBSZW1peCAyMDIwKQ==",
+        "name": "Günther & The Sunshine Girls - Ding Dong Song (LazerzF!ne Remix 2020)",
+        "artistfilter": "gunther & the sunshine girls",
+        "titlefilter": "ding dong song lazerzf!ne remix 2020",
+        "filter": "gunther & the sunshine girls ding dong song lazerzf!ne remix 2020",
+        "releaseTimestamp": "1603490400",
+        "remapImages": "R8O8bnRoZXIgJiBUaGUgU3Vuc2hpbmUgR2lybHMgLSBEaW5nIERvbmcgU29uZyAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0IDIwMjAp"
+    },
+    {
+        "id": "VGhlRmF0UmF0IGZlYXQuIExhdXJhIEJyZWhtIC0gTW9ub2R5IChMYXplcnpGIW5lIEVwaWMgJiBNYWtpbmEgUmVtaXggRWRpdCk=",
+        "name": "TheFatRat feat. Laura Brehm - Monody (LazerzF!ne Epic & Makina Remix Edit)",
+        "artistfilter": "thefatrat feat laura brehm",
+        "titlefilter": "monody lazerzf!ne epic & makina remix edit",
+        "filter": "thefatrat feat laura brehm monody lazerzf!ne epic & makina remix edit",
+        "youtube": "GQpldJf76OU",
+        "releaseTimestamp": "1599256800"
+    },
+    {
+        "id": "TGF6ZXJ6RiFuZSAtIExpY2sgT24gTWUgKFJhZGlvIEVkaXQp",
+        "name": "LazerzF!ne - Lick On Me (Radio Edit)",
+        "artistfilter": "lazerzf!ne",
+        "titlefilter": "lick on me radio edit",
+        "filter": "lazerzf!ne lick on me radio edit",
+        "youtube": "o9H-aub_pc8",
+        "releaseTimestamp": "1591999200"
+    },
+    {
+        "id": "RGlzY29DcmV3IC0gSHVzdmFnbiAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0IDIwMjAp",
+        "name": "DiscoCrew - Husvagn (LazerzF!ne Remix Edit 2020)",
+        "artistfilter": "discocrew",
+        "titlefilter": "husvagn lazerzf!ne remix edit 2020",
+        "filter": "discocrew husvagn lazerzf!ne remix edit 2020",
+        "youtube": "L-6AJbCd-hc",
+        "optiweb": true,
+        "releaseTimestamp": "1587852000"
+    },
+    {
+        "id": "RGlzY29DcmV3IC0gSHVzdmFnbiAoTGF6ZXJ6RiFuZSBSZW1peCAyMDIwKQ==",
+        "name": "DiscoCrew - Husvagn (LazerzF!ne Remix 2020)",
+        "artistfilter": "discocrew",
+        "titlefilter": "husvagn lazerzf!ne remix 2020",
+        "filter": "discocrew husvagn lazerzf!ne remix 2020",
+        "youtube": "M2r_qmz89Ic",
+        "releaseTimestamp": "1587852000",
+        "remapImages": "RGlzY29DcmV3IC0gSHVzdmFnbiAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0IDIwMjAp"
     },
     {
 		"id": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
@@ -21,7 +263,6 @@
 		"artistfilter": "alvaro soler ft flo rida, tini",
 		"titlefilter": "la cintura lazerzf!ne bootleg mix",
         "releaseTimestamp": "1541804409",
-        "remapBgImage": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
-        "remapCoverImage": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
+        "remapImages": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
 	}
 ]

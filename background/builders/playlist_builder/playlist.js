@@ -126,15 +126,17 @@ async function buildJson(filelist) {
   * @param object url - Url where to get the file list
   * @return function buildJson() -> Build custom file list based on Owncloud's file list object
 */
-async function getFileList(url, extraLogs) {
+async function getFileList(url, extraLogs, format) {
     console.time("Time")
     console.group("\nRequest: " + globalFunctions.dateDisplay());
+    const isVideo = format === "video" ? true : false
     const fileList = await axios.get(url).then(async (response) => {
         let $ = cheerio.load(response.data);
         let files = []
         $('a').each(function (i, e) {
             if (i === 0) return
-            if(extraLogs) console.log(url, $(e).attr('href'), decodeURI($(e).attr('href')))
+            if (extraLogs) console.log(url, $(e).attr('href'), decodeURI($(e).attr('href')))
+            if (isVideo && decodeURI($(e).attr('href')).includes("_optweb")) return
             files.push({
                 name: decodeURI($(e).attr('href')).replace(/%26/g, "&").replace(/%2C/g, ","),
                 url: `${url}${$(e).attr('href')}`
@@ -154,8 +156,8 @@ const init = async function (initOptions, extraLogs) {
         const url = initOptions.format === "lossless" ? losslessUrl : initOptions.format === "video" ? videoUrl : defaultUrl;
         const savePath = `${initOptions.dist ? distSavePath : buildSavePath}${initOptions.format === "lossless" ? losslessSaveJsonPath : initOptions.format === "video" ? videoSaveJsonPath : saveJsonPath}`;
         if (url && url != "") {
-            const newFileList = await getFileList(url, extraLogs);
-            checkFiles(newFileList, savePath);
+            const newFileList = await getFileList(url, extraLogs, initOptions.format);
+            checkFiles(newFileList, savePath, initOptions.format);
             return true
         } else {
             console.log("No default url set in config.json, please set an url in config.json");
