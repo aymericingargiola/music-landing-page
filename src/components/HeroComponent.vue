@@ -28,7 +28,7 @@
                     && currentItemExtra.optiweb"
                     :poster="backgroundImage"
                     :sources="[
-                    {src:optiWebVideoUrl,type:`video/${currentItemVideo.extension}`}
+                    {src:optiWebVideoUrl,type:`video/mp4`}
                     ]" />
                     <iframe :key="currentItemExtra"
                     v-else-if="currentItemExtra && currentItemExtra.youtubeId"
@@ -151,7 +151,7 @@ export default {
     },
     optiWebVideoUrl() {
       const videoUrl = this.currentItemVideo?.url;
-      const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.${this.currentItemVideo.extension}`;
+      const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
       return optUrl;
     },
   },

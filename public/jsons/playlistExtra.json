@@ -250,6 +250,95 @@
         "remapImages": "RGlzY29DcmV3IC0gSHVzdmFnbiAoTGF6ZXJ6RiFuZSBSZW1peCBFZGl0IDIwMjAp"
     },
     {
+        "id": "VHJvbml4IERKIFZzIEJhc3Nsb3VkZXIgZnQuIEdlbW1hIEIgLSBJJ20gWW91ciBCZXN0IEZhbnRhc3kgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "Tronix DJ Vs Basslouder ft. Gemma B - I'm Your Best Fantasy (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "tronix dj vs basslouder ft gemma b",
+        "titlefilter": "i'm your best fantasy lazerzf!ne bootleg edit",
+        "filter": "tronix dj vs basslouder ft gemma b i'm your best fantasy lazerzf!ne bootleg edit",
+        "youtube": "FLbUGol4RBY",
+        "releaseTimestamp": "1584745200"
+    },
+    {
+        "id": "REogS1MgJiBMYXplcnpGIW5lIC0gU3RpbGwgT2xkIFNjaG9vbCAoUmFkaW8gRWRpdCk=",
+        "name": "DJ KS & LazerzF!ne - Still Old School (Radio Edit)",
+        "artistfilter": "dj ks & lazerzf!ne",
+        "titlefilter": "still old school radio edit",
+        "filter": "dj ks & lazerzf!ne still old school radio edit",
+        "youtube": "5gtPwhx47kg",
+        "releaseTimestamp": "1581807600"
+    },
+    {
+        "id": "REogS1MgJiBMYXplcnpGIW5lIC0gU3RpbGwgT2xkIFNjaG9vbCAoT3JpZ2luYWwgTWl4KQ==",
+        "name": "DJ KS & LazerzF!ne - Still Old School (Original Mix)",
+        "artistfilter": "dj ks & lazerzf!ne",
+        "titlefilter": "still old school original mix",
+        "filter": "dj ks & lazerzf!ne still old school original mix",
+        "releaseTimestamp": "1581807600",
+        "remapImages": "REogS1MgJiBMYXplcnpGIW5lIC0gU3RpbGwgT2xkIFNjaG9vbCAoUmFkaW8gRWRpdCk="
+    },
+    {
+        "id": "RnJlZWRvbSAtIEhhbmcgT24gKExhemVyekYhbmUgUmVtaXggRWRpdCAyMDE5KQ==",
+        "name": "Freedom - Hang On (LazerzF!ne Remix Edit 2019)",
+        "artistfilter": "freedom",
+        "titlefilter": "hang on lazerzf!ne remix edit 2019",
+        "filter": "freedom hang on lazerzf!ne remix edit 2019",
+        "releaseTimestamp": "1566165600"
+    },
+    {
+        "id": "TGF6ZXJ6RiFuZSAtIEJhbWJvbyBMb3ZlciAoUmFkaW8gRWRpdCk=",
+        "name": "LazerzF!ne - Bamboo Lover (Radio Edit)",
+        "artistfilter": "lazerzf!ne",
+        "titlefilter": "bamboo lover radio edit",
+        "filter": "lazerzf!ne bamboo lover radio edit",
+        "youtube": "eB0OTVG5mdA",
+        "releaseTimestamp": "1559167200"
+    },
+    {
+        "id": "TGF6ZXJ6RiFuZSAtIEJhbWJvbyBMb3ZlciAoRXh0ZW5kZWQgTWl4KQ==",
+        "name": "LazerzF!ne - Bamboo Lover (Extended Mix)",
+        "artistfilter": "lazerzf!ne",
+        "titlefilter": "bamboo lover extended mix",
+        "filter": "lazerzf!ne bamboo lover extended mix",
+        "releaseTimestamp": "1559167200",
+        "remapImages": "TGF6ZXJ6RiFuZSAtIEJhbWJvbyBMb3ZlciAoUmFkaW8gRWRpdCk="
+    },
+    {
+        "id": "T01GRyAtIEVaIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "OMFG - EZ (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "omfg",
+        "titlefilter": "ez lazerzf!ne bootleg edit",
+        "filter": "omfg ez lazerzf!ne bootleg edit",
+        "youtube": "uo8s5cCrQsk",
+        "releaseTimestamp": "1557612000"
+    },
+    {
+        "id": "V2FsayB0aGUgbW9vbiAtIE9uZSBGb290IChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "Walk the moon - One Foot (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "walk the moon",
+        "titlefilter": "one foot lazerzf!ne bootleg edit",
+        "filter": "walk the moon one foot lazerzf!ne bootleg edit",
+        "youtube": "7hrFFWnoB38",
+        "releaseTimestamp": "1550962800"
+    },
+    {
+        "id": "V2FsayB0aGUgbW9vbiAtIE9uZSBGb290IChMYXplcnpGIW5lIEJvb3RsZWcgTWl4KQ==",
+        "name": "Walk the moon - One Foot (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "walk the moon",
+        "titlefilter": "one foot lazerzf!ne bootleg mix",
+        "filter": "walk the moon one foot lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1550962800",
+        "remapImages": "V2FsayB0aGUgbW9vbiAtIE9uZSBGb290IChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk="
+    },
+    {
+        "id": "T01GRyAtIE1lYW50IGZvciBZb3UgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "OMFG - Meant for You (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "omfg",
+        "titlefilter": "meant for you lazerzf!ne bootleg edit",
+        "filter": "omfg meant for you lazerzf!ne bootleg edit",
+        "youtube": "uuG86r94Afo",
+        "releaseTimestamp": "1549666800"
+    },
+    {
 		"id": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
 		"name": "Alvaro Soler ft. Flo Rida, TINI - La Cintura (LazerzF!ne Bootleg Edit)",
 		"artistfilter": "alvaro soler ft flo rida, tini",
@@ -264,5 +353,23 @@
 		"titlefilter": "la cintura lazerzf!ne bootleg mix",
         "releaseTimestamp": "1541804409",
         "remapImages": "QWx2YXJvIFNvbGVyIGZ0LiBGbG8gUmlkYSwgVElOSSAtIExhIENpbnR1cmEgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
-	}
+	},
+    {
+        "id": "SmVucyBPLiAtIE9uZSBNb3JlIChMYXplcnpGIW5lIFRyaWJ1dGUgVG8gVmVyYW5vIEJvb3RsZWcgRWRpdCk=",
+        "name": "Jens O. - One More (LazerzF!ne Tribute To Verano Bootleg Edit)",
+        "artistfilter": "jens o",
+        "titlefilter": "one more lazerzf!ne tribute to verano bootleg edit",
+        "filter": "jens o one more lazerzf!ne tribute to verano bootleg edit",
+        "youtubeId": "hwSGiXMsWvs",
+        "releaseTimestamp": "1536962400"
+    },
+    {
+        "id": "SmFubmluZSBXZWlnZWwgLSBIZWFydCBTdG9wIChMYXplcnpGIW5lIFJlbWl4IEVkaXQp",
+        "name": "Jannine Weigel - Heart Stop (LazerzF!ne Remix Edit)",
+        "artistfilter": "jannine weigel",
+        "titlefilter": "heart stop lazerzf!ne remix edit",
+        "filter": "jannine weigel heart stop lazerzf!ne remix edit",
+        "youtubeId": "0Xs9Fp7WOik",
+        "releaseTimestamp": "1536962400"
+    }
 ]
