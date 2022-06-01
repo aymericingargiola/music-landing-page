@@ -371,5 +371,146 @@
         "filter": "jannine weigel heart stop lazerzf!ne remix edit",
         "youtubeId": "0Xs9Fp7WOik",
         "releaseTimestamp": "1536962400"
+    },
+    {
+        "id": "RWQgU2hlZXJhbiAtIFBlcmZlY3QgKExhemVyekYhbmUgUmVtaXgp",
+        "name": "Ed Sheeran - Perfect (LazerzF!ne Remix)",
+        "artistfilter": "ed sheeran",
+        "titlefilter": "perfect lazerzf!ne remix",
+        "filter": "ed sheeran perfect lazerzf!ne remix",
+        "youtubeId": "VwNjomh-Rao",
+        "releaseTimestamp": "1508709600"
+    },
+    {
+        "id": "RWQgU2hlZXJhbiAtIFBlcmZlY3QgKExhemVyekYhbmUgUmVtaXggRWRpdCk=",
+        "name": "Ed Sheeran - Perfect (LazerzF!ne Remix Edit)",
+        "artistfilter": "ed sheeran",
+        "titlefilter": "perfect lazerzf!ne remix edit",
+        "filter": "ed sheeran perfect lazerzf!ne remix edit",
+        "releaseTimestamp": "1508709600",
+        "remapImages": "RWQgU2hlZXJhbiAtIFBlcmZlY3QgKExhemVyekYhbmUgUmVtaXgp"
+    },
+    {
+        "id": "U2hha2lyYSAtIFdoZW5ldmVyIFdoZXJldmVyIChMYXplcnpGIW5lIFJlbWl4IEVkaXQgMjAxNyk=",
+        "title": "Whenever Wherever (LazerzF!ne Remix Edit 2017)",
+        "artistfilter": "shakira",
+        "titlefilter": "whenever wherever lazerzf!ne remix edit 2017",
+        "filter": "shakira whenever wherever lazerzf!ne remix edit 2017",
+        "youtubeId": "WeiOfy_g0DQ",
+        "releaseTimestamp": "1506636000"
+    },
+    {
+        "id": "THVpcyBGb25zaSBmdC4gRGFkZHkgWWFua2VlIC0gRGVzcGFjaXRvIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "Luis Fonsi ft. Daddy Yankee - Despacito (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter": "luis fonsi ft daddy yankee",
+        "titlefilter": "despacito dj ks & lazerzf!ne bootleg edit",
+        "filter": "luis fonsi ft daddy yankee despacito dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "_QiNgyfYk80",
+        "releaseTimestamp": "1501452000"
+    },
+    {
+        "id": "THVpcyBGb25zaSBmdC4gRGFkZHkgWWFua2VlIC0gRGVzcGFjaXRvIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBNaXgp",
+        "name": "Luis Fonsi ft. Daddy Yankee - Despacito (DJ KS & LazerzF!ne Bootleg Mix)",
+        "artist": "Luis Fonsi ft. Daddy Yankee",
+        "title": "Despacito (DJ KS & LazerzF!ne Bootleg Mix)",
+        "artistfilter": "luis fonsi ft daddy yankee",
+        "titlefilter": "despacito dj ks & lazerzf!ne bootleg mix",
+        "filter": "luis fonsi ft daddy yankee despacito dj ks & lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1501452000",
+        "remapImages": "THVpcyBGb25zaSBmdC4gRGFkZHkgWWFua2VlIC0gRGVzcGFjaXRvIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
+    },
+    {
+        "id": "TGF6ZXJ6RiFuZSAtIFBhbG0gVHJlZXMgSW4gQ2FsaWZvcm5pYQ==",
+        "name": "LazerzF!ne - Palm Trees In California",
+        "artist": "LazerzF!ne",
+        "title": "Palm Trees In California",
+        "artistfilter": "lazerzf!ne",
+        "titlefilter": "palm trees in california",
+        "filter": "lazerzf!ne palm trees in california",
+        "youtubeId": "ai8HCO1gv_4",
+        "releaseTimestamp": "1499378400"
+    },
+    {
+        "id": "R3Jvb3ZlIENvdmVyYWdlIC0gMjFzdCBDZW50dXJ5IERpZ2l0YWwgR2lybCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Groove Coverage - 21st Century Digital Girl (LazerzF!ne Bootleg Edit)",
+        "artist": "Groove Coverage",
+        "title": "21st Century Digital Girl (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "groove coverage",
+        "titlefilter": "21st century digital girl lazerzf!ne bootleg edit",
+        "filter": "groove coverage 21st century digital girl lazerzf!ne bootleg edit",
+        "youtubeId": "jnd4k2Jk5ZM",
+        "releaseTimestamp": "1493244000"
+    },
+    {
+        "id": "S3lnbyAmIFNlbGVuYSBHb21leiAtIEl0IEFpbid0IE1lIChESiBLUyBhbmQgTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Kygo & Selena Gomez - It Ain't Me (DJ KS and LazerzF!ne Bootleg Edit)",
+        "artistfilter": "kygo & selena gomez",
+        "titlefilter": "it ain't me dj ks and lazerzf!ne bootleg edit",
+        "filter": "kygo & selena gomez it ain't me dj ks and lazerzf!ne bootleg edit",
+        "youtubeId": "SaONRkmTTZ0",
+        "releaseTimestamp": "1491688800"
+    },
+    {
+        "id": "TGFkeSBBbnRlYmVsbHVtIC0gQ29tcGFzcyAoREogS1MgJiBMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "Lady Antebellum - Compass (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter": "lady antebellum",
+        "titlefilter": "compass dj ks & lazerzf!ne bootleg edit",
+        "filter": "lady antebellum compass dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "WFpREYfMADY",
+        "releaseTimestamp": "1489878000"
+    },
+    {
+        "id": "TWlrZSBQZXJyeSAtIFRoZSBPY2VhbiAoUm9teSBXYXZlIENvdmVyKSAoREogS1MgJiBMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "Mike Perry - The Ocean (Romy Wave Cover) (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter": "mike perry",
+        "titlefilter": "the ocean romy wave cover dj ks & lazerzf!ne bootleg edit",
+        "filter": "mike perry the ocean romy wave cover dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "m_fy8VEq5_0",
+        "releaseTimestamp": "1486854000"
+    },
+    {
+        "id": "RGVlcCBTcGlyaXQgRmVhdC4gS2F0aHkgLSBObyBDb3ZlciBTb25nIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "Deep Spirit Feat. Kathy - No Cover Song (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter": "deep spirit feat kathy",
+        "titlefilter": "no cover song dj ks & lazerzf!ne bootleg edit",
+        "filter": "deep spirit feat kathy no cover song dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "_VcCa44QwNI",
+        "releaseTimestamp": "1484175600"
+    },
+    {
+        "id": "Q2hheWFubmUgLSBNYWRyZSBUaWVycmEgKERKIEtTICYgTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Chayanne - Madre Tierra (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artistfilter": "chayanne",
+        "titlefilter": "madre tierra dj ks & lazerzf!ne bootleg edit",
+        "filter": "chayanne madre tierra dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "7Cmlg9QKfjk",
+        "releaseTimestamp": "1467237600"
+    },
+    {
+        "id": "U2lhIGZ0LiBTZWFuIFBhdWwgLSBDaGVhcCBUaHJpbGxzIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ==",
+        "name": "Sia ft. Sean Paul - Cheap Thrills (DJ KS & LazerzF!ne Bootleg Edit)",
+        "artist": "Sia ft. Sean Paul",
+        "titlefilter": "cheap thrills dj ks & lazerzf!ne bootleg edit",
+        "filter": "sia ft sean paul cheap thrills dj ks & lazerzf!ne bootleg edit",
+        "youtubeId": "VDLYlMw5lio",
+        "releaseTimestamp": "1462053600"
+    },
+    {
+        "id": "U2lhIGZ0LiBTZWFuIFBhdWwgLSBDaGVhcCBUaHJpbGxzIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBNaXgp",
+        "name": "Sia ft. Sean Paul - Cheap Thrills (DJ KS & LazerzF!ne Bootleg Mix)",
+        "artistfilter": "sia ft sean paul",
+        "titlefilter": "cheap thrills dj ks & lazerzf!ne bootleg mix",
+        "filter": "sia ft sean paul cheap thrills dj ks & lazerzf!ne bootleg mix",
+        "releaseTimestamp": "1462053600",
+        "remapImages": "U2lhIGZ0LiBTZWFuIFBhdWwgLSBDaGVhcCBUaHJpbGxzIChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=="
+    },
+    {
+        "id": "REogR29sbHVtIEZlYXQuIERKIENhcCBWcy4gTklDQ08gLSBUb2dldGhlciBGb3JldmVyIChFYXN0ZXIgUmF2ZSBIeW1uIDJrMTYpIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
+        "name": "DJ Gollum Feat. DJ Cap Vs. NICCO - Together Forever (Easter Rave Hymn 2k16) (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "dj gollum feat dj cap vs nicco",
+        "titlefilter": "together forever easter rave hymn 2k16 lazerzf!ne bootleg edit",
+        "filter": "dj gollum feat dj cap vs nicco together forever easter rave hymn 2k16 lazerzf!ne bootleg edit",
+        "youtubeId": "QrV0dmSFhJw",
+        "releaseTimestamp": "1459461600"
     }
 ]
