@@ -6,7 +6,8 @@
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
             <template v-for="music in playlists.mp3" :key="music.id">
-              <PlaylistItem :music="music" :selectedContent="selectedContent"
+              <PlaylistItem :music="music"
+              :extra="extra(music.id)" :selectedContent="selectedContent"
 @update:selectedContent="selectedContentUpdate($event)"/>
             </template>
           </transition-group>
@@ -17,7 +18,8 @@
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
             <template v-for="music in playlists.wav" :key="music.id">
-              <PlaylistItem :music="music" :selectedContent="selectedContent"
+              <PlaylistItem :music="music"
+              :extra="extra(music.id)" :selectedContent="selectedContent"
 @update:selectedContent="selectedContentUpdate($event)"/>
             </template>
           </transition-group>
@@ -28,7 +30,8 @@
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
             <template v-for="music in playlists.video" :key="music.id">
-              <PlaylistItem :music="music" :selectedContent="selectedContent"
+              <PlaylistItem :music="music"
+              :extra="extra(music.id)" :selectedContent="selectedContent"
 @update:selectedContent="selectedContentUpdate($event)"/>
             </template>
           </transition-group>
@@ -58,6 +61,11 @@ export default {
     selectedContentUpdate(event) {
       this.$emit('update:selectedContent', event);
     },
+    extra(id) {
+      return this.playlists?.extra?.find((m) => m.id === id);
+    },
+  },
+  computed: {
   },
 };
 </script>

@@ -1,5 +1,7 @@
 <template>
-  <li class="playlist-item" :class="{selected: selectedContent === music.id}"
+  <li class="playlist-item"
+  :class="[{selected: selectedContent === music.id},
+  {missing: !extra}]"
   @click="updateSelectedContent(music.id)" @keydown="updateSelectedContent(music.id)">
     <div class="item-container" :type="music.extension">
       <div class="info-bar">
@@ -23,6 +25,7 @@ export default {
   name: 'PlaylistItem',
   props: {
     music: Object,
+    extra: Object,
     selectedContent: String,
   },
   methods: {
@@ -49,6 +52,9 @@ export default {
   transition: 1s ease;
   //animation: show 1.5s;
   cursor: pointer;
+  &.missing {
+    opacity: 0.25;
+  }
   &.selected {
     background-color: color($color: $active-purple-hover);
   }
