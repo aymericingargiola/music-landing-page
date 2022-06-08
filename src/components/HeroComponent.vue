@@ -22,17 +22,25 @@
               <div class="video-container">
                 <div class="video-content">
                   <transition name="fade" mode="out-in">
-                    <videoPlayer :key="optiWebVideoUrl"
-                    v-if="currentItemVideo
+                    <div :key="backgroundImageLoading"
+                    v-if="backgroundImageLoading" class="loading">
+                      <LoaderComponent/>
+                    </div>
+                    <videoPlayer :key="backgroundImageLoading && backgroundImage"
+                    v-else-if="currentItemVideo
                     && currentItemExtra
                     && currentItemExtra.optiweb
-                    && backgroundImage"
+                    && backgroundImage
+                    && !backgroundImageLoading"
                     :poster="backgroundImage"
                     :sources="[
                     {src:optiWebVideoUrl,type:`video/mp4`}
                     ]" />
                     <iframe :key="currentItemExtra"
-                    v-else-if="currentItemExtra && currentItemExtra.youtubeId"
+                    v-else-if="currentItemExtra
+                    && currentItemExtra.youtubeId
+                    && !currentItemExtra.optiweb
+                    && !backgroundImageLoading"
                     :src="`https://www.youtube-nocookie.com/embed/${currentItemExtra.youtubeId}`"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer;gyroscope"
@@ -79,6 +87,7 @@
 import { ref, computed, watch } from 'vue';
 import images from '@/helpers/images';
 import VideoPlayer from '@/components/Medias/VideoPlayer.vue';
+import LoaderComponent from '@/components/Tools/loaderComponent.vue';
 
 export default {
   props: {
@@ -89,10 +98,12 @@ export default {
   name: 'HeroComponent',
   components: {
     VideoPlayer,
+    LoaderComponent,
   },
   setup(props, context) {
     const heroBgFolder = '/imgs/heroes/';
     const pushedContent = ['Tm9hIEtpcmVsIC0gVGhvdWdodCBBYm91dCBUaGF0IChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=='];
+    const backgroundImageLoading = ref(true);
     const backgroundImage = ref(null);
     if (!props.selectedContent) {
       context.emit('update:selectedContent', pushedContent[0]);
@@ -138,17 +149,22 @@ export default {
       return date.toLocaleDateString('en-US', options);
     });
     async function getBackgroundImage() {
+      backgroundImageLoading.value = true;
       backgroundImage.value = null;
       const imgIdMap = currentItemExtra?.value?.remapImages
       || currentItemExtra?.value?.id
       || 'unknow';
       const imgUrl = `${heroBgFolder}${imgIdMap}.webp`;
       const isLoaded = await images.preloadImage(imgUrl);
+      // Long image loading test
+      // eslint-disable-next-line no-promise-executor-return
+      // await new Promise((resolve) => setTimeout(resolve, 20000));
       if (isLoaded === true) {
         backgroundImage.value = imgUrl;
       } else {
         backgroundImage.value = `${heroBgFolder}unknow.webp`;
       }
+      backgroundImageLoading.value = false;
     }
     watch(
       () => props.selectedContent,
@@ -167,6 +183,7 @@ export default {
       heroBgFolder,
       pushedContent,
       backgroundImage,
+      backgroundImageLoading,
       getBackgroundImage,
       selectedId,
       currentItem,
@@ -177,60 +194,6 @@ export default {
       releaseDate,
       optiWebVideoUrl,
     };
-  },
-  methods: {
-  },
-  watch: {
-    // selectedContent(newVal, oldVal) {
-    //   if (newVal !== oldVal) {
-    //     this.getBackgroundImage();
-    //   }
-    // },
-  },
-  computed: {
-    // selectedId() {
-    //   return this.selectedContent ? this.selectedContent : this.pushedContent[0];
-    // },
-    // currentItem() {
-    //   const current = this.playlists.mp3.find((music) => (music.id === this.selectedId))
-    //   || this.playlists.video.find((music) => (music.id === this.selectedId))
-    //   || this.playlists.wav.find((music) => (music.id === this.selectedId));
-    //   if (!current && (this.playlists.mp3.length > 0
-    //   || this.playlists.video.length > 0
-    //   || this.playlists.wav.length > 0)) {
-    //     return this.playlists.mp3[0]
-    //     || this.playlists.video[0]
-    //     || this.playlists.wav[0];
-    //   }
-    //   return current;
-    // },
-    // currentItemMp3() {
-    //   return this.playlists.mp3?.find((music) => (music.id === this.selectedId));
-    // },
-    // currentItemLossless() {
-    //   return this.playlists.wav?.find((music) => (music.id === this.selectedId));
-    // },
-    // currentItemVideo() {
-    //   return this.playlists.video?.find((music) => (music.id === this.selectedId));
-    // },
-    // currentItemExtra() {
-    //   return this.playlists.extra?.find((music) => (music.id === this.selectedId));
-    // },
-    // releaseDate() {
-    //   const date = this.currentItemExtra && this.currentItemExtra.releaseTimestamp
-    //     ? new Date(parseInt(this.currentItemExtra.releaseTimestamp, 10) * 1000)
-    //     : null;
-    //   const options = {
-    //     year: 'numeric', month: 'long', day: 'numeric',
-    //   };
-    //   if (!date) return date;
-    //   return date.toLocaleDateString('en-US', options);
-    // },
-    // optiWebVideoUrl() {
-    //   const videoUrl = this.currentItemVideo?.url;
-    //   const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
-    //   return optUrl;
-    // },
   },
 };
 </script>
@@ -247,6 +210,7 @@ export default {
     backdrop-filter: blur(20px);
     h1 {
       margin-top: 0px;
+      margin-bottom: 30px;
     }
     .empty-video {
       background: $background;
@@ -332,6 +296,9 @@ export default {
     position: relative;
     width: 100%;
     padding-bottom: calc(100% * 9/16);
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
     .video-content {
       position: absolute;
       width: 100%;

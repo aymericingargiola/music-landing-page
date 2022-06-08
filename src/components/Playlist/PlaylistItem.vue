@@ -53,7 +53,7 @@ export default {
   //animation: show 1.5s;
   cursor: pointer;
   &.missing {
-    opacity: 0.25;
+    //opacity: 0.25;
   }
   &.selected {
     background-color: color($color: $active-purple-hover);
