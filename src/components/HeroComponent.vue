@@ -254,7 +254,7 @@ export default {
   .video-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: calc(100% * 9/16);
     .video-content {
       position: absolute;
       width: 100%;
@@ -264,6 +264,12 @@ export default {
       iframe, video {
         border-radius: 5px;
         width: 100%;
+      }
+      video {
+        max-height: 100%;
+        background: #000;
+      }
+      iframe {
         height: 100%;
       }
     }
