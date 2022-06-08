@@ -78,7 +78,7 @@ export default {
       currentPageMp3: 1,
       currentPageLossless: 1,
       currentPageVideo: 1,
-      maxItems: 10,
+      maxItems: 9999,
     };
   },
   methods: {
