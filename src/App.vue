@@ -29,7 +29,10 @@
     </div>
     <div class="row">
       <PlaylistComponent :playlists="filteredPlaylists"
-      :selectedContent="this.selectedContent"
+      :selectedContent="selectedContent"
+      :textFilter="textFilter"
+      :textFilterArtist="textFilterArtist"
+      :textFilterTitle="textFilterTitle"
       @update:selectedContent="selectedContent = $event"/>
     </div>
   </div>

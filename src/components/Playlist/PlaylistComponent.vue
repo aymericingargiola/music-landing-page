@@ -64,6 +64,9 @@ export default {
   props: {
     playlists: Object,
     selectedContent: String,
+    textFilter: String,
+    textFilterArtist: String,
+    textFilterTitle: String,
   },
   name: 'PlaylistComponent',
   components: {
@@ -84,6 +87,28 @@ export default {
     },
     extra(id) {
       return this.playlists?.extra?.find((m) => m.id === id);
+    },
+    resetPagination() {
+      this.currentPageMp3 = 1;
+      this.currentPageLossless = 1;
+      this.currentPageVideo = 1;
+    },
+  },
+  watch: {
+    textFilter(newVal, oldVal) {
+      if (newVal?.length >= 3 && newVal !== oldVal) {
+        this.resetPagination();
+      }
+    },
+    textFilterArtist(newVal, oldVal) {
+      if (newVal?.length >= 3 && newVal !== oldVal) {
+        this.resetPagination();
+      }
+    },
+    textFilterTitle(newVal, oldVal) {
+      if (newVal?.length >= 3 && newVal !== oldVal) {
+        this.resetPagination();
+      }
     },
   },
   computed: {
