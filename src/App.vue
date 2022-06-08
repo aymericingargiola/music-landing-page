@@ -1,5 +1,8 @@
 <template>
-  <HeroComponent :playlists="filteredPlaylists"
+  <HeroComponent v-if="playlists.mp3
+  && playlists.wav
+  && playlists.video
+  && playlists.extra" :playlists="filteredPlaylists"
   :selectedContent="this.selectedContent"
   :filtering="filteredPlaylists ? true : false"
   @update:selectedContent="selectedContent = $event"/>
@@ -29,7 +32,10 @@
     </div>
     <div class="row">
       <PlaylistComponent :playlists="filteredPlaylists"
-      :selectedContent="this.selectedContent"
+      :selectedContent="selectedContent"
+      :textFilter="textFilter"
+      :textFilterArtist="textFilterArtist"
+      :textFilterTitle="textFilterTitle"
       @update:selectedContent="selectedContent = $event"/>
     </div>
   </div>
@@ -56,12 +62,7 @@ export default {
     const textFilter = ref(null);
     const textFilterArtist = ref(null);
     const textFilterTitle = ref(null);
-    const playlists = reactive({
-      mp3: null,
-      wav: null,
-      video: null,
-      extra: null,
-    });
+    const playlists = reactive({});
     function textFilterPlaylists() {
       const arr = array.objectMap(playlists, (value) => value.filter((music) => {
         const textSearchValue = textFilter?.value?.normalize('NFC').toLowerCase();
