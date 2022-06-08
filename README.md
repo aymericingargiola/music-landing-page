@@ -1,5 +1,7 @@
 # music-landing-page
 
+Made in vue3, hosted on Netlify : https://www.lazerzfine.com/
+
 ## Project setup
 ```
 npm install
