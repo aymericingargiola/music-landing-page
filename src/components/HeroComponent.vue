@@ -102,7 +102,7 @@ export default {
   },
   setup(props, context) {
     const heroBgFolder = '/imgs/heroes/';
-    const pushedContent = ['Tm9hIEtpcmVsIC0gVGhvdWdodCBBYm91dCBUaGF0IChESiBLUyAmIExhemVyekYhbmUgQm9vdGxlZyBFZGl0KQ=='];
+    const pushedContent = ['Q2FzY2FkYSAtIE1pcmFjbGUgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0IDIwMjIp'];
     const backgroundImageLoading = ref(true);
     const backgroundImage = ref(null);
     if (!props.selectedContent) {
