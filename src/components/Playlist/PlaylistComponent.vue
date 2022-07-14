@@ -2,7 +2,10 @@
   <div v-if="playlists.mp3 && playlists.wav && playlists.video" class="playlist-component col-12">
     <div class="row">
       <div class="col-12 col-md-4">
-        <h3>MP3 ({{playlists.mp3.length}})</h3>
+        <h3>
+          MP3 ({{playlists.mp3.length}})
+          <a href="https://antiphates.feralhosting.com/aymeric000/links/music/mp3.zip" class="download-all">Download all</a>
+        </h3>
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
             <template v-for="music in currentPageMp3Playlist" :key="music.id">
@@ -19,7 +22,10 @@
         </div>
       </div>
       <div class="col-12 col-md-4">
-        <h3>Lossless ({{playlists.wav.length}})</h3>
+        <h3>
+          Lossless ({{playlists.wav.length}})
+          <a href="https://antiphates.feralhosting.com/aymeric000/links/music/wav.zip" class="download-all">Download all</a>
+        </h3>
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
             <template v-for="music in currentPageLosslessPlaylist" :key="music.id">
@@ -135,6 +141,13 @@ export default {
 </script>
 
 <style lang="scss">
+.download-all {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-left: 4px;
+}
 .items-content {
   height: 100%;
   position: relative;
