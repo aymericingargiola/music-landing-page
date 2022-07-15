@@ -10,13 +10,14 @@
     "buildPlaylist": "node background/builders/playlist_builder/playlist.js --write-json",
     "buildPlaylistLossless": "node background/builders/playlist_builder/playlist.js --write-json-lossless",
     "buildPlaylistVideo": "node background/builders/playlist_builder/playlist.js --write-json-video",
-    "buildPlaylistAll" : "npm run buildPlaylistVideo && npm run buildPlaylistLossless && npm run buildPlaylist"
+    "buildPlaylistAll": "npm run buildPlaylistVideo && npm run buildPlaylistLossless && npm run buildPlaylist"
   },
   "dependencies": {
     "axios": "^0.27.2",
     "cheerio": "^1.0.0-rc.11",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
