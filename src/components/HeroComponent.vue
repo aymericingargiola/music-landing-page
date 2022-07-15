@@ -150,6 +150,7 @@ export default {
     });
     async function getBackgroundImage() {
       backgroundImageLoading.value = true;
+      if (!props.selectedContent) return;
       backgroundImage.value = null;
       const imgIdMap = currentItemExtra?.value?.remapImages
       || currentItemExtra?.value?.id
@@ -166,6 +167,7 @@ export default {
       }
       backgroundImageLoading.value = false;
     }
+    getBackgroundImage();
     watch(
       () => props.selectedContent,
       (newVal, oldVal) => {

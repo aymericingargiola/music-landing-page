@@ -5,7 +5,7 @@
   && playlists.extra" :playlists="filteredPlaylists"
   :selectedContent="this.selectedContent"
   :filtering="filteredPlaylists ? true : false"
-  @update:selectedContent="selectedContent = $event"/>
+  @update:selectedContent="updateSelectedContent($event)"/>
   <div class="container">
     <div class="row">
       <TextFilter v-if="playlists.mp3"
@@ -36,7 +36,7 @@
       :textFilter="textFilter"
       :textFilterArtist="textFilterArtist"
       :textFilterTitle="textFilterTitle"
-      @update:selectedContent="selectedContent = $event"/>
+      @update:selectedContent="updateSelectedContent($event)"/>
     </div>
   </div>
 </template>
@@ -46,23 +46,30 @@ import {
   onMounted, reactive, ref, computed,
 } from 'vue';
 import array from '@/helpers/array';
-import HeroComponent from './components/HeroComponent.vue';
-import PlaylistComponent from './components/Playlist/PlaylistComponent.vue';
-import TextFilter from './components/Filters/TextFilter.vue';
+import { useRouter } from 'vue-router';
+import HeroComponent from '@/components/HeroComponent.vue';
+import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
+import TextFilter from '@/components/Filters/TextFilter.vue';
 
 export default {
-  name: 'App',
+  name: 'HomePage',
   components: {
     HeroComponent,
     PlaylistComponent,
     TextFilter,
   },
   setup() {
-    const selectedContent = ref(null);
+    const router = useRouter();
+    const urlParams = new URLSearchParams(window.location.hash.replace('#/', ''));
+    const selectedContent = ref(urlParams.get('track'));
     const textFilter = ref(null);
     const textFilterArtist = ref(null);
     const textFilterTitle = ref(null);
     const playlists = reactive({});
+    function updateSelectedContent(id) {
+      selectedContent.value = id;
+      router.push({ path: '/', query: { track: selectedContent.value } });
+    }
     function textFilterPlaylists() {
       const arr = array.objectMap(playlists, (value) => value.filter((music) => {
         const textSearchValue = textFilter?.value?.normalize('NFC').toLowerCase();
@@ -82,10 +89,11 @@ export default {
           : true;
         return filterIncludeSearch && filterArtistIncludeSearch && filterTitleIncludeSearch;
       }));
-      if (textFilter.value?.length >= 3
+      if (!selectedContent.value && (textFilter.value?.length >= 3
       || textFilterArtist.value?.length >= 3
-      || textFilterTitle.value?.length >= 3) {
+      || textFilterTitle.value?.length >= 3)) {
         selectedContent.value = arr.mp3[0]?.id || arr.wav[0]?.id || arr.video[0]?.id;
+        router.push({ path: '/', query: { track: selectedContent.value } });
       }
       return arr;
     }
@@ -102,7 +110,13 @@ export default {
       playlists.extra = await playlistExtra.json();
     });
     return {
-      selectedContent, textFilter, textFilterArtist, textFilterTitle, playlists, filteredPlaylists,
+      updateSelectedContent,
+      selectedContent,
+      textFilter,
+      textFilterArtist,
+      textFilterTitle,
+      playlists,
+      filteredPlaylists,
     };
   },
 };
