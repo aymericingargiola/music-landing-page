@@ -337,7 +337,6 @@ export default {
             newRandomTrack = Math.floor(
               Math.random() * (this.musicPlaylist.length - 1 - 0 + 1),
             ) + 0;
-            console.log(newRandomTrack);
           }
           this.changeSong(newRandomTrack);
         }
@@ -376,7 +375,7 @@ export default {
       this.audio = new Audio(this.audioFile);
       this.audio.volume = this.volume / 100;
       const localThis = this;
-      this.audio.addEventListener('loadedmetadata', function () {
+      this.audio.addEventListener('loadedmetadata', () => {
         localThis.trackDuration = Math.round(this.duration);
       });
       this.audio.addEventListener('ended', this.handleEnded);

@@ -3,7 +3,7 @@
   && playlists.wav
   && playlists.video
   && playlists.extra" :playlists="filteredPlaylists"
-  :selectedContent="this.selectedContent"
+  :selectedContent="selectedContent"
   :filtering="filteredPlaylists ? true : false"
   @update:selectedContent="updateSelectedContent($event)"/>
   <div class="container">
@@ -66,6 +66,7 @@ export default {
   setup() {
     const router = useRouter();
     const urlParams = new URLSearchParams(window.location.hash.replace('#/', ''));
+    const pushedContent = reactive([]);
     const selectedContent = ref(urlParams.get('track'));
     const textFilter = ref(null);
     const textFilterArtist = ref(null);
@@ -76,7 +77,6 @@ export default {
       router.push({ path: '/', query: { track: selectedContent.value } });
     }
     function textFilterPlaylists() {
-      console.log('enter');
       const arr = array.objectMap(playlists, (value) => value.filter((music) => {
         const textSearchValue = textFilter?.value?.normalize('NFC').toLowerCase();
         const textSearchValueArtist = textFilterArtist?.value?.normalize('NFC').toLowerCase();
@@ -109,10 +109,16 @@ export default {
     const filteredPlaylists = computed(() => (playlists.mp3
     && playlists.wav && playlists.video && playlists.extra ? textFilterPlaylists() : {}));
     onMounted(async () => {
+      const playlistPushedContent = await fetch('/jsons/playlistPushedContent.json');
       const playlistJson = await fetch('/jsons/playlist.json');
       const playlistLosslessJson = await fetch('/jsons/playlistLossless.json');
       const playlistVideoJson = await fetch('/jsons/playlistVideo.json');
       const playlistExtra = await fetch('/jsons/playlistExtra.json');
+      pushedContent.value = await playlistPushedContent.json();
+      if (!selectedContent.value) {
+        selectedContent.value = pushedContent.value[0].id;
+        router.push({ path: '/', query: { track: selectedContent.value } });
+      }
       playlists.mp3 = await playlistJson.json();
       playlists.wav = await playlistLosslessJson.json();
       playlists.video = await playlistVideoJson.json();
