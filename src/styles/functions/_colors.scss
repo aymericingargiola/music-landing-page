@@ -1,0 +1,6 @@
+@use "sass:string";
+
+@function color($color: dark, $opacity: 1) {
+    $thisColor: "rgba(" + map-get($colors-map, $color) + "," + $opacity + ")";
+    @return unquote($thisColor);
+}
