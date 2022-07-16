@@ -235,6 +235,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-plusplus */
+/* eslint-disable func-names */
 import slider from 'vue3-slider';
 
 export default {
@@ -375,7 +376,7 @@ export default {
       this.audio = new Audio(this.audioFile);
       this.audio.volume = this.volume / 100;
       const localThis = this;
-      this.audio.addEventListener('loadedmetadata', () => {
+      this.audio.addEventListener('loadedmetadata', function () {
         localThis.trackDuration = Math.round(this.duration);
       });
       this.audio.addEventListener('ended', this.handleEnded);
