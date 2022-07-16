@@ -1,6 +1,7 @@
 <!-- eslint-disable vuejs-accessibility/anchor-has-content -->
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <!-- eslint-disable vuejs-accessibility/form-control-has-label -->
+<!-- eslint-disable vuejs-accessibility/mouse-events-have-key-events -->
 <template>
   <div
     class="audioContainer"
@@ -16,8 +17,6 @@
       class="audioPlayerUI isOpen"
       @mouseover="notHovering = false"
       @mouseout="notHovering = true"
-      @focusin="notHovering = false"
-      @focusout="notHovering = true"
       :class="{ isDisabled: isPlaylistActive, notHovering: notHovering }"
     >
       <div class="track-info">
