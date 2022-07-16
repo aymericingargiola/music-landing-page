@@ -235,6 +235,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-plusplus */
+/* eslint-disable func-names */
 import slider from 'vue3-slider';
 
 export default {
@@ -337,7 +338,6 @@ export default {
             newRandomTrack = Math.floor(
               Math.random() * (this.musicPlaylist.length - 1 - 0 + 1),
             ) + 0;
-            console.log(newRandomTrack);
           }
           this.changeSong(newRandomTrack);
         }

@@ -100,23 +100,16 @@ export default {
     VideoPlayer,
     LoaderComponent,
   },
-  setup(props, context) {
+  setup(props) {
     const heroBgFolder = '/imgs/heroes/';
-    const pushedContent = ['Q2FzY2FkYSAtIE1pcmFjbGUgKExhemVyekYhbmUgQm9vdGxlZyBFZGl0IDIwMjIp'];
     const backgroundImageLoading = ref(true);
     const backgroundImage = ref(null);
-    if (!props.selectedContent) {
-      context.emit('update:selectedContent', pushedContent[0]);
-    }
-    const selectedId = computed(() => (
-      props.selectedContent
-        ? props.selectedContent
-        : pushedContent[0]
-    ));
     const currentItem = computed(() => {
-      const current = props.playlists.mp3.find((music) => (music.id === selectedId.value))
-      || props.playlists.video.find((music) => (music.id === selectedId.value))
-      || props.playlists.wav.find((music) => (music.id === selectedId.value));
+      const current = props.playlists.mp3.find(
+        (music) => (music.id === props.selectedContent),
+      )
+      || props.playlists.video.find((music) => (music.id === props.selectedContent))
+      || props.playlists.wav.find((music) => (music.id === props.selectedContent));
       if (!current && (props.playlists.mp3.length > 0
       || props.playlists.video.length > 0
       || props.playlists.wav.length > 0)) {
@@ -127,16 +120,16 @@ export default {
       return current;
     });
     const currentItemMp3 = computed(
-      () => props.playlists.mp3?.find((music) => (music.id === selectedId.value)),
+      () => props.playlists.mp3?.find((music) => (music.id === props.selectedContent)),
     );
     const currentItemLossless = computed(
-      () => props.playlists.wav?.find((music) => (music.id === selectedId.value)),
+      () => props.playlists.wav?.find((music) => (music.id === props.selectedContent)),
     );
     const currentItemVideo = computed(
-      () => props.playlists.video?.find((music) => (music.id === selectedId.value)),
+      () => props.playlists.video?.find((music) => (music.id === props.selectedContent)),
     );
     const currentItemExtra = computed(
-      () => props.playlists.extra?.find((music) => (music.id === selectedId.value)),
+      () => props.playlists.extra?.find((music) => (music.id === props.selectedContent)),
     );
     const releaseDate = computed(() => {
       const date = currentItemExtra?.value?.releaseTimestamp
@@ -183,11 +176,9 @@ export default {
     });
     return {
       heroBgFolder,
-      pushedContent,
       backgroundImage,
       backgroundImageLoading,
       getBackgroundImage,
-      selectedId,
       currentItem,
       currentItemMp3,
       currentItemLossless,
