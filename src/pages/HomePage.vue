@@ -39,6 +39,9 @@
       @update:selectedContent="updateSelectedContent($event)"/>
     </div>
   </div>
+  <AudioPlayer v-if="playlists && playlists.mp3" :playlist="playlists.mp3"
+  :selectedContent="selectedContent"
+  @update:selectedContent="updateSelectedContent($event)"/>
 </template>
 
 <script>
@@ -47,6 +50,7 @@ import {
 } from 'vue';
 import array from '@/helpers/array';
 import { useRouter } from 'vue-router';
+import AudioPlayer from '@/components/AudioPlayer/AudioPlayer.vue';
 import HeroComponent from '@/components/HeroComponent.vue';
 import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
 import TextFilter from '@/components/Filters/TextFilter.vue';
@@ -57,6 +61,7 @@ export default {
     HeroComponent,
     PlaylistComponent,
     TextFilter,
+    AudioPlayer,
   },
   setup() {
     const router = useRouter();
@@ -71,6 +76,7 @@ export default {
       router.push({ path: '/', query: { track: selectedContent.value } });
     }
     function textFilterPlaylists() {
+      console.log('enter');
       const arr = array.objectMap(playlists, (value) => value.filter((music) => {
         const textSearchValue = textFilter?.value?.normalize('NFC').toLowerCase();
         const textSearchValueArtist = textFilterArtist?.value?.normalize('NFC').toLowerCase();
@@ -89,9 +95,12 @@ export default {
           : true;
         return filterIncludeSearch && filterArtistIncludeSearch && filterTitleIncludeSearch;
       }));
-      if (!selectedContent.value && (textFilter.value?.length >= 3
+      if ((textFilter.value?.length >= 3
       || textFilterArtist.value?.length >= 3
-      || textFilterTitle.value?.length >= 3)) {
+      || textFilterTitle.value?.length >= 3)
+      && (arr.mp3.findIndex((m) => m.id === selectedContent.value) === -1
+      && arr.wav.findIndex((m) => m.id === selectedContent.value) === -1
+      && arr.video.findIndex((m) => m.id === selectedContent.value) === -1)) {
         selectedContent.value = arr.mp3[0]?.id || arr.wav[0]?.id || arr.video[0]?.id;
         router.push({ path: '/', query: { track: selectedContent.value } });
       }

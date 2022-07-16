@@ -12,3 +12,21 @@ $active-purple-light: #BF94FF;
 
 $alert: #E91916;
 $valid: #00F593;
+
+$dark-color: #313131;
+$dark-background: #2b3037;
+$darker-background: rgb(35,36,42);
+$light-color: #FFF;
+
+$light-pink: #bf04a7;
+$light-cyan: #04bf8f;
+
+$colors-map: (
+    black: "0, 0, 0",
+    white: "255, 255, 255",
+    dark: "49, 49, 49",
+    dark-bg: "43, 48, 55",
+    darker-bg: "35,36,42",
+    light-pink: "191, 4, 167",
+    light-cyan: "4, 191, 143"
+);
