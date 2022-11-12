@@ -42,6 +42,7 @@
   <AudioPlayer v-if="playlists && playlists.mp3" :playlist="playlists.mp3"
   :selectedContent="selectedContent"
   @update:selectedContent="updateSelectedContent($event)"/>
+  <SupportComponent/>
 </template>
 
 <script>
@@ -54,6 +55,7 @@ import AudioPlayer from '@/components/AudioPlayer/AudioPlayer.vue';
 import HeroComponent from '@/components/HeroComponent.vue';
 import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
 import TextFilter from '@/components/Filters/TextFilter.vue';
+import SupportComponent from '@/components/Tools/SupportComponent.vue';
 
 export default {
   name: 'HomePage',
@@ -62,6 +64,7 @@ export default {
     PlaylistComponent,
     TextFilter,
     AudioPlayer,
+    SupportComponent,
   },
   setup() {
     const router = useRouter();

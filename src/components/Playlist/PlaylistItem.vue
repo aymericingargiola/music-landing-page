@@ -3,6 +3,14 @@
   :class="[{selected: selectedContent === music.id},
   {missing: !extra}]"
   @click="updateSelectedContent(music.id)" @keydown="updateSelectedContent(music.id)">
+    <span class="cover">
+      <img
+          :src="`imgs/covers/${music.id}.jpg`"
+          alt="cover"
+          id="playerAlbumArt"
+          onerror="this.src='imgs/covers/default-empty.png'"
+        />
+    </span>
     <div class="item-container" :type="music.extension">
       <div class="info-bar">
         <span class="small-info extension">{{ music.extension }}</span
@@ -50,22 +58,50 @@ export default {
   border-radius: 6px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0);
   transition: 1s ease;
+  overflow: hidden;
   //animation: show 1.5s;
   cursor: pointer;
   &.missing {
     //opacity: 0.25;
   }
-  &.selected {
-    background-color: color($color: $active-purple-hover);
-  }
   &:not(:first-child) {
     margin-top: 12px;
+  }
+  .cover {
+    transition: 0.5s ease;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0.15;
+    &::after {
+      content: '';
+      transition: 0.5s ease;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, $background2 10%, transparent 100%);
+      left: 0;
+      top: 0;
+    }
+    img {
+      transition: 0.5s ease;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
   }
   .item-container {
     color: inherit;
     text-decoration: none;
     padding: 24px;
     display: block;
+    z-index: 1;
+    position: relative;
     .info-bar {
       position: absolute;
       bottom: 0;
@@ -166,8 +202,19 @@ export default {
       }
     }
   }
+  &.selected {
+    background-color: color($color: $active-purple-hover);
+    .cover {
+      &::after {
+        background: linear-gradient(to right, $active-purple-hover 2%, transparent 100%);
+      }
+    }
+  }
   &:hover {
     box-shadow: 0px 0px 15px color($color: $active-purple-hover, $opacity: 0.5);
+    .cover {
+      transform: translateX(100%);
+    }
     .item-container {
       .info-bar {
         .small-info {
