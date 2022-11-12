@@ -19,7 +19,8 @@
       <div class="item-content">
         <a class="image" :type="music.extension" :href="music.url" target="_blank">download</a>
         <div class="info">
-          <span>{{ music.name }}</span>
+          <span class="artist">{{ music.artist }}</span>
+          <span class="title">{{ music.title }}</span>
         </div>
       </div>
     </div>
@@ -136,6 +137,7 @@ export default {
     .item-content {
       display: flex;
       flex-direction: row;
+      align-items: center;
       .image {
         font-size: 0px;
         position: relative;
@@ -198,7 +200,14 @@ export default {
       }
       .info {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        .artist {
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+        .title {
+          font-size: 14px;
+        }
       }
     }
   }
