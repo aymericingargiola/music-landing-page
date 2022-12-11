@@ -13,7 +13,10 @@
           <div class="row">
             <div class="col-12">
               <transition name="fade" mode="out-in">
-                <h1 :key="currentItem">{{currentItem.name}}</h1>
+                <h1 :key="currentItem">
+                  <span class="artist">{{currentItem.artist}}</span>
+                  <span class="title">{{currentItem.title}}</span>
+                </h1>
               </transition>
             </div>
           </div>
@@ -204,6 +207,14 @@ export default {
     h1 {
       margin-top: 0px;
       margin-bottom: 30px;
+      .artist {
+        display: block;
+        letter-spacing: 2px;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: normal;
+      }
     }
     .empty-video {
       background: $background;
@@ -293,6 +304,7 @@ export default {
       margin-bottom: 24px;
     }
     .video-content {
+      display: flex;
       position: absolute;
       width: 100%;
       height: 100%;

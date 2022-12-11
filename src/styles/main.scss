@@ -1,5 +1,7 @@
 @import "animations";
 @import "libs/animate";
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -8,7 +10,7 @@ html {
     padding: 0px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif;
     color: $text;
     background: $background;
     overflow-x: hidden;
