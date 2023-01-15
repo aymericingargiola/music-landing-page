@@ -8,6 +8,20 @@
   @update:selectedContent="updateSelectedContent($event)"/>
   <div class="container">
     <div class="row">
+      <LatestTracksComponent v-if="playlists.mp3
+      && playlists.wav
+      && playlists.video
+      && playlists.extra"
+      :playlists="{
+        mp3: playlists.mp3,
+        wav: playlists.wav,
+        video: playlists.video,
+        extra: playlists.extra
+      }"
+      />
+    </div>
+    <div class="row">
+      <h2>Search</h2>
       <TextFilter v-if="playlists.mp3"
       sizeMobile="d-none"
       sizeTablet=""
@@ -53,6 +67,7 @@ import array from '@/helpers/array';
 import { useRouter } from 'vue-router';
 import AudioPlayer from '@/components/AudioPlayer/AudioPlayer.vue';
 import HeroComponent from '@/components/HeroComponent.vue';
+import LatestTracksComponent from '@/components/LatestTracksComponent.vue';
 import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
 import TextFilter from '@/components/Filters/TextFilter.vue';
 import SupportComponent from '@/components/Tools/SupportComponent.vue';
@@ -61,6 +76,7 @@ export default {
   name: 'HomePage',
   components: {
     HeroComponent,
+    LatestTracksComponent,
     PlaylistComponent,
     TextFilter,
     AudioPlayer,

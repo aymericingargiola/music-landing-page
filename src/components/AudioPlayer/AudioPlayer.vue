@@ -1008,16 +1008,17 @@ $desktop-width: 992px;
           padding: 0 4px;
           width: 100px;
           overflow: hidden;
+          margin-left: 8px;
           .track {
-            border-radius: 0px;
+            border-radius: 5px;
             background-color: color(white, 0.5);
           }
           .track-filled {
             background-color: $active-purple;
-            border-radius: 0px;
+            border-radius: 5px;
           }
           .handle {
-            border-radius: 0px;
+            border-radius: 5px;
             // height: 10px;
             // width: 8px;
             background-color: white;
