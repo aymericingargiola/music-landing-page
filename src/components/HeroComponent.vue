@@ -1,8 +1,9 @@
 <template>
   <div v-if="currentItem" class="hero-component" ref="backgroundImageElRel">
-        <div class="background" ref="backgroundImageEl">
+        <div class="background">
           <transition name="fade" mode="out-in">
             <img
+            ref="backgroundImageEl"
             :key="backgroundImage"
             :alt="currentItem.name"
             :src="backgroundImage">
@@ -182,10 +183,22 @@ export default {
       return optUrl;
     });
     const parallaxBackground = () => {
+      console.log(
+        backgroundImageElRel.value.getBoundingClientRect().bottom,
+        backgroundImageElRel.value.offsetHeight,
+      );
       if (
         backgroundImageElRel.value.getBoundingClientRect().top
         < 0
-      ) backgroundImageEl.value.style.transform = `translate3d(0, ${0.15 * backgroundImageElRel.value.getBoundingClientRect().top}px, 0)`;
+      ) backgroundImageEl.value.style.transform = `translate3d(0, ${0.15 * -backgroundImageElRel.value.getBoundingClientRect().top}px, 0)`;
+      if (
+        backgroundImageElRel.value.getBoundingClientRect().bottom
+        - backgroundImageElRel.value.offsetHeight
+        < 0
+        && backgroundImageElRel.value.getBoundingClientRect().bottom > 0
+      ) {
+        backgroundImageEl.value.style.opacity = `${(backgroundImageElRel.value.getBoundingClientRect().bottom / backgroundImageElRel.value.offsetHeight) * 100}%`;
+      }
     };
     onMounted(() => {
       window.addEventListener('scroll', parallaxBackground);
