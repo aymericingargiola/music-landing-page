@@ -1,6 +1,6 @@
 <template>
-  <div v-if="currentItem" class="hero-component">
-        <div class="background">
+  <div v-if="currentItem" class="hero-component" ref="backgroundImageElRel">
+        <div class="background" ref="backgroundImageEl">
           <transition name="fade" mode="out-in">
             <img
             :key="backgroundImage"
@@ -87,7 +87,9 @@
 </template>
 
 <script>
-import { ref, computed, watch } from 'vue';
+import {
+  ref, computed, watch, onMounted, onUnmounted,
+} from 'vue';
 import images from '@/helpers/images';
 import VideoPlayer from '@/components/Medias/VideoPlayer.vue';
 import LoaderComponent from '@/components/Tools/loaderComponent.vue';
@@ -107,6 +109,8 @@ export default {
     const heroBgFolder = '/imgs/heroes/';
     const backgroundImageLoading = ref(true);
     const backgroundImage = ref(null);
+    const backgroundImageEl = ref(null);
+    const backgroundImageElRel = ref(null);
     const currentItem = computed(() => {
       const current = props.playlists.mp3.find(
         (music) => (music.id === props.selectedContent),
@@ -177,9 +181,23 @@ export default {
       const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
       return optUrl;
     });
+    const parallaxBackground = () => {
+      if (
+        backgroundImageElRel.value.getBoundingClientRect().top
+        < 0
+      ) backgroundImageEl.value.style.transform = `translate3d(0, ${0.15 * backgroundImageElRel.value.getBoundingClientRect().top}px, 0)`;
+    };
+    onMounted(() => {
+      window.addEventListener('scroll', parallaxBackground);
+    });
+    onUnmounted(() => {
+      window.removeEventListener(parallaxBackground);
+    });
     return {
       heroBgFolder,
       backgroundImage,
+      backgroundImageEl,
+      backgroundImageElRel,
       backgroundImageLoading,
       getBackgroundImage,
       currentItem,
@@ -270,6 +288,7 @@ export default {
     max-height: 600px;
     pointer-events: none;
     opacity: 1;
+    overflow: hidden;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -279,7 +298,7 @@ export default {
       object-fit: cover;
       object-position: center;
       width: 100%;
-      height: 100%;
+      height: 99%;
     }
     &::after {
       content: '';
