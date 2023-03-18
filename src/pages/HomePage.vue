@@ -1,17 +1,12 @@
 <template>
-  <HeroComponent v-if="playlists.mp3
-  && playlists.wav
-  && playlists.video
-  && playlists.extra" :playlists="filteredPlaylists"
+  <LoaderComponent class="loader" v-if="!playlistsReady"/>
+  <HeroComponent v-if="playlistsReady" :playlists="filteredPlaylists"
   :selectedContent="selectedContent"
   :filtering="filteredPlaylists ? true : false"
   @update:selectedContent="updateSelectedContent($event)"/>
   <div class="container">
     <div class="row">
-      <LatestTracksComponent v-if="playlists.mp3
-      && playlists.wav
-      && playlists.video
-      && playlists.extra"
+      <LatestTracksComponent v-if="playlistsReady"
       :playlists="{
         mp3: playlists.mp3,
         wav: playlists.wav,
@@ -21,22 +16,22 @@
       />
     </div>
     <div class="row">
-      <h2>Search</h2>
-      <TextFilter v-if="playlists.mp3"
+      <h2 v-if="playlistsReady">Search</h2>
+      <TextFilter v-if="playlistsReady"
       sizeMobile="d-none"
       sizeTablet=""
       sizeDesktop="d-lg-block col-lg-4"
       placeholder="Search artist"
       @update:updateValue="textFilterArtist = $event"
       />
-      <TextFilter v-if="playlists.mp3"
+      <TextFilter v-if="playlistsReady"
       sizeMobile="d-none"
       sizeTablet=""
       sizeDesktop="d-lg-block col-lg-4"
       placeholder="Search title"
       @update:updateValue="textFilterTitle = $event"
       />
-      <TextFilter v-if="playlists.mp3"
+      <TextFilter v-if="playlistsReady"
       sizeMobile="col-12"
       sizeTablet="col-md-12"
       sizeDesktop="col-lg-4"
@@ -53,7 +48,7 @@
       @update:selectedContent="updateSelectedContent($event)"/>
     </div>
   </div>
-  <AudioPlayer v-if="playlists && playlists.mp3" :playlist="playlists.mp3"
+  <AudioPlayer v-if="playlistsReady"
   :selectedContent="selectedContent"
   @update:selectedContent="updateSelectedContent($event)"/>
   <SupportComponent/>
@@ -71,6 +66,7 @@ import LatestTracksComponent from '@/components/LatestTracksComponent.vue';
 import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
 import TextFilter from '@/components/Filters/TextFilter.vue';
 import SupportComponent from '@/components/Tools/SupportComponent.vue';
+import LoaderComponent from '@/components/Tools/loaderComponent.vue';
 
 export default {
   name: 'HomePage',
@@ -81,6 +77,7 @@ export default {
     TextFilter,
     AudioPlayer,
     SupportComponent,
+    LoaderComponent,
   },
   setup() {
     const router = useRouter();
@@ -91,6 +88,10 @@ export default {
     const textFilterArtist = ref(null);
     const textFilterTitle = ref(null);
     const playlists = reactive({});
+    const playlistsReady = computed(() => playlists.mp3
+      && playlists.wav
+      && playlists.video
+      && playlists.extra);
     function updateSelectedContent(id) {
       selectedContent.value = id;
       router.push({ path: '/', query: { track: selectedContent.value } });
@@ -150,6 +151,7 @@ export default {
       textFilterArtist,
       textFilterTitle,
       playlists,
+      playlistsReady,
       filteredPlaylists,
     };
   },
