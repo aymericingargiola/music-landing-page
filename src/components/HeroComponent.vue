@@ -183,10 +183,6 @@ export default {
       return optUrl;
     });
     const parallaxBackground = () => {
-      console.log(
-        backgroundImageElRel.value.getBoundingClientRect().bottom,
-        backgroundImageElRel.value.offsetHeight,
-      );
       if (
         backgroundImageElRel.value.getBoundingClientRect().top
         < 0
@@ -312,6 +308,7 @@ export default {
       object-position: center;
       width: 100%;
       height: 99%;
+      filter: blur(15px);
     }
     &::after {
       content: '';
