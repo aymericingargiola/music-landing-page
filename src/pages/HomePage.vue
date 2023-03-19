@@ -1,61 +1,75 @@
 <template>
-  <HeroComponent v-if="playlists.mp3
-  && playlists.wav
-  && playlists.video
-  && playlists.extra" :playlists="filteredPlaylists"
-  :selectedContent="selectedContent"
-  :filtering="filteredPlaylists ? true : false"
-  @update:selectedContent="updateSelectedContent($event)"/>
+  <Transition>
+    <LoaderComponent class="loader" v-if="!playlistsReady"/>
+  </Transition>
+  <Transition>
+    <HeroComponent v-if="playlistsReady" :playlists="filteredPlaylists"
+    :selectedContent="selectedContent"
+    :filtering="filteredPlaylists ? true : false"
+    @update:selectedContent="updateSelectedContent($event)"/>
+  </Transition>
   <div class="container">
     <div class="row">
-      <LatestTracksComponent v-if="playlists.mp3
-      && playlists.wav
-      && playlists.video
-      && playlists.extra"
-      :playlists="{
-        mp3: playlists.mp3,
-        wav: playlists.wav,
-        video: playlists.video,
-        extra: playlists.extra
-      }"
-      />
+      <Transition>
+        <LatestTracksComponent v-if="playlistsReady"
+        :playlists="{
+          mp3: playlists.mp3,
+          wav: playlists.wav,
+          video: playlists.video,
+          extra: playlists.extra
+        }"
+        />
+      </Transition>
     </div>
     <div class="row">
-      <h2>Search</h2>
-      <TextFilter v-if="playlists.mp3"
-      sizeMobile="d-none"
-      sizeTablet=""
-      sizeDesktop="d-lg-block col-lg-4"
-      placeholder="Search artist"
-      @update:updateValue="textFilterArtist = $event"
-      />
-      <TextFilter v-if="playlists.mp3"
-      sizeMobile="d-none"
-      sizeTablet=""
-      sizeDesktop="d-lg-block col-lg-4"
-      placeholder="Search title"
-      @update:updateValue="textFilterTitle = $event"
-      />
-      <TextFilter v-if="playlists.mp3"
-      sizeMobile="col-12"
-      sizeTablet="col-md-12"
-      sizeDesktop="col-lg-4"
-      placeholder="Search track"
-      @update:updateValue="textFilter = $event"
-      />
+      <Transition>
+        <h2 v-if="playlistsReady">Search</h2>
+      </Transition>
+      <Transition>
+        <TextFilter v-if="playlistsReady"
+        sizeMobile="d-none"
+        sizeTablet=""
+        sizeDesktop="d-lg-block col-lg-4"
+        placeholder="Search artist"
+        @update:updateValue="textFilterArtist = $event"
+        />
+      </Transition>
+      <Transition>
+        <TextFilter v-if="playlistsReady"
+        sizeMobile="d-none"
+        sizeTablet=""
+        sizeDesktop="d-lg-block col-lg-4"
+        placeholder="Search title"
+        @update:updateValue="textFilterTitle = $event"
+        />
+      </Transition>
+      <Transition>
+        <TextFilter v-if="playlistsReady"
+        sizeMobile="col-12"
+        sizeTablet="col-md-12"
+        sizeDesktop="col-lg-4"
+        placeholder="Search track"
+        @update:updateValue="textFilter = $event"
+        />
+      </Transition>
     </div>
     <div class="row">
-      <PlaylistComponent :playlists="filteredPlaylists"
-      :selectedContent="selectedContent"
-      :textFilter="textFilter"
-      :textFilterArtist="textFilterArtist"
-      :textFilterTitle="textFilterTitle"
-      @update:selectedContent="updateSelectedContent($event)"/>
+      <Transition>
+        <PlaylistComponent :playlists="filteredPlaylists"
+        :selectedContent="selectedContent"
+        :textFilter="textFilter"
+        :textFilterArtist="textFilterArtist"
+        :textFilterTitle="textFilterTitle"
+        @update:selectedContent="updateSelectedContent($event)"/>
+      </Transition>
     </div>
   </div>
-  <AudioPlayer v-if="playlists && playlists.mp3" :playlist="playlists.mp3"
-  :selectedContent="selectedContent"
-  @update:selectedContent="updateSelectedContent($event)"/>
+  <Transition name="pop-b">
+    <AudioPlayer v-if="playlistsReady"
+    :playlist="playlists.mp3"
+    :selectedContent="selectedContent"
+    @update:selectedContent="updateSelectedContent($event)"/>
+  </Transition>
   <SupportComponent/>
 </template>
 
@@ -71,6 +85,7 @@ import LatestTracksComponent from '@/components/LatestTracksComponent.vue';
 import PlaylistComponent from '@/components/Playlist/PlaylistComponent.vue';
 import TextFilter from '@/components/Filters/TextFilter.vue';
 import SupportComponent from '@/components/Tools/SupportComponent.vue';
+import LoaderComponent from '@/components/Tools/loaderComponent.vue';
 
 export default {
   name: 'HomePage',
@@ -81,6 +96,7 @@ export default {
     TextFilter,
     AudioPlayer,
     SupportComponent,
+    LoaderComponent,
   },
   setup() {
     const router = useRouter();
@@ -91,6 +107,10 @@ export default {
     const textFilterArtist = ref(null);
     const textFilterTitle = ref(null);
     const playlists = reactive({});
+    const playlistsReady = computed(() => playlists.mp3
+      && playlists.wav
+      && playlists.video
+      && playlists.extra);
     function updateSelectedContent(id) {
       selectedContent.value = id;
       router.push({ path: '/', query: { track: selectedContent.value } });
@@ -150,6 +170,7 @@ export default {
       textFilterArtist,
       textFilterTitle,
       playlists,
+      playlistsReady,
       filteredPlaylists,
     };
   },
@@ -159,4 +180,24 @@ export default {
 <style lang="scss">
 @import './src/styles/bootstrap-grid';
 @import './src/styles/main';
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 1s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+.pop-b-enter-active,
+.pop-b-leave-active {
+  transform: translateY(55vh);
+  transition: transform 1s ease;
+  transition-delay: 1s;
+}
+
+.pop-b-enter-from,
+.pop-b-leave-to {
+  transform: translateY(100%);
+}
 </style>

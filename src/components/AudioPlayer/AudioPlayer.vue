@@ -298,7 +298,7 @@ export default {
           pl.findIndex(filterPlaylist);
         });
       }
-      this.musicPlaylist = pl;
+      this.musicPlaylist = pl ?? [];
       if (this.selectedContent) {
         this.selectedContentChanged();
       }
