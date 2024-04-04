@@ -1,8 +1,8 @@
 {
     "userSettings": {
-        "defaultUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne/",
-        "losslessUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Lossless/",
-        "videoUrl": "https://antiphates.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/",
+        "defaultUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne/",
+        "losslessUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Lossless/",
+        "videoUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/",
         "saveJsonPath": "playlist.json",
         "losslessSaveJsonPath": "playlistLossless.json",
         "videoSaveJsonPath": "playlistVideo.json",

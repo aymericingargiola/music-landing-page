@@ -4,7 +4,7 @@
       <div class="col-12 col-md-4">
         <h3>
           MP3 ({{playlists.mp3.length}})
-          <a href="https://antiphates.feralhosting.com/aymeric000/links/music/mp3.zip" class="download-all">Download all</a>
+          <a href="https://talos.feralhosting.com/aymeric000/links/music/mp3.zip" class="download-all">Download all</a>
         </h3>
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
@@ -24,7 +24,7 @@
       <div class="col-12 col-md-4">
         <h3>
           Lossless ({{playlists.wav.length}})
-          <a href="https://antiphates.feralhosting.com/aymeric000/links/music/wav.zip" class="download-all">Download all</a>
+          <a href="https://talos.feralhosting.com/aymeric000/links/music/wav.zip" class="download-all">Download all</a>
         </h3>
         <div class="items-content">
           <transition-group name="playlist-items" tag="ul">
