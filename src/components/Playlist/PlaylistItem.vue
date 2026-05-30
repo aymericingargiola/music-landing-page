@@ -27,28 +27,25 @@
   </li>
 </template>
 
-<script>
+<script setup>
 import format from '@/helpers/format';
 
-export default {
-  name: 'PlaylistItem',
-  props: {
-    music: Object,
-    extra: Object,
-    selectedContent: String,
-  },
-  methods: {
-    convertSize(bytes) {
-      return format.bytesToSize(bytes);
-    },
-    updateSelectedContent(id) {
-      if (!this.selectedContent || this.selectedContent !== id) {
-        this.$emit('update:selectedContent', id);
-      } else if (this.selectedContent === id) {
-        this.$emit('update:selectedContent', null);
-      }
-    },
-  },
+const props = defineProps({
+  music: Object,
+  extra: Object,
+  selectedContent: String,
+});
+
+const emit = defineEmits(['update:selectedContent']);
+
+const convertSize = (bytes) => format.bytesToSize(bytes);
+
+const updateSelectedContent = (id) => {
+  if (!props.selectedContent || props.selectedContent !== id) {
+    emit('update:selectedContent', id);
+  } else if (props.selectedContent === id) {
+    emit('update:selectedContent', null);
+  }
 };
 </script>
 

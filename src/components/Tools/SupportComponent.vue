@@ -12,34 +12,27 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 
-export default {
-  name: 'SupportComponent',
-  setup() {
-    const componentRoot = ref(null);
-    function hideComponent() {
-      componentRoot.value.classList.add('hidden');
-    }
-    function showTooltip(el) {
-      el.classList.remove('hidden');
-      setTimeout(() => {
-        el.classList.add('hidden');
-      }, 2500);
-    }
-    function copyEmail(event, email) {
-      const tooltip = event.target.parentNode.querySelector('.tooltip');
-      if (tooltip) showTooltip(tooltip);
-      navigator.clipboard.writeText(email);
-    }
-    return {
-      copyEmail,
-      hideComponent,
-      componentRoot,
-    };
-  },
-};
+const componentRoot = ref(null);
+
+function hideComponent() {
+  componentRoot.value.classList.add('hidden');
+}
+
+function showTooltip(el) {
+  el.classList.remove('hidden');
+  setTimeout(() => {
+    el.classList.add('hidden');
+  }, 2500);
+}
+
+function copyEmail(event, email) {
+  const tooltip = event.target.parentNode.querySelector('.tooltip');
+  if (tooltip) showTooltip(tooltip);
+  navigator.clipboard.writeText(email);
+}
 </script>
 
 <style lang="scss">

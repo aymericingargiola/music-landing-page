@@ -5,25 +5,22 @@
     </div>
 </template>
 
-<script>
-export default {
-  name: 'TextFilter',
-  props: {
-    sizeMobile: String,
-    sizeTablet: String,
-    sizeDesktop: String,
-    placeholder: String,
-  },
-  data() {
-    return {
-      inputValue: '',
-    };
-  },
-  methods: {
-    updateValue(e) {
-      this.$emit('update:updateValue', e.target.value);
-    },
-  },
+<script setup>
+import { ref } from 'vue';
+
+defineProps({
+  sizeMobile: String,
+  sizeTablet: String,
+  sizeDesktop: String,
+  placeholder: String,
+});
+
+const emit = defineEmits(['update:updateValue']);
+
+const inputValue = ref('');
+
+const updateValue = (e) => {
+  emit('update:updateValue', e.target.value);
 };
 </script>
 

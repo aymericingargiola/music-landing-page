@@ -87,7 +87,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import {
   ref, computed, watch, onMounted, onUnmounted,
 } from 'vue';
@@ -95,130 +95,120 @@ import images from '@/helpers/images';
 import VideoPlayer from '@/components/Medias/VideoPlayer.vue';
 import LoaderComponent from '@/components/Tools/loaderComponent.vue';
 
-export default {
-  props: {
-    playlists: Object,
-    selectedContent: String,
-    filtering: Boolean,
-  },
-  name: 'HeroComponent',
-  components: {
-    VideoPlayer,
-    LoaderComponent,
-  },
-  setup(props) {
-    const heroBgFolder = '/imgs/heroes/';
-    const backgroundImageLoading = ref(true);
-    const backgroundImage = ref(null);
-    const backgroundImageEl = ref(null);
-    const backgroundImageElRel = ref(null);
-    const currentItem = computed(() => {
-      const current = props.playlists.mp3.find(
-        (music) => (music.id === props.selectedContent),
-      )
-      || props.playlists.video.find((music) => (music.id === props.selectedContent))
-      || props.playlists.wav.find((music) => (music.id === props.selectedContent));
-      if (!current && (props.playlists.mp3.length > 0
-      || props.playlists.video.length > 0
-      || props.playlists.wav.length > 0)) {
-        return props.playlists.mp3[0]
-        || props.playlists.video[0]
-        || props.playlists.wav[0];
-      }
-      return current;
-    });
-    const currentItemMp3 = computed(
-      () => props.playlists.mp3?.find((music) => (music.id === props.selectedContent)),
-    );
-    const currentItemLossless = computed(
-      () => props.playlists.wav?.find((music) => (music.id === props.selectedContent)),
-    );
-    const currentItemVideo = computed(
-      () => props.playlists.video?.find((music) => (music.id === props.selectedContent)),
-    );
-    const currentItemExtra = computed(
-      () => props.playlists.extra?.find((music) => (music.id === props.selectedContent)),
-    );
-    const releaseDate = computed(() => {
-      const date = currentItemExtra?.value?.releaseTimestamp
-        ? new Date(parseInt(currentItemExtra.value.releaseTimestamp, 10) * 1000)
-        : null;
-      const options = {
-        year: 'numeric', month: 'long', day: 'numeric',
-      };
-      if (!date) return date;
-      return date.toLocaleDateString('en-US', options);
-    });
-    async function getBackgroundImage() {
-      backgroundImageLoading.value = true;
-      if (!props.selectedContent) return;
-      backgroundImage.value = null;
-      const imgIdMap = currentItemExtra?.value?.remapImages
-      || currentItemExtra?.value?.id
-      || 'unknow';
-      const imgUrl = `${heroBgFolder}${imgIdMap}.webp`;
-      const isLoaded = await images.preloadImage(imgUrl);
-      // Long image loading test
-      // eslint-disable-next-line no-promise-executor-return
-      // await new Promise((resolve) => setTimeout(resolve, 20000));
-      if (isLoaded === true) {
-        backgroundImage.value = imgUrl;
-      } else {
-        backgroundImage.value = `${heroBgFolder}unknow.webp`;
-      }
-      backgroundImageLoading.value = false;
+const props = defineProps({
+  playlists: Object,
+  selectedContent: String,
+  filtering: Boolean,
+});
+
+const heroBgFolder = '/imgs/heroes/';
+const backgroundImageLoading = ref(true);
+const backgroundImage = ref(null);
+const backgroundImageEl = ref(null);
+const backgroundImageElRel = ref(null);
+
+const currentItem = computed(() => {
+  const current = props.playlists.mp3.find(
+    (music) => (music.id === props.selectedContent),
+  )
+  || props.playlists.video.find((music) => (music.id === props.selectedContent))
+  || props.playlists.wav.find((music) => (music.id === props.selectedContent));
+  if (!current && (props.playlists.mp3.length > 0
+  || props.playlists.video.length > 0
+  || props.playlists.wav.length > 0)) {
+    return props.playlists.mp3[0]
+    || props.playlists.video[0]
+    || props.playlists.wav[0];
+  }
+  return current;
+});
+
+const currentItemMp3 = computed(
+  () => props.playlists.mp3?.find((music) => (music.id === props.selectedContent)),
+);
+
+const currentItemLossless = computed(
+  () => props.playlists.wav?.find((music) => (music.id === props.selectedContent)),
+);
+
+const currentItemVideo = computed(
+  () => props.playlists.video?.find((music) => (music.id === props.selectedContent)),
+);
+
+const currentItemExtra = computed(
+  () => props.playlists.extra?.find((music) => (music.id === props.selectedContent)),
+);
+
+const releaseDate = computed(() => {
+  const date = currentItemExtra?.value?.releaseTimestamp
+    ? new Date(parseInt(currentItemExtra.value.releaseTimestamp, 10) * 1000)
+    : null;
+  const options = {
+    year: 'numeric', month: 'long', day: 'numeric',
+  };
+  if (!date) return date;
+  return date.toLocaleDateString('en-US', options);
+});
+
+async function getBackgroundImage() {
+  backgroundImageLoading.value = true;
+  if (!props.selectedContent) return;
+  backgroundImage.value = null;
+  const imgIdMap = currentItemExtra?.value?.remapImages
+  || currentItemExtra?.value?.id
+  || 'unknow';
+  const imgUrl = `${heroBgFolder}${imgIdMap}.webp`;
+  const isLoaded = await images.preloadImage(imgUrl);
+  // Long image loading test
+  // eslint-disable-next-line no-promise-executor-return
+  // await new Promise((resolve) => setTimeout(resolve, 20000));
+  if (isLoaded === true) {
+    backgroundImage.value = imgUrl;
+  } else {
+    backgroundImage.value = `${heroBgFolder}unknow.webp`;
+  }
+  backgroundImageLoading.value = false;
+}
+
+getBackgroundImage();
+
+watch(
+  () => props.selectedContent,
+  (newVal, oldVal) => {
+    if (newVal !== oldVal) {
+      getBackgroundImage();
     }
-    getBackgroundImage();
-    watch(
-      () => props.selectedContent,
-      (newVal, oldVal) => {
-        if (newVal !== oldVal) {
-          getBackgroundImage();
-        }
-      },
-    );
-    const optiWebVideoUrl = computed(() => {
-      const videoUrl = currentItemVideo?.value?.url;
-      const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
-      return optUrl;
-    });
-    const parallaxBackground = () => {
-      if (
-        backgroundImageElRel.value.getBoundingClientRect().top
-        < 0
-      ) backgroundImageEl.value.style.transform = `translate3d(0, ${0.15 * -backgroundImageElRel.value.getBoundingClientRect().top}px, 0)`;
-      if (
-        backgroundImageElRel.value.getBoundingClientRect().bottom
-        - backgroundImageElRel.value.offsetHeight
-        < 0
-        && backgroundImageElRel.value.getBoundingClientRect().bottom > 0
-      ) {
-        backgroundImageEl.value.style.opacity = `${(backgroundImageElRel.value.getBoundingClientRect().bottom / backgroundImageElRel.value.offsetHeight) * 100}%`;
-      }
-    };
-    onMounted(() => {
-      window.addEventListener('scroll', parallaxBackground);
-    });
-    onUnmounted(() => {
-      window.removeEventListener(parallaxBackground);
-    });
-    return {
-      heroBgFolder,
-      backgroundImage,
-      backgroundImageEl,
-      backgroundImageElRel,
-      backgroundImageLoading,
-      getBackgroundImage,
-      currentItem,
-      currentItemMp3,
-      currentItemLossless,
-      currentItemVideo,
-      currentItemExtra,
-      releaseDate,
-      optiWebVideoUrl,
-    };
   },
+);
+
+const optiWebVideoUrl = computed(() => {
+  const videoUrl = currentItemVideo?.value?.url;
+  const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
+  return optUrl;
+});
+
+const parallaxBackground = () => {
+  if (
+    backgroundImageElRel.value.getBoundingClientRect().top
+    < 0
+  ) backgroundImageEl.value.style.transform = `translate3d(0, ${0.15 * -backgroundImageElRel.value.getBoundingClientRect().top}px, 0)`;
+  if (
+    backgroundImageElRel.value.getBoundingClientRect().bottom
+    - backgroundImageElRel.value.offsetHeight
+    < 0
+    && backgroundImageElRel.value.getBoundingClientRect().bottom > 0
+  ) {
+    backgroundImageEl.value.style.opacity = `${(backgroundImageElRel.value.getBoundingClientRect().bottom / backgroundImageElRel.value.offsetHeight) * 100}%`;
+  }
 };
+
+onMounted(() => {
+  window.addEventListener('scroll', parallaxBackground);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', parallaxBackground);
+});
 </script>
 
 <style lang="scss">

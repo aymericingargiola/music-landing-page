@@ -62,82 +62,70 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref, computed, watch } from 'vue';
 import PaginationComponent from '../Filters/PaginationComponent.vue';
 import PlaylistItem from './PlaylistItem.vue';
 
-export default {
-  props: {
-    playlists: Object,
-    selectedContent: String,
-    textFilter: String,
-    textFilterArtist: String,
-    textFilterTitle: String,
-  },
-  name: 'PlaylistComponent',
-  components: {
-    PaginationComponent,
-    PlaylistItem,
-  },
-  data() {
-    return {
-      currentPageMp3: 1,
-      currentPageLossless: 1,
-      currentPageVideo: 1,
-      maxItems: 10,
-    };
-  },
-  methods: {
-    selectedContentUpdate(event) {
-      this.$emit('update:selectedContent', event);
-    },
-    extra(id) {
-      return this.playlists?.extra?.find((m) => m.id === id);
-    },
-    resetPagination() {
-      this.currentPageMp3 = 1;
-      this.currentPageLossless = 1;
-      this.currentPageVideo = 1;
-    },
-  },
-  watch: {
-    textFilter(newVal, oldVal) {
-      if (newVal?.length >= 3 && newVal !== oldVal) {
-        this.resetPagination();
-      }
-    },
-    textFilterArtist(newVal, oldVal) {
-      if (newVal?.length >= 3 && newVal !== oldVal) {
-        this.resetPagination();
-      }
-    },
-    textFilterTitle(newVal, oldVal) {
-      if (newVal?.length >= 3 && newVal !== oldVal) {
-        this.resetPagination();
-      }
-    },
-  },
-  computed: {
-    currentPageMp3Playlist() {
-      return this.playlists.mp3.slice(
-        (this.currentPageMp3 - 1) * this.maxItems,
-        this.currentPageMp3 * this.maxItems,
-      );
-    },
-    currentPageLosslessPlaylist() {
-      return this.playlists.wav.slice(
-        (this.currentPageLossless - 1) * this.maxItems,
-        this.currentPageLossless * this.maxItems,
-      );
-    },
-    currentPageVideoPlaylist() {
-      return this.playlists.video.slice(
-        (this.currentPageVideo - 1) * this.maxItems,
-        this.currentPageVideo * this.maxItems,
-      );
-    },
-  },
+const props = defineProps({
+  playlists: Object,
+  selectedContent: String,
+  textFilter: String,
+  textFilterArtist: String,
+  textFilterTitle: String,
+});
+
+const emit = defineEmits(['update:selectedContent']);
+
+const currentPageMp3 = ref(1);
+const currentPageLossless = ref(1);
+const currentPageVideo = ref(1);
+const maxItems = ref(10);
+
+const selectedContentUpdate = (event) => {
+  emit('update:selectedContent', event);
 };
+
+const extra = (id) => props.playlists?.extra?.find((m) => m.id === id);
+
+const resetPagination = () => {
+  currentPageMp3.value = 1;
+  currentPageLossless.value = 1;
+  currentPageVideo.value = 1;
+};
+
+watch(() => props.textFilter, (newVal, oldVal) => {
+  if (newVal?.length >= 3 && newVal !== oldVal) {
+    resetPagination();
+  }
+});
+
+watch(() => props.textFilterArtist, (newVal, oldVal) => {
+  if (newVal?.length >= 3 && newVal !== oldVal) {
+    resetPagination();
+  }
+});
+
+watch(() => props.textFilterTitle, (newVal, oldVal) => {
+  if (newVal?.length >= 3 && newVal !== oldVal) {
+    resetPagination();
+  }
+});
+
+const currentPageMp3Playlist = computed(() => props.playlists.mp3.slice(
+  (currentPageMp3.value - 1) * maxItems.value,
+  currentPageMp3.value * maxItems.value,
+));
+
+const currentPageLosslessPlaylist = computed(() => props.playlists.wav.slice(
+  (currentPageLossless.value - 1) * maxItems.value,
+  currentPageLossless.value * maxItems.value,
+));
+
+const currentPageVideoPlaylist = computed(() => props.playlists.video.slice(
+  (currentPageVideo.value - 1) * maxItems.value,
+  currentPageVideo.value * maxItems.value,
+));
 </script>
 
 <style lang="scss">

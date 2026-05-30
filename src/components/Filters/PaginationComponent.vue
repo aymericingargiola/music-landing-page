@@ -15,48 +15,43 @@
     </div>
 </template>
 
-<script>
-export default {
-  name: 'PaginationComponent',
-  props: {
-    itemsTotal: Number,
-    itemsPerPage: Number,
-    maxPagesVisible: Number,
-    currentPage: Number,
-  },
-  computed: {
-    pages() {
-      return Math.ceil(this.itemsTotal / this.itemsPerPage);
-    },
-    getMaxPages() {
-      return this.maxPagesVisible ? this.maxPagesVisible : 3;
-    },
-    maxPagesRange() {
-      const pagesRange = [this.currentPage];
-      for (let pageNb = 1; pageNb < this.getMaxPages; pageNb += 1) {
-        pagesRange.push(this.currentPage - pageNb, this.currentPage + pageNb);
-      }
-      return pagesRange;
-    },
-  },
-  methods: {
-    changePage(page) {
-      this.$emit('update:pagination', page);
-    },
-    showPage(page) {
-      return page === 1
-      || page === this.pages
-      || this.maxPagesRange.includes(page);
-    },
-    showOffset(page) {
-      return (((page > 1 && page < this.pages)
-      && ((page === this.currentPage - this.getMaxPages)
-      && (this.currentPage > this.getMaxPages)))
-      || ((page === this.currentPage + this.getMaxPages)
-      && (this.currentPage < this.pages - this.getMaxPages)));
-    },
-  },
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+  itemsTotal: Number,
+  itemsPerPage: Number,
+  maxPagesVisible: Number,
+  currentPage: Number,
+});
+
+const emit = defineEmits(['update:pagination']);
+
+const pages = computed(() => Math.ceil(props.itemsTotal / props.itemsPerPage));
+
+const getMaxPages = computed(() => (props.maxPagesVisible ? props.maxPagesVisible : 3));
+
+const maxPagesRange = computed(() => {
+  const pagesRange = [props.currentPage];
+  for (let pageNb = 1; pageNb < getMaxPages.value; pageNb += 1) {
+    pagesRange.push(props.currentPage - pageNb, props.currentPage + pageNb);
+  }
+  return pagesRange;
+});
+
+const changePage = (page) => {
+  emit('update:pagination', page);
 };
+
+const showPage = (page) => page === 1
+  || page === pages.value
+  || maxPagesRange.value.includes(page);
+
+const showOffset = (page) => (((page > 1 && page < pages.value)
+  && ((page === props.currentPage - getMaxPages.value)
+  && (props.currentPage > getMaxPages.value)))
+  || ((page === props.currentPage + getMaxPages.value)
+  && (props.currentPage < pages.value - getMaxPages.value)));
 </script>
 
 <style lang="scss">

@@ -9,14 +9,11 @@
   </video>
 </template>
 
-<script>
-export default {
-  name: 'VideoPlayer',
-  props: {
-    sources: Array,
-    poster: String,
-  },
-};
+<script setup>
+defineProps({
+  sources: Array,
+  poster: String,
+});
 </script>
 
 <style lang="scss">

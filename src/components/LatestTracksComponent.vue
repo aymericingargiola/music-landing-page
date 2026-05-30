@@ -31,43 +31,34 @@
   </div>
 </template>
 
-<script>
-import { computed } from 'vue';
+<script setup>
+import { computed, defineProps } from 'vue';
 
-export default {
-  props: {
-    playlists: Object,
-    selectedContent: String,
-    filtering: Boolean,
-  },
-  name: 'LatestTracksComponent',
-  setup(props) {
-    const itemsOrderedByReleaseDate = computed(() => {
-      if (!props.playlists.extra || props.playlists.extra.length < 1) return [];
-      const extras = [...props.playlists.extra];
-      return extras.sort((a, b) => b.releaseTimestamp - a.releaseTimestamp).slice(0, 3);
-    });
-    const getMp3Url = (id) => props.playlists.mp3?.find((m) => m.id === id)?.url;
-    const getWavUrl = (id) => props.playlists.wav?.find((m) => m.id === id)?.url;
-    const getVideoUrl = (id) => props.playlists.video?.find((m) => m.id === id)?.url;
-    const releaseDate = (timestamp) => {
-      const date = timestamp
-        ? new Date(parseInt(timestamp, 10) * 1000)
-        : null;
-      const options = {
-        year: 'numeric', month: 'long', day: 'numeric',
-      };
-      if (!date) return date;
-      return date.toLocaleDateString('en-US', options);
-    };
-    return {
-      itemsOrderedByReleaseDate,
-      getMp3Url,
-      getWavUrl,
-      getVideoUrl,
-      releaseDate,
-    };
-  },
+const props = defineProps({
+  playlists: Object,
+  selectedContent: String,
+  filtering: Boolean,
+});
+
+const itemsOrderedByReleaseDate = computed(() => {
+  if (!props.playlists.extra || props.playlists.extra.length < 1) return [];
+  const extras = [...props.playlists.extra];
+  return extras.sort((a, b) => b.releaseTimestamp - a.releaseTimestamp).slice(0, 3);
+});
+
+const getMp3Url = (id) => props.playlists.mp3?.find((m) => m.id === id)?.url;
+const getWavUrl = (id) => props.playlists.wav?.find((m) => m.id === id)?.url;
+const getVideoUrl = (id) => props.playlists.video?.find((m) => m.id === id)?.url;
+
+const releaseDate = (timestamp) => {
+  const date = timestamp
+    ? new Date(parseInt(timestamp, 10) * 1000)
+    : null;
+  const options = {
+    year: 'numeric', month: 'long', day: 'numeric',
+  };
+  if (!date) return date;
+  return date.toLocaleDateString('en-US', options);
 };
 </script>
 
