@@ -1,11 +1,17 @@
 <template>
-<div class="loader">
-  <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-      <path fill="none" stroke-linecap="round" stroke-width="10"
-      d="M 80 18.75 A 61.25 61.25 0 1 1 30.45 44.00">
-      </path>
-  </svg>
-</div>
+  <div class="loader">
+    <svg
+      viewBox="0 0 160 160"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="none"
+        stroke-linecap="round"
+        stroke-width="10"
+        d="M 80 18.75 A 61.25 61.25 0 1 1 30.45 44.00"
+      />
+    </svg>
+  </div>
 </template>
 
 <script setup>

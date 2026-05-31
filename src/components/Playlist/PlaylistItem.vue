@@ -1,23 +1,33 @@
 <template>
-  <li class="playlist-item"
-  :class="[{selected: selectedContent === music.id},
-  {missing: !extra}]"
-  @click="updateSelectedContent(music.id)" @keydown="updateSelectedContent(music.id)">
+  <li
+    class="playlist-item"
+    :class="[{selected: selectedContent === music.id},
+             {missing: !extra}]"
+    @click="updateSelectedContent(music.id)"
+    @keydown="updateSelectedContent(music.id)"
+  >
     <span class="cover">
       <img
-          :src="`imgs/covers/${music.id}.jpg`"
-          alt="cover"
-          id="playerAlbumArt"
-          onerror="this.src='imgs/covers/default-empty.png'"
-        />
+        id="playerAlbumArt"
+        :src="`imgs/covers/${music.id}.jpg`"
+        alt="cover"
+        onerror="this.src='imgs/covers/default-empty.png'"
+      >
     </span>
-    <div class="item-container" :type="music.extension">
+    <div
+      class="item-container"
+      :type="music.extension"
+    >
       <div class="info-bar">
-        <span class="small-info extension">{{ music.extension }}</span
-        ><span class="small-info size">{{ convertSize(music.bytes) }}</span>
+        <span class="small-info extension">{{ music.extension }}</span><span class="small-info size">{{ convertSize(music.bytes) }}</span>
       </div>
       <div class="item-content">
-        <a class="image" :type="music.extension" :href="music.url" target="_blank">download</a>
+        <a
+          class="image"
+          :type="music.extension"
+          :href="music.url"
+          target="_blank"
+        >download</a>
         <div class="info">
           <span class="artist">{{ music.artist }}</span>
           <span class="title">{{ music.title }}</span>

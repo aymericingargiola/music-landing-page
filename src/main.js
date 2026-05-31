@@ -56,7 +56,7 @@ const app = createApp(Home);
 
 app.use(router);
 
-app.component('font-awesome-icon', FontAwesomeIcon);
+app.component('FontAwesomeIcon', FontAwesomeIcon);
 
 app.config.globalProperties.$isDev = process.env.NODE_ENV === 'development';
 

@@ -1,76 +1,92 @@
 <template>
   <Transition>
-    <LoaderComponent class="loader" v-if="!playlistsReady"/>
+    <LoaderComponent
+      v-if="!playlistsReady"
+      class="loader"
+    />
   </Transition>
   <Transition>
-    <HeroComponent v-if="playlistsReady" :playlists="filteredPlaylists"
-    :selectedContent="selectedContent"
-    :filtering="filteredPlaylists ? true : false"
-    @update:selectedContent="updateSelectedContent($event)"/>
+    <HeroComponent
+      v-if="playlistsReady"
+      :playlists="filteredPlaylists"
+      :selected-content="selectedContent"
+      :filtering="filteredPlaylists ? true : false"
+      @update:selected-content="updateSelectedContent($event)"
+    />
   </Transition>
   <div class="container">
     <div class="row">
       <Transition>
-        <LatestTracksComponent v-if="playlistsReady"
-        :playlists="{
-          mp3: playlists.mp3,
-          wav: playlists.wav,
-          video: playlists.video,
-          extra: playlists.extra
-        }"
+        <LatestTracksComponent
+          v-if="playlistsReady"
+          :playlists="{
+            mp3: playlists.mp3,
+            wav: playlists.wav,
+            video: playlists.video,
+            extra: playlists.extra
+          }"
         />
       </Transition>
     </div>
     <div class="row">
       <Transition>
-        <h2 v-if="playlistsReady">Search</h2>
+        <h2 v-if="playlistsReady">
+          Search
+        </h2>
       </Transition>
       <Transition>
-        <TextFilter v-if="playlistsReady"
-        sizeMobile="d-none"
-        sizeTablet=""
-        sizeDesktop="d-lg-block col-lg-4"
-        placeholder="Search artist"
-        @update:updateValue="textFilterArtist = $event"
+        <TextFilter
+          v-if="playlistsReady"
+          size-mobile="d-none"
+          size-tablet=""
+          size-desktop="d-lg-block col-lg-4"
+          placeholder="Search artist"
+          @update:update-value="textFilterArtist = $event"
         />
       </Transition>
       <Transition>
-        <TextFilter v-if="playlistsReady"
-        sizeMobile="d-none"
-        sizeTablet=""
-        sizeDesktop="d-lg-block col-lg-4"
-        placeholder="Search title"
-        @update:updateValue="textFilterTitle = $event"
+        <TextFilter
+          v-if="playlistsReady"
+          size-mobile="d-none"
+          size-tablet=""
+          size-desktop="d-lg-block col-lg-4"
+          placeholder="Search title"
+          @update:update-value="textFilterTitle = $event"
         />
       </Transition>
       <Transition>
-        <TextFilter v-if="playlistsReady"
-        sizeMobile="col-12"
-        sizeTablet="col-md-12"
-        sizeDesktop="col-lg-4"
-        placeholder="Search track"
-        @update:updateValue="textFilter = $event"
+        <TextFilter
+          v-if="playlistsReady"
+          size-mobile="col-12"
+          size-tablet="col-md-12"
+          size-desktop="col-lg-4"
+          placeholder="Search track"
+          @update:update-value="textFilter = $event"
         />
       </Transition>
     </div>
     <div class="row">
       <Transition>
-        <PlaylistComponent :playlists="filteredPlaylists"
-        :selectedContent="selectedContent"
-        :textFilter="textFilter"
-        :textFilterArtist="textFilterArtist"
-        :textFilterTitle="textFilterTitle"
-        @update:selectedContent="updateSelectedContent($event)"/>
+        <PlaylistComponent
+          :playlists="filteredPlaylists"
+          :selected-content="selectedContent"
+          :text-filter="textFilter"
+          :text-filter-artist="textFilterArtist"
+          :text-filter-title="textFilterTitle"
+          @update:selected-content="updateSelectedContent($event)"
+        />
       </Transition>
     </div>
   </div>
   <Transition name="pop-b">
-    <AudioPlayer v-if="playlistsReady"
-    :playlist="playlists.mp3"
-    :selectedContent="selectedContent"
-    @update:selectedContent="updateSelectedContent($event)"/>
+    <AudioPlayer
+      v-if="playlistsReady"
+      :playlist="playlists.mp3"
+      :selected-content="selectedContent"
+      @update:selected-content="updateSelectedContent($event)"
+    />
   </Transition>
-  <SupportComponent/>
+  <SupportComponent />
 </template>
 
 <script setup>

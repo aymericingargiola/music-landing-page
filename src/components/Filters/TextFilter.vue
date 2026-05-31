@@ -1,8 +1,14 @@
 <template>
-    <div class="search-component"
-    :class="[sizeMobile, sizeTablet, sizeDesktop]">
-        <input v-model="inputValue" v-on:input="updateValue" :placeholder="placeholder">
-    </div>
+  <div
+    class="search-component"
+    :class="[sizeMobile, sizeTablet, sizeDesktop]"
+  >
+    <input
+      v-model="inputValue"
+      :placeholder="placeholder"
+      @input="updateValue"
+    >
+  </div>
 </template>
 
 <script setup>

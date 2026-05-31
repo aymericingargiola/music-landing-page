@@ -36,26 +36,26 @@ function checkFiles(newFileList, savePath) {
     if (newFileList.error) {
         return console.log("New file list request returned an error");
     } else if (globalFunctions.fileExist(savePath) && savePath != "") {
-        console.group("\File list already exist, check files:");
+        console.group("File list already exist, check files:");
         console.time("Time");
         var newFiles = 0;
         var oldFiles = 0;
         var updatedFiles = 0;
         oldFileList = JSON.parse(fs.readFileSync(savePath, 'utf8'));
-        newFileList.forEach(function (item, index) {
-            const idx = oldFileList.findIndex(i => i.id === item.id);
+        newFileList.forEach(function (item) {
+            const idx = oldFileList.findIndex((i) => i.id === item.id);
             if (idx === -1) {
                 console.log("New file : " + item.fileName);
-                ++newFiles;
+                newFiles++;
             } else if (oldFileList[idx] !== item) {
                 console.log("Updated file : " + item.fileName);
-                ++updatedFiles
+                updatedFiles++;
             }
         });
-        oldFileList.forEach(function (item, index) {
+        oldFileList.forEach(function (item) {
             if (newFileList.map(function (items) { return items['id']; }).indexOf(item.id) === -1) {
                 console.log("Removed file : " + item.fileName);
-                ++oldFiles;
+                oldFiles++;
             }
         });
         console.log("New file(s) : " + newFiles);
@@ -80,7 +80,7 @@ function checkFiles(newFileList, savePath) {
 async function buildJson(filelist) {
     console.time("Json build");
     var newFileList = [];
-    await globalFunctions.asyncForEach(filelist, async function (item, index) {
+    await globalFunctions.asyncForEach(filelist, async function (item) {
         let name, cleanName, extension, artist, artistfilter, titlefilter, title, filter, url, bytes, modified;
         await axios(item.url, {method: 'head'}).then(async (response) => { bytes = response.headers['content-length']; modified = response.headers['last-modified'] })
         name = item.name.replace(/ +/g, " ").replace(/\n/g, "").trim();
@@ -187,9 +187,9 @@ switch (process.argv[2]) {
 
 module.exports = {
     buildAll: async function (dist) {
-        await init(globalFunctions.initOptions(checkFilesParam = true, dist = dist))
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "lossless", dist = dist))
-        await init(globalFunctions.initOptions(checkFilesParam = true, format = "video", dist = dist))
+        await init(globalFunctions.initOptions({ checkFilesParam: true, dist }))
+        await init(globalFunctions.initOptions({ checkFilesParam: true, format: "lossless", dist }))
+        await init(globalFunctions.initOptions({ checkFilesParam: true, format: "video", dist }))
         return console.log("Jsons updated")
     }
 }

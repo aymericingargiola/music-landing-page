@@ -4,20 +4,20 @@
 <!-- eslint-disable vuejs-accessibility/mouse-events-have-key-events -->
 <template>
   <div
+    v-if="ready"
     class="audioContainer"
     :class="{ playing: currentlyPlaying, playlistActive: isPlaylistActive }"
-    v-if="ready"
   >
     <!--<div
       class="background-cover"
       :style="{ backgroundImage: 'url(' + musicPlaylist[currentSong].image + ')' }"
     ></div>-->
-    <div class="background-cover"></div>
+    <div class="background-cover" />
     <div
       class="audioPlayerUI isOpen"
+      :class="{ isDisabled: isPlaylistActive, notHovering: notHovering }"
       @mouseover="notHovering = false"
       @mouseout="notHovering = true"
-      :class="{ isDisabled: isPlaylistActive, notHovering: notHovering }"
     >
       <div class="track-info">
         <div class="albumImage">
@@ -28,44 +28,60 @@
             mode="out-in"
           >
             <img
-              :src="`imgs/covers/${musicPlaylist[currentSong].id}.jpg`"
+              id="playerAlbumArt"
               :key="currentSong"
+              :src="`imgs/covers/${musicPlaylist[currentSong].id}.jpg`"
               alt="cover"
               ondragstart="return false;"
-              id="playerAlbumArt"
               onerror="this.src='imgs/covers/default-2.png'"
-            />
+            >
           </transition>
           <!--<div class="loader" :key="currentSong">Loading...</div>-->
         </div>
         <div class="albumDetails">
-          <transition name="slide-fade" mode="out-in">
-            <p class="title" :key="currentSong">{{ musicPlaylist[currentSong].title }}</p>
+          <transition
+            name="slide-fade"
+            mode="out-in"
+          >
+            <p
+              :key="currentSong"
+              class="title"
+            >
+              {{ musicPlaylist[currentSong].title }}
+            </p>
           </transition>
-          <transition name="slide-fade" mode="out-in">
-            <p class="artist" :key="currentSong">{{ musicPlaylist[currentSong].artist }}</p>
+          <transition
+            name="slide-fade"
+            mode="out-in"
+          >
+            <p
+              :key="currentSong"
+              class="artist"
+            >
+              {{ musicPlaylist[currentSong].artist }}
+            </p>
           </transition>
         </div>
 
         <div class="playerButtons">
           <a
-            v-on:click="
+            :class="['button shuffle', shufflePlay ? 'active' : 'disabled']"
+            title="shuffle"
+            @click="
               [
                 shufflePlay ? (shuffleTemp = []) : '',
                 (shufflePlay = !shufflePlay)
               ]
             "
-            :class="['button shuffle', shufflePlay ? 'active' : 'disabled']"
-            title="shuffle"
           >
             <font-awesome-icon icon="random" />
           </a>
           <a
             class="button download-icon"
-            v-on:click="downloadTrack()"
             title="download"
             tabindex="0"
-            v-on:keyup.enter="downloadTrack()"
+            @click="downloadTrack()"
+            @keyup.enter="downloadTrack()"
           >
             <font-awesome-icon icon="download" />
           </a>
@@ -73,47 +89,62 @@
             class="button"
             :class="[
               (shufflePlay && shuffleTemp.indexOf(currentSong) === 0) ||
-              (shufflePlay && shuffleTemp.length < 1)
+                (shufflePlay && shuffleTemp.length < 1)
                 ? 'isDisabled'
                 : !shufflePlay && currentSong === 0
-                ? 'isDisabled'
-                : ''
+                  ? 'isDisabled'
+                  : ''
             ]"
-            v-on:click="prevSong()"
             title="previous"
             tabindex="0"
-            v-on:keyup.enter="prevSong()"
+            @click="prevSong()"
+            @keyup.enter="prevSong()"
           >
             <font-awesome-icon icon="fa-solid fa-backward-fast" />
           </a>
           <a
             class="button play"
-            v-on:click="playAudio()"
             title="play"
             tabindex="0"
-            v-on:keyup.enter="playAudio()"
+            @click="playAudio()"
+            @keyup.enter="playAudio()"
           >
-            <TransitionGroup name="slide-fade" mode="out-in">
-              <font-awesome-icon v-if="currentlyStopped" icon="stop-circle" :key="1" />
-              <font-awesome-icon v-if="currentlyPlaying" icon="pause-circle" :key="1" />
-              <font-awesome-icon v-if="!currentlyPlaying" icon="play-circle" :key="1" />
+            <TransitionGroup
+              name="slide-fade"
+              mode="out-in"
+            >
+              <font-awesome-icon
+                v-if="currentlyStopped"
+                :key="1"
+                icon="stop-circle"
+              />
+              <font-awesome-icon
+                v-if="currentlyPlaying"
+                :key="1"
+                icon="pause-circle"
+              />
+              <font-awesome-icon
+                v-if="!currentlyPlaying"
+                :key="1"
+                icon="play-circle"
+              />
             </TransitionGroup>
           </a>
           <a
             class="button"
             :class="[
               shufflePlay &&
-              shuffleTemp.length == musicPlaylist.length - 1 &&
-              shuffleTemp.indexOf(currentSong) === -1
+                shuffleTemp.length == musicPlaylist.length - 1 &&
+                shuffleTemp.indexOf(currentSong) === -1
                 ? 'isDisabled'
                 : !shufflePlay && currentSong === musicPlaylist.length - 1
-                ? 'isDisabled'
-                : ''
+                  ? 'isDisabled'
+                  : ''
             ]"
-            v-on:click="nextSong()"
             title="next"
             tabindex="0"
-            v-on:keyup.enter="nextSong()"
+            @click="nextSong()"
+            @keyup.enter="nextSong()"
           >
             <font-awesome-icon icon="fa-solid fa-forward-fast" />
           </a>
@@ -127,50 +158,65 @@
           >
             <font-awesome-icon icon="list-alt" />
           </a> -->
-          <a class="button vol-button" v-on:click="muteAudio()">
+          <a
+            class="button vol-button"
+            @click="muteAudio()"
+          >
             <font-awesome-icon
               :icon="
-                this.volume === 0
+                volume === 0
                   ? 'volume-mute'
-                  : this.volume <= 25
-                  ? 'volume-off'
-                  : this.volume <= 65
-                  ? 'volume-down'
-                  : 'volume-up'
+                  : volume <= 25
+                    ? 'volume-off'
+                    : volume <= 65
+                      ? 'volume-down'
+                      : 'volume-up'
               "
             />
           </a>
-            <vue3-slider v-model="volume" />
+          <slider v-model="volume" />
         </div>
       </div>
       <div class="duration-progress-container">
-        <div class="currentTimeContainer" style="text-align:center">
+        <div
+          class="currentTimeContainer"
+          style="text-align:center"
+        >
           <span class="currentTime">{{ fancyTimeFormat(currentTime) }}</span>
         </div>
 
-        <div class="currentProgressBar" v-on:click="changeTime($event)">
+        <div
+          class="currentProgressBar"
+          @click="changeTime($event)"
+        >
           <div
             class="currentProgress"
             :style="{ transform: 'scaleX(' + currentProgressBar / 100 + ')' }"
-          ></div>
+          />
         </div>
 
-        <div class="currentTimeContainer" style="text-align:center">
+        <div
+          class="currentTimeContainer"
+          style="text-align:center"
+        >
           <span class="totalTime">{{ fancyTimeFormat(trackDuration) }}</span>
         </div>
       </div>
     </div>
-    <div class="audioPlayerList" :class="{ isActive: isPlaylistActive }">
+    <div
+      class="audioPlayerList"
+      :class="{ isActive: isPlaylistActive }"
+    >
       <div class="playlistcontainer">
         <div class="playlistrow">
           <div
-            class="mix item"
             v-for="(item, index) in musicPlaylist"
             :key="index"
-            v-bind:class="{ isActive: isCurrentSong(index) }"
-            v-on:click="changeSong(index)"
+            class="mix item"
+            :class="{ isActive: isCurrentSong(index) }"
             :data-title="item.titlefilter"
             :data-artist="item.artistfilter"
+            @click="changeSong(index)"
           >
             <div
               class="vatilt item-container"
@@ -180,7 +226,7 @@
               data-tilt-max-glare="1"
               data-tilt-reverse="true"
               tabindex="0"
-              v-on:keyup.enter="changeSong(index)"
+              @keyup.enter="changeSong(index)"
             >
               <font-awesome-icon icon="volume-up" />
               <div class="image-container">
@@ -193,293 +239,323 @@
                       '), url(images/covers/default-2.png)'
                   "
                 >
-                  <svg v-if="coverSvg === true" id="loading" x="0px" y="0px" viewBox="0 0 150 150">
-                    <circle id="loading-inner" cx="75" cy="75" r="60" />
+                  <svg
+                    v-if="coverSvg === true"
+                    id="loading"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 150 150"
+                  >
+                    <circle
+                      id="loading-inner"
+                      cx="75"
+                      cy="75"
+                      r="60"
+                    />
                   </svg>
                 </div>
               </div>
-              <p class="title">{{ item.title }}</p>
-              <p class="artist">{{ item.artist }}</p>
+              <p class="title">
+                {{ item.title }}
+              </p>
+              <p class="artist">
+                {{ item.artist }}
+              </p>
             </div>
           </div>
         </div>
       </div>
       <div class="search-container">
         <form class="controls">
-          <fieldset data-filter-group class="text-input-wrapper">
+          <fieldset
+            data-filter-group
+            class="text-input-wrapper"
+          >
             <input
               type="text"
               data-search-attribute="data-title"
               placeholder="title"
-            />
+            >
           </fieldset>
 
-          <fieldset data-filter-group class="text-input-wrapper">
+          <fieldset
+            data-filter-group
+            class="text-input-wrapper"
+          >
             <input
               type="text"
               data-search-attribute="data-artist"
               placeholder="artist"
-            />
+            >
           </fieldset>
         </form>
-        <div class="mixitup-page-list"></div>
+        <div class="mixitup-page-list" />
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-return-assign */
 /* eslint-disable no-plusplus */
 /* eslint-disable func-names */
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import slider from 'vue3-slider';
 
-export default {
-  props: {
-    playlist: Array,
-    selectedContent: String,
-    pushTracks: Array,
-    shuffle: Boolean,
-  },
-  data() {
-    return {
-      ready: false,
-      audio: null,
-      notHovering: true,
-      currentlyPlaying: false,
-      currentlyStopped: false,
-      currentTime: 0,
-      checkingCurrentPositionInTrack: '',
-      trackDuration: 0,
-      currentProgressBar: 0,
-      volume: 100,
-      volumeTemp: 100,
-      shufflePlay: false,
-      shuffleTemp: [],
-      isPlaylistActive: false,
-      currentSong: 0,
-      debug: false,
-      coverSvg: false,
-      musicPlaylist: [],
-      audioFile: '',
-    };
-  },
-  components: {
-    'vue3-slider': slider,
-  },
-  created() {
-  },
-  async mounted() {
-    this.getPlaylist();
-    this.changeSong();
-    this.audio.loop = false;
-  },
-  methods: {
-    initPlaylist(pl) {
-      if (this.shuffle) {
-        for (let i = pl.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          const temp = pl[i];
-          pl[i] = pl[j];
-          pl[j] = temp;
+const props = defineProps({
+  playlist: Array,
+  selectedContent: String,
+  pushTracks: Array,
+  shuffle: Boolean,
+});
+
+const emit = defineEmits(['update:selectedContent']);
+
+const ready = ref(false);
+const audio = ref(null);
+const notHovering = ref(true);
+const currentlyPlaying = ref(false);
+const currentlyStopped = ref(false);
+const currentTime = ref(0);
+const checkingCurrentPositionInTrack = ref('');
+const trackDuration = ref(0);
+const currentProgressBar = ref(0);
+const volume = ref(100);
+const volumeTemp = ref(100);
+const shufflePlay = ref(false);
+const shuffleTemp = ref([]);
+const isPlaylistActive = ref(false);
+const currentSong = ref(0);
+const debug = ref(false);
+const coverSvg = ref(false);
+const musicPlaylist = ref([]);
+const audioFile = ref('');
+
+const initPlaylist = (pl) => {
+  if (props.shuffle) {
+    for (let i = pl.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = pl[i];
+      pl[i] = pl[j];
+      pl[j] = temp;
+    }
+  }
+  if (props.pushTracks) {
+    props.pushTracks.forEach((filter) => {
+      function filterPlaylist(music, index, array) {
+        if (music.filter.includes(filter)) {
+          pl.splice(index, 1);
+          pl.unshift(music);
         }
       }
-      if (this.pushTracks) {
-        this.pushTracks.forEach((filter) => {
-          function filterPlaylist(music, index, array) {
-            if (music.filter.includes(filter)) {
-              pl.splice(index, 1);
-              pl.unshift(music);
-            }
-          }
-          pl.findIndex(filterPlaylist);
-        });
-      }
-      this.musicPlaylist = pl ?? [];
-      if (this.selectedContent) {
-        this.selectedContentChanged();
-      }
-      return (this.ready = true);
-    },
-    getPlaylist() {
-      this.initPlaylist(this.playlist);
-    },
-    fancyTimeFormat(s) {
-      return (s - (s %= 60)) / 60 + (s > 9 ? ':' : ':0') + s;
-    },
-    togglePlaylist() {
-      this.isPlaylistActive = !this.isPlaylistActive;
-    },
-    downloadTrack() {
-      window.open(this.musicPlaylist[this.currentSong].url);
-    },
-    nextSong() {
-      if (this.shufflePlay) {
-        if (this.shuffleTemp.includes(this.currentSong)
-        && this.shuffleTemp.indexOf(this.currentSong) < this.shuffleTemp.length - 1) {
-          this.changeSong(
-            this.shuffleTemp[this.shuffleTemp.indexOf(this.currentSong) + 1],
-          );
-        } else if (
-          (this.shuffleTemp.length !== this.musicPlaylist.length - 1)
-        && (this.shuffleTemp.indexOf(this.currentSong) !== this.musicPlaylist.length - 1)
-        ) {
-          if (this.shuffleTemp.indexOf(this.currentSong) === -1) {
-            this.shuffleTemp.push(this.currentSong);
-          }
-          let newRandomTrack = Math.floor(
-            Math.random() * (this.musicPlaylist.length - 1 - 0 + 1),
-          ) + 0;
-          while (this.shuffleTemp.includes(newRandomTrack)) {
-            newRandomTrack = Math.floor(
-              Math.random() * (this.musicPlaylist.length - 1 - 0 + 1),
-            ) + 0;
-          }
-          this.changeSong(newRandomTrack);
-        }
-      } else if (this.currentSong < this.musicPlaylist.length - 1) {
-        this.changeSong(this.currentSong + 1);
-      }
-    },
-    prevSong() {
-      if (this.shufflePlay) {
-        if (this.shuffleTemp.indexOf(this.currentSong) === -1) {
-          this.changeSong(this.shuffleTemp[this.shuffleTemp.length - 1]);
-        } else if (
-          this.shuffleTemp.includes(this.currentSong)
-          && this.shuffleTemp.indexOf(this.currentSong) !== 0
-        ) {
-          this.changeSong(
-            this.shuffleTemp[this.shuffleTemp.indexOf(this.currentSong) - 1],
-          );
-        }
-      } else if (this.currentSong > 0) {
-        this.changeSong(this.currentSong - 1);
-      }
-    },
-    selectedContentChanged() {
-      const songIndex = this.musicPlaylist?.findIndex((s) => s.id === this.selectedContent);
-      if (songIndex > -1) this.changeSong(songIndex);
-    },
-    changeSong(index) {
-      const wasPlaying = this.currentlyPlaying;
-      this.imageLoaded = false;
-      if (index !== undefined) {
-        if (this.audio) this.stopAudio();
-        this.currentSong = index;
-      }
-      this.audioFile = this.musicPlaylist[this.currentSong].url;
-      this.audio = new Audio(this.audioFile);
-      this.audio.volume = this.volume / 100;
-      const localThis = this;
-      this.audio.addEventListener('loadedmetadata', function () {
-        localThis.trackDuration = Math.round(this.duration);
-      });
-      this.audio.addEventListener('ended', this.handleEnded);
-      if (wasPlaying) {
-        this.playAudio();
-      }
-      if (this.musicPlaylist[this.currentSong].id !== this.selectedContent) {
-        this.$emit('update:selectedContent', this.musicPlaylist[this.currentSong].id);
-      }
-    },
-    isCurrentSong(index) {
-      if (this.currentSong === index) {
-        return true;
-      }
-      return false;
-    },
-    getCurrentSong(currentSong) {
-      return this.musicPlaylist[currentSong].url;
-    },
-    playAudio() {
-      if (
-        this.currentlyStopped === true
-        && this.currentSong + 1 === this.musicPlaylist.length
-      ) {
-        this.currentSong = 0;
-        this.changeSong();
-      }
-      if (!this.currentlyPlaying) {
-        this.getCurrentTimeEverySecond(true);
-        this.currentlyPlaying = true;
-        this.audio.play();
-      } else {
-        this.stopAudio();
-      }
-      this.currentlyStopped = false;
-    },
-    stopAudio() {
-      this.audio.pause();
-      this.currentlyPlaying = false;
-      this.pausedMusic();
-    },
-    handleEnded() {
-      if (this.currentSong + 1 === this.musicPlaylist.length) {
-        this.stopAudio();
-        this.currentlyPlaying = false;
-        this.currentlyStopped = true;
-      } else {
-        this.currentlyPlaying = false;
-        this.currentSong++;
-        this.changeSong();
-        this.playAudio();
-      }
-    },
-    getCurrentTimeEverySecond() {
-      const localThis = this;
-      this.checkingCurrentPositionInTrack = setTimeout(
-        () => {
-          localThis.currentTime = localThis.audio.currentTime;
-          localThis.currentProgressBar = (localThis.audio.currentTime
-          / localThis.trackDuration) * 100;
-          localThis.getCurrentTimeEverySecond(true);
-        },
-        200,
-      );
-    },
-    pausedMusic() {
-      clearTimeout(this.checkingCurrentPositionInTrack);
-    },
-    changeTime(event) {
-      if (this.currentlyPlaying) {
-        const mouseX = event.offsetX;
-        const newTime = (mouseX * this.trackDuration) / event.target.offsetWidth;
-        this.audio.currentTime = newTime;
-        this.currentProgressBar = (this.audio.currentTime / this.trackDuration) * 100;
-      }
-    },
-    muteAudio() {
-      if (this.volume !== 0) {
-        this.volumeTemp = this.volume;
-        this.volume = 0;
-        this.audio.volume = 0;
-      } else {
-        this.volume = this.volumeTemp;
-        this.audio.volume = this.volume / 100;
-      }
-    },
-  },
-  watch: {
-    currentTime() {
-      this.currentTime = Math.round(this.currentTime);
-    },
-    volume() {
-      this.audio.volume = this.volume / 100;
-    },
-    selectedContent() {
-      this.selectedContentChanged();
-    },
-  },
-  beforeUnmount() {
-    if (this.audio) this.audio.removeEventListener('ended', this.handleEnded);
-    if (this.audio) this.audio.removeEventListener('loadedmetadata', this.handleEnded);
-    clearTimeout(this.checkingCurrentPositionInTrack);
-  },
+      pl.findIndex(filterPlaylist);
+    });
+  }
+  musicPlaylist.value = pl ?? [];
+  if (props.selectedContent) {
+    selectedContentChanged();
+  }
+  ready.value = true;
 };
+
+const getPlaylist = () => {
+  initPlaylist(props.playlist);
+};
+
+const fancyTimeFormat = (s) => {
+  return (s - (s %= 60)) / 60 + (s > 9 ? ':' : ':0') + s;
+};
+
+const togglePlaylist = () => {
+  isPlaylistActive.value = !isPlaylistActive.value;
+};
+
+const downloadTrack = () => {
+  window.open(musicPlaylist.value[currentSong.value].url);
+};
+
+const nextSong = () => {
+  if (shufflePlay.value) {
+    if (shuffleTemp.value.includes(currentSong.value)
+    && shuffleTemp.value.indexOf(currentSong.value) < shuffleTemp.value.length - 1) {
+      changeSong(
+        shuffleTemp.value[shuffleTemp.value.indexOf(currentSong.value) + 1],
+      );
+    } else if (
+      (shuffleTemp.value.length !== musicPlaylist.value.length - 1)
+    && (shuffleTemp.value.indexOf(currentSong.value) !== musicPlaylist.value.length - 1)
+    ) {
+      if (shuffleTemp.value.indexOf(currentSong.value) === -1) {
+        shuffleTemp.value.push(currentSong.value);
+      }
+      let newRandomTrack = Math.floor(
+        Math.random() * (musicPlaylist.value.length - 1 - 0 + 1),
+      ) + 0;
+      while (shuffleTemp.value.includes(newRandomTrack)) {
+        newRandomTrack = Math.floor(
+          Math.random() * (musicPlaylist.value.length - 1 - 0 + 1),
+        ) + 0;
+      }
+      changeSong(newRandomTrack);
+    }
+  } else if (currentSong.value < musicPlaylist.value.length - 1) {
+    changeSong(currentSong.value + 1);
+  }
+};
+
+const prevSong = () => {
+  if (shufflePlay.value) {
+    if (shuffleTemp.value.indexOf(currentSong.value) === -1) {
+      changeSong(shuffleTemp.value[shuffleTemp.value.length - 1]);
+    } else if (
+      shuffleTemp.value.includes(currentSong.value)
+      && shuffleTemp.value.indexOf(currentSong.value) !== 0
+    ) {
+      changeSong(
+        shuffleTemp.value[shuffleTemp.value.indexOf(currentSong.value) - 1],
+      );
+    }
+  } else if (currentSong.value > 0) {
+    changeSong(currentSong.value - 1);
+  }
+};
+
+const selectedContentChanged = () => {
+  const songIndex = musicPlaylist.value?.findIndex((s) => s.id === props.selectedContent);
+  if (songIndex > -1) changeSong(songIndex);
+};
+
+const changeSong = (index) => {
+  const wasPlaying = currentlyPlaying.value;
+  if (index !== undefined) {
+    if (audio.value) stopAudio();
+    currentSong.value = index;
+  }
+  audioFile.value = musicPlaylist.value[currentSong.value].url;
+  audio.value = new Audio(audioFile.value);
+  audio.value.volume = volume.value / 100;
+  audio.value.addEventListener('loadedmetadata', function () {
+    trackDuration.value = Math.round(this.duration);
+  });
+  audio.value.addEventListener('ended', handleEnded);
+  if (wasPlaying) {
+    playAudio();
+  }
+  if (musicPlaylist.value[currentSong.value].id !== props.selectedContent) {
+    emit('update:selectedContent', musicPlaylist.value[currentSong.value].id);
+  }
+};
+
+const isCurrentSong = (index) => {
+  if (currentSong.value === index) {
+    return true;
+  }
+  return false;
+};
+
+const getCurrentSong = (currentSongVal) => {
+  return musicPlaylist.value[currentSongVal].url;
+};
+
+const playAudio = () => {
+  if (
+    currentlyStopped.value === true
+    && currentSong.value + 1 === musicPlaylist.value.length
+  ) {
+    currentSong.value = 0;
+    changeSong();
+  }
+  if (!currentlyPlaying.value) {
+    getCurrentTimeEverySecond(true);
+    currentlyPlaying.value = true;
+    audio.value.play();
+  } else {
+    stopAudio();
+  }
+  currentlyStopped.value = false;
+};
+
+const stopAudio = () => {
+  audio.value.pause();
+  currentlyPlaying.value = false;
+  pausedMusic();
+};
+
+const handleEnded = () => {
+  if (currentSong.value + 1 === musicPlaylist.value.length) {
+    stopAudio();
+    currentlyPlaying.value = false;
+    currentlyStopped.value = true;
+  } else {
+    currentlyPlaying.value = false;
+    currentSong.value++;
+    changeSong();
+    playAudio();
+  }
+};
+
+const getCurrentTimeEverySecond = () => {
+  checkingCurrentPositionInTrack.value = setTimeout(
+    () => {
+      currentTime.value = audio.value.currentTime;
+      currentProgressBar.value = (audio.value.currentTime
+      / trackDuration.value) * 100;
+      getCurrentTimeEverySecond(true);
+    },
+    200,
+  );
+};
+
+const pausedMusic = () => {
+  clearTimeout(checkingCurrentPositionInTrack.value);
+};
+
+const changeTime = (event) => {
+  if (currentlyPlaying.value) {
+    const mouseX = event.offsetX;
+    const newTime = (mouseX * trackDuration.value) / event.target.offsetWidth;
+    audio.value.currentTime = newTime;
+    currentProgressBar.value = (audio.value.currentTime / trackDuration.value) * 100;
+  }
+};
+
+const muteAudio = () => {
+  if (volume.value !== 0) {
+    volumeTemp.value = volume.value;
+    volume.value = 0;
+    audio.value.volume = 0;
+  } else {
+    volume.value = volumeTemp.value;
+    audio.value.volume = volume.value / 100;
+  }
+};
+
+onMounted(async () => {
+  getPlaylist();
+  changeSong();
+  audio.value.loop = false;
+});
+
+onBeforeUnmount(() => {
+  if (audio.value) audio.value.removeEventListener('ended', handleEnded);
+  if (audio.value) audio.value.removeEventListener('loadedmetadata', handleEnded);
+  clearTimeout(checkingCurrentPositionInTrack.value);
+});
+
+watch(() => currentTime.value, () => {
+  currentTime.value = Math.round(currentTime.value);
+});
+
+watch(() => volume.value, () => {
+  audio.value.volume = volume.value / 100;
+});
+
+watch(() => props.selectedContent, () => {
+  selectedContentChanged();
+});
 </script>
 
 <style lang="scss">

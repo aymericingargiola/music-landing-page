@@ -1,15 +1,29 @@
 <template>
-    <div ref="componentRoot" class="support">
-        <span @click="hideComponent()" @keydown="hideComponent()" class="hide"></span>
-        <ul>
-            <li class="link paypal"><a href="https://paypal.me/AIngargiola" target="_blank">Support me</a> 😄</li>
-            <li class="link paypal">
-                <a @click="copyEmail($event, 'aymericfbm@gmail.com')"
-                href="mailto:aymericfbm@gmail.com">Contact me</a> ✉️
-                <span class="tooltip hidden">email copied to your clipboard</span>
-            </li>
-        </ul>
-    </div>
+  <div
+    ref="componentRoot"
+    class="support"
+  >
+    <span
+      class="hide"
+      @click="hideComponent()"
+      @keydown="hideComponent()"
+    />
+    <ul>
+      <li class="link paypal">
+        <a
+          href="https://paypal.me/AIngargiola"
+          target="_blank"
+        >Support me</a> 😄
+      </li>
+      <li class="link paypal">
+        <a
+          href="mailto:aymericfbm@gmail.com"
+          @click="copyEmail($event, 'aymericfbm@gmail.com')"
+        >Contact me</a> ✉️
+        <span class="tooltip hidden">email copied to your clipboard</span>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup>

@@ -1,26 +1,50 @@
 <template>
-  <div v-if="itemsOrderedByReleaseDate" class="latest-tracks-component col-12">
+  <div
+    v-if="itemsOrderedByReleaseDate"
+    class="latest-tracks-component col-12"
+  >
     <div class="component-content">
       <div class="title">
-      <h2>Latest tracks</h2>
-    </div>
+        <h2>Latest tracks</h2>
+      </div>
       <div class="content">
-        <transition-group name="playlist-items" tag="ul">
-          <template v-for="music in itemsOrderedByReleaseDate" :key="music.id">
+        <transition-group
+          name="playlist-items"
+          tag="ul"
+        >
+          <template
+            v-for="music in itemsOrderedByReleaseDate"
+            :key="music.id"
+          >
             <li class="col-12 col-lg-4">
               <div class="content">
-                <div class="date">{{ releaseDate(music.releaseTimestamp) }}</div>
+                <div class="date">
+                  {{ releaseDate(music.releaseTimestamp) }}
+                </div>
                 <div class="track-name">
-                  <div class="artist">{{ music.artist }}</div>
-                  <div class="title">{{ music.title }}</div>
+                  <div class="artist">
+                    {{ music.artist }}
+                  </div>
+                  <div class="title">
+                    {{ music.title }}
+                  </div>
                 </div>
                 <div class="links">
-                  <a v-if="getMp3Url(music.id)"
-                  :href="getMp3Url(music.id)" target="_blank">MP3</a>
-                  <a v-if="getWavUrl(music.id)"
-                  :href="getWavUrl(music.id)" target="_blank">WAV</a>
-                  <a v-if="getVideoUrl(music.id)"
-                  :href="getVideoUrl(music.id)" target="_blank">Video</a>
+                  <a
+                    v-if="getMp3Url(music.id)"
+                    :href="getMp3Url(music.id)"
+                    target="_blank"
+                  >MP3</a>
+                  <a
+                    v-if="getWavUrl(music.id)"
+                    :href="getWavUrl(music.id)"
+                    target="_blank"
+                  >WAV</a>
+                  <a
+                    v-if="getVideoUrl(music.id)"
+                    :href="getVideoUrl(music.id)"
+                    target="_blank"
+                  >Video</a>
                 </div>
               </div>
             </li>
