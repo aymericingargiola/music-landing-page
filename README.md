@@ -1,26 +1,42 @@
 # music-landing-page
 
-Made in vue3, hosted on Netlify : https://www.lazerzfine.com/
+Made in Vue 3 with Vite, hosted on Netlify: https://www.lazerzfine.com/
 
 ## Project setup
-```
+```bash
 npm install
 ```
 
 ### Compiles and hot-reloads for development
-```
-npm run serve
+```bash
+npm run dev
 ```
 
 ### Compiles and minifies for production
-```
+```bash
 npm run build
 ```
 
 ### Lints and fixes files
-```
+```bash
 npm run lint
+npm run lintFix
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Vite Configuration Reference](https://vitejs.dev/config/).
+
+### Additional Scripts
+
+#### Build Playlist JSON files
+```bash
+npm run buildPlaylist
+npm run buildPlaylistLossless
+npm run buildPlaylistVideo
+npm run buildPlaylistAll
+```
+
+#### Preview production build locally
+```bash
+npm run preview
+```

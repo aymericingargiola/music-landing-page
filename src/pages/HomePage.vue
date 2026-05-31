@@ -174,8 +174,8 @@ onMounted(async () => {
 </script>
 
 <style lang="scss">
-@import './src/styles/bootstrap-grid';
-@import './src/styles/main';
+@import '@/styles/bootstrap-grid';
+@import '@/styles/main';
 .v-enter-active,
 .v-leave-active {
   transition: opacity 1s ease;
