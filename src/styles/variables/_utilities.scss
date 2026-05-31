@@ -1,0 +1,258 @@
+// Utilities
+
+$utilities: (
+  "width": (
+    property: width,
+    class: w,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "height": (
+    property: height,
+    class: h,
+    values: (
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  ),
+  "margin": (
+    property: margin,
+    class: m,
+    values: (
+      0: 0,
+      1: $spacer * .25,
+      2: $spacer * .5,
+      3: $spacer,
+      4: $spacer * 1.5,
+      5: $spacer * 3,
+      auto: auto
+    )
+  ),
+  "padding": (
+    property: padding,
+    class: p,
+    values: (
+      0: 0,
+      1: $spacer * .25,
+      2: $spacer * .5,
+      3: $spacer,
+      4: $spacer * 1.5,
+      5: $spacer * 3
+    )
+  ),
+  "display": (
+    property: display,
+    class: d,
+    values: (
+      none: none,
+      inline: inline,
+      inline-block: inline-block,
+      block: block,
+      table: table,
+      table-row: table-row,
+      table-cell: table-cell,
+      flex: flex,
+      inline-flex: inline-flex
+    )
+  ),
+  "flex-direction": (
+    property: flex-direction,
+    class: flex,
+    values: (
+      row: row,
+      column: column,
+      row-reverse: row-reverse,
+      column-reverse: column-reverse
+    )
+  ),
+  "flex-wrap": (
+    property: flex-wrap,
+    class: flex,
+    values: (
+      wrap: wrap,
+      nowrap: nowrap,
+      wrap-reverse: wrap-reverse
+    )
+  ),
+  "justify-content": (
+    property: justify-content,
+    class: justify-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around
+    )
+  ),
+  "align-items": (
+    property: align-items,
+    class: align-items,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch
+    )
+  ),
+  "align-content": (
+    property: align-content,
+    class: align-content,
+    values: (
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      between: space-between,
+      around: space-around,
+      stretch: stretch
+    )
+  ),
+  "align-self": (
+    property: align-self,
+    class: align-self,
+    values: (
+      auto: auto,
+      start: flex-start,
+      end: flex-end,
+      center: center,
+      baseline: baseline,
+      stretch: stretch
+    )
+  ),
+  "text-align": (
+    property: text-align,
+    class: text,
+    values: (
+      left: left,
+      center: center,
+      right: right
+    )
+  ),
+  "overflow": (
+    property: overflow,
+    class: overflow,
+    values: (
+      auto: auto,
+      hidden: hidden,
+      visible: visible,
+      scroll: scroll
+    )
+  ),
+  "position": (
+    property: position,
+    class: position,
+    values: (
+      static: static,
+      relative: relative,
+      absolute: absolute,
+      fixed: fixed,
+      sticky: sticky
+    )
+  ),
+  "top": (
+    property: top,
+    class: top,
+    values: (
+      0: 0,
+      50: 50%,
+      100: 100%
+    )
+  ),
+  "bottom": (
+    property: bottom,
+    class: bottom,
+    values: (
+      0: 0,
+      50: 50%,
+      100: 100%
+    )
+  ),
+  "left": (
+    property: left,
+    class: left,
+    values: (
+      0: 0,
+      50: 50%,
+      100: 100%
+    )
+  ),
+  "right": (
+    property: right,
+    class: right,
+    values: (
+      0: 0,
+      50: 50%,
+      100: 100%
+    )
+  ),
+  "font-size": (
+    property: font-size,
+    class: fs,
+    values: (
+      1: $font-size-base * .75,
+      2: $font-size-base * .875,
+      3: $font-size-base,
+      4: $font-size-base * 1.25,
+      5: $font-size-base * 1.5,
+      6: $font-size-base * 2
+    )
+  ),
+  "font-weight": (
+    property: font-weight,
+    class: fw,
+    values: (
+      light: 300,
+      normal: 400,
+      bold: 700
+    )
+  ),
+  "color": (
+    property: color,
+    class: text,
+    values: (
+      primary: $primary,
+      secondary: $secondary,
+      success: $success,
+      info: $info,
+      warning: $warning,
+      danger: $danger,
+      light: $light,
+      dark: $dark,
+      white: $white,
+      black: $black
+    )
+  ),
+  "background-color": (
+    property: background-color,
+    class: bg,
+    values: (
+      primary: $primary,
+      secondary: $secondary,
+      success: $success,
+      info: $info,
+      warning: $warning,
+      danger: $danger,
+      light: $light,
+      dark: $dark,
+      white: $white,
+      black: $black
+    )
+  )
+) !default;
+
+// Spacer variable
+
+$spacer: 1rem !default;
+
+// Font size base
+
+$font-size-base: 1rem !default;

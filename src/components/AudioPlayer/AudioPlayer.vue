@@ -948,11 +948,6 @@ $desktop-width: 992px;
         text-align: center;
         display: flex;
         align-items: center;
-        &* {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-        }
         .button {
           font-size: $button_size;
           display: inline-block;

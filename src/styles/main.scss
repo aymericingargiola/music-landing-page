@@ -1,3 +1,16 @@
+@import "variables/colors";
+@import "variables/breakpoints";
+@import "variables/utilities";
+@import "variables/icons";
+@import "functions/colors";
+@import "mixins/breakpoints";
+@import "mixins/colors";
+@import "mixins/container";
+@import "mixins/grid";
+@import "mixins/icons";
+@import "mixins/lists";
+@import "mixins/utilities";
+@import "utilities/api";
 @import "animations";
 @import "libs/animate";
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');

@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "lintFix": "vue-cli-service lint --fix",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs",
+    "lintFix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
     "buildPlaylist": "node background/builders/playlist_builder/playlist.js --write-json",
     "buildPlaylistLossless": "node background/builders/playlist_builder/playlist.js --write-json-lossless",
     "buildPlaylistVideo": "node background/builders/playlist_builder/playlist.js --write-json-video",
@@ -16,7 +17,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
-    "axios": "^0.27.2",
+    "axios": "^1.6.1",
     "cheerio": "^1.0.0-rc.11",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
@@ -24,36 +25,33 @@
     "vue3-slider": "^1.8.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-airbnb": "^6.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-vue": "^8.0.3",
-    "eslint-plugin-vuejs-accessibility": "^1.1.0",
+    "@babel/eslint-parser": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "eslint": "^8.40.0",
+    "eslint-plugin-vue": "^9.0.0",
     "sass": "^1.52.1",
-    "sass-loader": "^13.0.0",
-    "style-resources-loader": "^1.5.0",
-    "vue-cli-plugin-style-resources-loader": "~0.1.5"
+    "vite": "^4.4.0"
   },
   "eslintConfig": {
     "root": true,
     "env": {
-      "node": true
+      "node": true,
+      "es2021": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "@vue/airbnb"
+      "plugin:vue/vue3-recommended",
+      "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "@babel/eslint-parser"
+      "ecmaVersion": 2021,
+      "sourceType": "module",
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
     },
     "rules": {
-      "no-undef": "off"
+      "no-undef": "off",
+      "vue/multi-word-component-names": "off"
     },
     "globals": {
       "defineProps": "readonly",
