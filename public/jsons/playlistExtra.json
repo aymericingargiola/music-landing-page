@@ -1,5 +1,26 @@
 [
     {
+        "id": "R3Jvb3ZlIENvdmVyYWdlIC0gVGhlIEVuZCAoTGF6ZXJ6RiFuZSBCb290bGVnIE1peCk=",
+        "name": "Groove Coverage - The End (LazerzF!ne Bootleg Mix)",
+        "artist": "Groove Coverage",
+        "title": "The End (LazerzF!ne Bootleg Mix)",
+        "artistfilter": "groove coverage",
+        "titlefilter": "the end lazerzf!ne bootleg mix",
+        "releaseTimestamp": 1780329600,
+        "remapImages": "R3Jvb3ZlIENvdmVyYWdlIC0gVGhlIEVuZCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp"
+    },
+    {
+        "id": "R3Jvb3ZlIENvdmVyYWdlIC0gVGhlIEVuZCAoTGF6ZXJ6RiFuZSBCb290bGVnIEVkaXQp",
+        "name": "Groove Coverage - The End (LazerzF!ne Bootleg Edit)",
+        "artist": "Groove Coverage",
+        "title": "The End (LazerzF!ne Bootleg Edit)",
+        "artistfilter": "groove coverage",
+        "titlefilter": "the end lazerzf!ne bootleg edit",
+        "releaseTimestamp": 1780329600,
+        "optiweb": true,
+        "youtubeId" : "2koA0lNRzEo"
+    },
+    {
         "id": "S2VsbHkgQ2xhcmtzb24gLSBCZWhpbmQgVGhlc2UgSGF6ZWwgRXllcyAoREogS1MgJiBMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
         "name": "Kelly Clarkson - Behind These Hazel Eyes (DJ KS & LazerzF!ne Bootleg Edit)",
         "artist": "Kelly Clarkson",
@@ -8,7 +29,7 @@
         "titlefilter": "behind these hazel eyes dj ks & lazerzf!ne bootleg edit",
         "optiweb": true,
         "releaseTimestamp": "1779012000",
-        "youtubeId" : null
+        "youtubeId" : "KO8G3yyM1-I"
     },
     {
         "id": "RWxlY3RyaWMgQ2FsbGJveSAtIFRBTlpORUlEIChMYXplcnpGIW5lIEJvb3RsZWcgRWRpdCk=",
