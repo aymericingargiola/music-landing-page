@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && copy public\\sitemap.xml dist\\sitemap.xml",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs",
     "lintFix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
