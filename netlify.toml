@@ -15,11 +15,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://talos.feralhosting.com; connect-src 'self' https://talos.feralhosting.com; frame-src 'none'; object-src 'none"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-
-[[plugins]]
-  package = "@netlify/plugin-sitemap"
-  [plugins.inputs]
-    buildDir = "dist"
-    filePath = "sitemap.xml"
-    prettyURLs = true
     exclude = ["/sitemap.xml"]

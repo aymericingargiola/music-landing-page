@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && copyfiles public/sitemap.xml dist/",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs",
     "lintFix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
@@ -30,7 +30,6 @@
     "@babel/eslint-parser": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@vitejs/plugin-vue": "^6.0.0",
-    "copyfiles": "^2.4.1",
     "eslint": "^8.40.0",
     "eslint-plugin-vue": "^9.0.0",
     "sass": "^1.52.1",
