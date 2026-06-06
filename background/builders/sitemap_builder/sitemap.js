@@ -36,9 +36,11 @@ function escapeXml(unsafe) {
 
 function urlEncodeSpecialChars(url) {
     // URL encode special characters that might cause issues in XML
-    return url.replace(/[!]/g, function (c) {
+    // Double encode ! as %2521 for Netlify redirect compatibility
+    // Also handle already encoded %21 and convert to %2521
+    return url.replace(/%21/g, '%2521').replace(/[!]/g, function (c) {
         switch (c) {
-            case '!': return '%21';
+            case '!': return '%2521';
             default: return c;
         }
     });
