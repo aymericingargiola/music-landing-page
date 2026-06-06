@@ -22,3 +22,4 @@
     buildDir = "dist"
     filePath = "sitemap.xml"
     prettyURLs = true
+    exclude = ["/sitemap.xml"]
