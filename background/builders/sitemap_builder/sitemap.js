@@ -21,6 +21,29 @@ fs.readFile(playlistPath, 'utf8', (err, data) => {
     }
 });
 
+function escapeXml(unsafe) {
+    return unsafe.replace(/[<>&'""]/g, function (c) {
+        switch (c) {
+            case '<': return '&lt;';
+            case '>': return '&gt;';
+            case '&': return '&amp;';
+            case '"': return '&quot;';
+            case "'": return '&apos;';
+            default: return c;
+        }
+    });
+}
+
+function urlEncodeSpecialChars(url) {
+    // URL encode special characters that might cause issues in XML
+    return url.replace(/[!]/g, function (c) {
+        switch (c) {
+            case '!': return '%21';
+            default: return c;
+        }
+    });
+}
+
 function generateSitemap(playlists) {
     // Définir la date actuelle pour lastmod
     const currentDate = new Date().toISOString().split('T')[0];
@@ -39,9 +62,11 @@ function generateSitemap(playlists) {
     // Ajouter les URLs des tracks
     playlists.forEach(track => {
         const trackUrl = `https://www.lazerzfine.com/track/${track.slug}`;
+        const encodedUrl = urlEncodeSpecialChars(trackUrl);
+        const escapedUrl = escapeXml(encodedUrl);
         sitemapContent += `
     <url>
-        <loc>${trackUrl}</loc>
+        <loc>${escapedUrl}</loc>
         <lastmod>${currentDate}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
