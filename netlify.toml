@@ -21,4 +21,4 @@
   [plugins.inputs]
     buildDir = "dist"
     filePath = "sitemap.xml"
-    prettyUrls = true
+    prettyURLs = true
