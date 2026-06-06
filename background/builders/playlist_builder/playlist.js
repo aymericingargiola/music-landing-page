@@ -100,6 +100,7 @@ async function buildJson(filelist) {
         }
         itemDatas = {
             "id": Buffer.from(cleanName).toString('base64'),
+            "slug": cleanName.normalize("NFD").replace(/[\u0300-\u036f-.()]/g, "").replace(/ +/g, '-').toLowerCase(),
             "name": cleanName,
             "artist": (artist ? artist : undefined),
             "title": (title ? title : undefined),

@@ -9,9 +9,8 @@
     <span class="cover">
       <img
         id="playerAlbumArt"
-        :src="`imgs/covers/${music.id}.jpg`"
+        :src="`/imgs/covers/${music.id}.jpg`"
         alt="cover"
-        onerror="this.src='imgs/covers/default-empty.png'"
       >
     </span>
     <div

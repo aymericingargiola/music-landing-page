@@ -91,10 +91,11 @@
 
 <script setup>
 import {
-  onMounted, reactive, ref, computed,
+  onMounted, reactive, ref, computed, watch
 } from 'vue';
+import { useHead } from '@unhead/vue'
 import array from '@/helpers/array';
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 import AudioPlayer from '@/components/AudioPlayer/AudioPlayer.vue';
 import HeroComponent from '@/components/HeroComponent.vue';
 import LatestTracksComponent from '@/components/LatestTracksComponent.vue';
@@ -104,9 +105,106 @@ import SupportComponent from '@/components/Tools/SupportComponent.vue';
 import LoaderComponent from '@/components/Tools/loaderComponent.vue';
 
 const router = useRouter();
-const urlParams = new URLSearchParams(window.location.hash.replace('#/', ''));
+const route = useRoute();
+
+// Dynamic meta tags based on current route
+const currentTrack = computed(() => {
+  if (!route.params.slug) return null;
+  
+  const allTracks = [
+    ...(playlists.mp3 || []),
+    ...(playlists.wav || []),
+    ...(playlists.video || [])
+  ];
+  
+  return allTracks.find(t => t.slug === route.params.slug) || null;
+});
+
+const pageTitle = computed(() => 
+  currentTrack.value 
+    ? `${currentTrack.value.artist} - ${currentTrack.value.title}`
+    : 'Lazerzf!ne - Music Remixes & Bootlegs'
+);
+
+const pageDescription = computed(() => 
+  currentTrack.value
+    ? `Listen to ${currentTrack.value.title} by ${currentTrack.value.artist}`
+    : 'Discover the latest remixes and bootlegs by Lazerzf!ne. Electronic and dance music.'
+);
+
+const pageUrl = computed(() => 
+  currentTrack.value
+    ? `https://www.lazerzfine.com/track/${currentTrack.value.slug}`
+    : 'https://www.lazerzfine.com/'
+);
+
+const pageImage = computed(() => 
+  currentTrack.value?.cover || 'https://www.lazerzfine.com/images/default-cover.jpg'
+);
+
+// Structured data for track pages
+const structuredData = computed(() => {
+  if (!currentTrack.value) return null;
+  
+  return {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "name": currentTrack.value.title,
+    "byArtist": {
+      "@type": "MusicGroup",
+      "name": currentTrack.value.artist
+    },
+    "datePublished": currentTrack.value.date || '2024-01-01',
+    "url": `https://www.lazerzfine.com/track/${currentTrack.value.slug}`,
+    "description": currentTrack.value.description || 'Remix by Lazerzf!ne',
+    "genre": currentTrack.value.genre || 'Electronic',
+    "inAlbum": {
+      "@type": "MusicAlbum",
+      "name": "Lazerzf!ne Remixes"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lazerzf!ne",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.lazerzfine.com/images/logo.jpg"
+      }
+    }
+  };
+});
+
+useHead({
+  title: pageTitle,
+  meta: [
+    { name: 'description', content: pageDescription },
+    { property: 'og:title', content: pageTitle },
+    { property: 'og:description', content: pageDescription },
+    { property: 'og:url', content: pageUrl },
+    { property: 'og:type', content: currentTrack.value ? 'music.song' : 'website' },
+    { property: 'og:image', content: pageImage },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: pageTitle },
+    { name: 'twitter:description', content: pageDescription },
+    { name: 'twitter:image', content: pageImage }
+  ],
+  link: [
+    { rel: 'canonical', href: pageUrl }
+  ],
+  script: structuredData.value ? [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify(structuredData.value)
+    }
+  ] : []
+})
+
+// Fallback title update in case useHead doesn't work
+watch(() => pageTitle.value, (newTitle) => {
+  document.title = newTitle;
+}, { immediate: true });
+
 const pushedContent = reactive([]);
-const selectedContent = ref(urlParams.get('track'));
+const selectedContent = ref(null);
 const textFilter = ref(null);
 const textFilterArtist = ref(null);
 const textFilterTitle = ref(null);
@@ -117,9 +215,23 @@ const playlistsReady = computed(() => playlists.mp3
   && playlists.extra);
 
 function updateSelectedContent(id) {
-  selectedContent.value = id;
-  router.push({ path: '/', query: { track: selectedContent.value } });
+  const allPlaylists = [...(playlists.mp3 || []), ...(playlists.wav || []), ...(playlists.video || [])];
+  const music = allPlaylists.find(m => m.id === id);
+  if (music) {
+    selectedContent.value = id;
+    router.push({ name: 'Track', params: { slug: music.slug } });
+  }
 }
+
+watch(() => route.params.slug, (newSlug) => {
+  if (newSlug) {
+    const allPlaylists = [...(playlists.mp3 || []), ...(playlists.wav || []), ...(playlists.video || [])];
+    const music = allPlaylists.find(m => m.slug === newSlug);
+    if (music) {
+      selectedContent.value = music.id;
+    }
+  }
+});
 
 function textFilterPlaylists() {
   const arr = array.objectMap(playlists, (value) => value.filter((music) => {
@@ -147,7 +259,11 @@ function textFilterPlaylists() {
   && arr.wav.findIndex((m) => m.id === selectedContent.value) === -1
   && arr.video.findIndex((m) => m.id === selectedContent.value) === -1)) {
     selectedContent.value = arr.mp3[0]?.id || arr.wav[0]?.id || arr.video[0]?.id;
-    router.push({ path: '/', query: { track: selectedContent.value } });
+    const allPlaylists = [...(arr.mp3 || []), ...(arr.wav || []), ...(arr.video || [])];
+    const music = allPlaylists.find(m => m.id === selectedContent.value);
+    if (music) {
+      router.push({ name: 'Track', params: { slug: music.slug } });
+    }
   }
   return arr;
 }
@@ -162,14 +278,25 @@ onMounted(async () => {
   const playlistVideoJson = await fetch('/jsons/playlistVideo.json');
   const playlistExtra = await fetch('/jsons/playlistExtra.json');
   pushedContent.value = await playlistPushedContent.json();
-  if (!selectedContent.value) {
-    selectedContent.value = pushedContent.value[0].id;
-    router.push({ path: '/', query: { track: selectedContent.value } });
-  }
   playlists.mp3 = await playlistJson.json();
   playlists.wav = await playlistLosslessJson.json();
   playlists.video = await playlistVideoJson.json();
   playlists.extra = await playlistExtra.json();
+  
+  if (route.params.slug) {
+    const allPlaylists = [...(playlists.mp3 || []), ...(playlists.wav || []), ...(playlists.video || [])];
+    const music = allPlaylists.find(m => m.slug === route.params.slug);
+    if (music) {
+      selectedContent.value = music.id;
+    }
+  } else if (!selectedContent.value && pushedContent.value.length > 0) {
+    selectedContent.value = pushedContent.value[0].id;
+    const allPlaylists = [...(playlists.mp3 || []), ...(playlists.wav || []), ...(playlists.video || [])];
+    const music = allPlaylists.find(m => m.id === selectedContent.value);
+    if (music) {
+      router.push({ name: 'Track', params: { slug: music.slug } });
+    }
+  }
 });
 </script>
 

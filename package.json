@@ -11,18 +11,20 @@
     "buildPlaylist": "node background/builders/playlist_builder/playlist.js --write-json",
     "buildPlaylistLossless": "node background/builders/playlist_builder/playlist.js --write-json-lossless",
     "buildPlaylistVideo": "node background/builders/playlist_builder/playlist.js --write-json-video",
-    "buildPlaylistAll": "npm run buildPlaylistVideo && npm run buildPlaylistLossless && npm run buildPlaylist"
+    "buildPlaylistAll": "npm run buildPlaylistVideo && npm run buildPlaylistLossless && npm run buildPlaylist",
+    "buildSitemap": "node background/builders/sitemap_builder/sitemap.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@unhead/vue": "^3.1.3",
     "axios": "^1.6.1",
     "cheerio": "^1.0.0-rc.11",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.1.2",
-    "vue3-slider": "^1.8.0" 
+    "vue3-slider": "^1.8.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.29.7",

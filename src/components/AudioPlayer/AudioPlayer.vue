@@ -29,11 +29,11 @@
           >
             <img
               id="playerAlbumArt"
-              :key="currentSong"
-              :src="`imgs/covers/${musicPlaylist[currentSong].id}.jpg`"
+              :key="`${currentSong}-${new Date().getTime()}`"
+              :src="`/imgs/covers/${musicPlaylist[currentSong].id}.jpg`"
               alt="cover"
               ondragstart="return false;"
-              onerror="this.src='imgs/covers/default-2.png'"
+              onerror="this.src='/imgs/covers/default-2.png'"
             >
           </transition>
           <!--<div class="loader" :key="currentSong">Loading...</div>-->
