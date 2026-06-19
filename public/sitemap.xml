@@ -1,1036 +1,2571 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- URL de la page d'accueil -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <!-- Homepage -->
     <url>
         <loc>https://www.lazerzfine.com/</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/alessza-barcsak-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/alestorm-shipwrecked-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Alestorm%20-%20Shipwrecked%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/alestorm-shipwrecked-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Alestorm - Shipwrecked (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Alestorm - Shipwrecked (LazerzF!ne Bootleg Edit) by Alestorm</video:description>
+            <video:publication_date>2022-11-18</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Alestorm</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/alizee-moi-lolita-lazerzf%2521ne-&amp;-dj-ks-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Aliz%C3%A9e%20-%20Moi...%20Lolita%20%28LazerzF%21ne%20%26%20DJ%20KS%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/alizee-moi-lolita-lazerzf%21ne-&amp;-dj-ks-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Alizée - Moi... Lolita (LazerzF!ne &amp; DJ KS Bootleg Edit)</video:title>
+            <video:description>Music video: Alizée - Moi... Lolita (LazerzF!ne &amp; DJ KS Bootleg Edit) by Alizée</video:description>
+            <video:publication_date>2025-04-13</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Alizée</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/alvaro-soler-ft-flo-rida,-tini-la-cintura-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=TBZIuko7-b0</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/TBZIuko7-b0</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Alvaro Soler ft. Flo Rida, TINI - La Cintura (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Alvaro Soler ft. Flo Rida, TINI - La Cintura (LazerzF!ne Bootleg Edit) by Alvaro Soler ft. Flo Rida, TINI</video:description>
+            <video:publication_date>2018-11-09</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Alvaro Soler ft. Flo Rida, TINI</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/alvaro-soler-ft-flo-rida,-tini-la-cintura-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/aqua-roses-are-red-lazerzf%2521ne-bootleg-edit-2021</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=l4W4AfNG52Q</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/l4W4AfNG52Q</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Aqua - Roses Are Red (LazerzF!ne Bootleg Edit 2021)</video:title>
+            <video:description>Music video: Aqua - Roses Are Red (LazerzF!ne Bootleg Edit 2021) by Aqua</video:description>
+            <video:publication_date>2021-04-24</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Aqua</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/aqua-roses-are-red-lazerzf%2521ne-bootleg-mix-2021</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/aronchupa-i&apos;m-an-albatraoz-lazerzf%2521ne-fresh-oldschool-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=7TgjXvjf_0I</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/7TgjXvjf_0I</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>AronChupa - I&apos;m an Albatraoz (LazerzF!ne Fresh Oldschool Remix Edit)</video:title>
+            <video:description>Music video: AronChupa - I&apos;m an Albatraoz (LazerzF!ne Fresh Oldschool Remix Edit) by AronChupa</video:description>
+            <video:publication_date>2015-04-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>AronChupa</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/aronchupa-i&apos;m-an-albatraoz-lazerzf%2521ne-fresh-oldschool-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=OdQMIs4Wd7A</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/OdQMIs4Wd7A</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>AronChupa - I&apos;m an Albatraoz (LazerzF!ne Fresh Oldschool Remix)</video:title>
+            <video:description>Music video: AronChupa - I&apos;m an Albatraoz (LazerzF!ne Fresh Oldschool Remix) by AronChupa</video:description>
+            <video:publication_date>2015-04-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>AronChupa</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/aronchupa-i&apos;m-an-albatraoz-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=wui0PZ6kTYo</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/wui0PZ6kTYo</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>AronChupa - I&apos;m an Albatraoz (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: AronChupa - I&apos;m an Albatraoz (LazerzF!ne Remix) by AronChupa</video:description>
+            <video:publication_date>2015-04-29</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>AronChupa</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/avicii-feat-aloe-blacc-wake-me-up-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=sJ5_yFtUtDk</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/sJ5_yFtUtDk</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Avicii Feat. Aloe Blacc - Wake Me Up (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Avicii Feat. Aloe Blacc - Wake Me Up (LazerzF!ne Bootleg Edit) by Avicii Feat. Aloe Blacc</video:description>
+            <video:publication_date>2013-04-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Avicii Feat. Aloe Blacc</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/avicii-feat-aloe-blacc-wake-me-up-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=F7STdPgBiGw</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/F7STdPgBiGw</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Avicii Feat. Aloe Blacc - Wake Me Up (LazerzF!ne Bootleg Mix)</video:title>
+            <video:description>Music video: Avicii Feat. Aloe Blacc - Wake Me Up (LazerzF!ne Bootleg Mix) by Avicii Feat. Aloe Blacc</video:description>
+            <video:publication_date>2013-08-17</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Avicii Feat. Aloe Blacc</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/baby-alice-mr-dj-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=D2LzKN57KrQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/D2LzKN57KrQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Baby Alice - Mr. Dj (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Baby Alice - Mr. Dj (LazerzF!ne Remix Edit) by Baby Alice</video:description>
+            <video:publication_date>2012-09-03</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Baby Alice</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/baby-alice-pina-colada-boy-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=Y2c76cKFboE</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/Y2c76cKFboE</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Baby Alice - Pina Colada Boy (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Baby Alice - Pina Colada Boy (LazerzF!ne Remix Edit) by Baby Alice</video:description>
+            <video:publication_date>2012-10-19</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Baby Alice</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/baby-alice-pina-colada-boy-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/baracuda-where-is-the-love-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Baracuda%20-%20Where%20is%20the%20love%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/baracuda-where-is-the-love-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Baracuda - Where is the love (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Baracuda - Where is the love (LazerzF!ne Bootleg Edit) by Baracuda</video:description>
+            <video:publication_date>2022-12-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Baracuda</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/basta-kocham-ten-stan-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=a2To4LHDchc</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/a2To4LHDchc</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Basta - Kocham Ten Stan (Lazerzf!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Basta - Kocham Ten Stan (Lazerzf!ne Bootleg Edit) by Basta</video:description>
+            <video:publication_date>2014-07-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Basta</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/becky-g-ft-omega-arranca-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Becky%20G%20ft.%20Omega%20-%20Arranca%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/becky-g-ft-omega-arranca-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Becky G ft. Omega - Arranca (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Becky G ft. Omega - Arranca (LazerzF!ne Bootleg Edit) by Becky G ft. Omega</video:description>
+            <video:publication_date>2023-03-18</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Becky G ft. Omega</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/becky-g-ft-omega-arranca-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/benassi-bros-feat-dhany-hit-my-heart-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Benassi%20Bros%20Feat.%20Dhany%20-%20Hit%20My%20Heart%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/benassi-bros-feat-dhany-hit-my-heart-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Benassi Bros Feat. Dhany - Hit My Heart (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Benassi Bros Feat. Dhany - Hit My Heart (LazerzF!ne Bootleg Edit) by Benassi Bros Feat. Dhany</video:description>
+            <video:publication_date>2024-11-17</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Benassi Bros Feat. Dhany</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/brick-&amp;-lace-love-is-wicked-lazerzf%2521ne-bootleg-edit-2021</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Brick%20%26%20Lace%20-%20Love%20Is%20Wicked%20%28LazerzF%21ne%20Bootleg%20Edit%202021%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/brick-&amp;-lace-love-is-wicked-lazerzf%21ne-bootleg-edit-2021</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Brick &amp; Lace - Love Is Wicked (LazerzF!ne Bootleg Edit 2021)</video:title>
+            <video:description>Music video: Brick &amp; Lace - Love Is Wicked (LazerzF!ne Bootleg Edit 2021) by Brick &amp; Lace</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Brick &amp; Lace</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cj-mkh-feat-cedric-night-&amp;-day-lazerzf%2521ne-remix-2k13</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=p1L_ABQW1qQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/p1L_ABQW1qQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>CJ Mkh Feat. Cédric - Night &amp; Day (LazerzF!ne Remix 2K13)</video:title>
+            <video:description>Music video: CJ Mkh Feat. Cédric - Night &amp; Day (LazerzF!ne Remix 2K13) by CJ Mkh Feat. Cédric</video:description>
+            <video:publication_date>2013-02-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>CJ Mkh Feat. Cédric</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cj-mkh-feat-cedric-night-&amp;-day-lazerzf%2521ne-remix-edit-2k13</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=fSw5GTWylZc</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/fSw5GTWylZc</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>CJ Mkh Feat. Cédric - Night &amp; Day (LazerzF!ne Remix Edit 2K13)</video:title>
+            <video:description>Music video: CJ Mkh Feat. Cédric - Night &amp; Day (LazerzF!ne Remix Edit 2K13) by CJ Mkh Feat. Cédric</video:description>
+            <video:publication_date>2013-02-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>CJ Mkh Feat. Cédric</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/carly-rae-jepsen-i-really-like-you-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=F6lNS-jRDOE</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/F6lNS-jRDOE</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Carly Rae Jepsen - I Really Like You (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Carly Rae Jepsen - I Really Like You (LazerzF!ne Bootleg Edit) by Carly Rae Jepsen</video:description>
+            <video:publication_date>2015-03-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Carly Rae Jepsen</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/carly-rae-jepsen-i-really-like-you-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=Vo5aJYsEbkM</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/Vo5aJYsEbkM</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Carly Rae Jepsen - I Really Like You (LazerzF!ne Bootleg Mix)</video:title>
+            <video:description>Music video: Carly Rae Jepsen - I Really Like You (LazerzF!ne Bootleg Mix) by Carly Rae Jepsen</video:description>
+            <video:publication_date>2015-03-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Carly Rae Jepsen</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-everytime-we-touch-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Cascada%20-%20Everytime%20we%20touch%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/cascada-everytime-we-touch-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - Everytime we touch (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Cascada - Everytime we touch (LazerzF!ne Bootleg Edit) by Cascada</video:description>
+            <video:publication_date>2022-03-20</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-everytime-we-touch-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-miracle-lazerzf%2521ne-bootleg-edit-2014</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=xN6ofknCNRQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/xN6ofknCNRQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - Miracle (LazerzF!ne Bootleg Edit 2014)</video:title>
+            <video:description>Music video: Cascada - Miracle (LazerzF!ne Bootleg Edit 2014) by Cascada</video:description>
+            <video:publication_date>2014-06-10</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-miracle-lazerzf%2521ne-bootleg-edit-2022</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Cascada%20-%20Miracle%20%28LazerzF%21ne%20Bootleg%20Edit%202022%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/cascada-miracle-lazerzf%21ne-bootleg-edit-2022</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - Miracle (LazerzF!ne Bootleg Edit 2022)</video:title>
+            <video:description>Music video: Cascada - Miracle (LazerzF!ne Bootleg Edit 2022) by Cascada</video:description>
+            <video:publication_date>2022-07-10</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-one-more-night-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=52OmIvkO1po</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/52OmIvkO1po</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - One More Night (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Cascada - One More Night (LazerzF!ne Remix Edit) by Cascada</video:description>
+            <video:publication_date>2011-06-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-ready-for-love-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=vqy9jbYFgNs</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/vqy9jbYFgNs</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - Ready For Love (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Cascada - Ready For Love (LazerzF!ne Remix Edit) by Cascada</video:description>
+            <video:publication_date>2012-07-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-runaway-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/cascada-what-do-you-want-from-me-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Cascada%20-%20What%20Do%20You%20Want%20From%20Me%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/cascada-what-do-you-want-from-me-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Cascada - What Do You Want From Me (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Cascada - What Do You Want From Me (LazerzF!ne Bootleg Edit) by Cascada</video:description>
+            <video:publication_date>2023-06-18</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Cascada</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/chayanne-madre-tierra-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=7Cmlg9QKfjk</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/7Cmlg9QKfjk</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Chayanne - Madre Tierra (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Chayanne - Madre Tierra (DJ KS &amp; LazerzF!ne Bootleg Edit) by Chayanne</video:description>
+            <video:publication_date>2016-06-29</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Chayanne</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/chayanne-madre-tierra-dj-ks-&amp;-lazerzf%2521ne-bootleg</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/collectif-metisse-dame-el-kuduro-dj-ks-&amp;-lazerzf%2521ne-bootleg</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Collectif%20M%C3%A9tiss%C3%A9%20-%20Dame%20El%20Kuduro%20%28DJ%20KS%20%26%20LazerzF%21ne%20Bootleg%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/collectif-metisse-dame-el-kuduro-dj-ks-&amp;-lazerzf%21ne-bootleg</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Collectif Métissé - Dame El Kuduro (DJ KS &amp; LazerzF!ne Bootleg)</video:title>
+            <video:description>Music video: Collectif Métissé - Dame El Kuduro (DJ KS &amp; LazerzF!ne Bootleg) by Collectif Métissé</video:description>
+            <video:publication_date>2024-06-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Collectif Métissé</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/corona-baby-baby-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Corona%20-%20Baby%20Baby%20%28LazerzF%21ne%20Bootleg%20Edit%29.mkv</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/corona-baby-baby-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Corona - Baby Baby (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Corona - Baby Baby (LazerzF!ne Bootleg Edit) by Corona</video:description>
+            <video:publication_date>2022-11-27</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Corona</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/crapman-uh-la-la-la-lazerzf%2521ne-remix-edit-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=bZeTN5MwLdY</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/bZeTN5MwLdY</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Crapman - Uh La La La (LazerzF!ne Remix Edit 2K12)</video:title>
+            <video:description>Music video: Crapman - Uh La La La (LazerzF!ne Remix Edit 2K12) by Crapman</video:description>
+            <video:publication_date>2012-04-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Crapman</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/crew-cardinal-feat-kodie-money-can&apos;t-buy-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=EXXRZsmsT2I</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/EXXRZsmsT2I</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Crew Cardinal Feat Kodie - Money Can&apos;t Buy (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Crew Cardinal Feat Kodie - Money Can&apos;t Buy (LazerzF!ne Bootleg Edit) by Crew Cardinal Feat Kodie</video:description>
+            <video:publication_date>2015-12-13</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Crew Cardinal Feat Kodie</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/crew-cardinal-feat-kodie-money-can&apos;t-buy-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dht-listen-to-your-heart-lazerzf%2521ne-remix-edit-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=Aw7it7QZX50</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/Aw7it7QZX50</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>D.H.T - Listen To Your Heart (LazerzF!ne Remix Edit 2K12)</video:title>
+            <video:description>Music video: D.H.T - Listen To Your Heart (LazerzF!ne Remix Edit 2K12) by D.H.T</video:description>
+            <video:publication_date>2012-04-04</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>D.H.T</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dcx-flying-high-lazerzf%2521ne-remix-edit-2015</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=DeGOseOwumg</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/DeGOseOwumg</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DCX - Flying High (LazerzF!ne Remix Edit 2015)</video:title>
+            <video:description>Music video: DCX - Flying High (LazerzF!ne Remix Edit 2015) by DCX</video:description>
+            <video:publication_date>2015-06-03</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DCX</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-gollum-feat-dj-cap-vs-nicco-together-forever-easter-rave-hymn-2k16-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=QrV0dmSFhJw</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/QrV0dmSFhJw</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ Gollum Feat. DJ Cap Vs. NICCO - Together Forever (Easter Rave Hymn 2k16) (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: DJ Gollum Feat. DJ Cap Vs. NICCO - Together Forever (Easter Rave Hymn 2k16) (LazerzF!ne Bootleg Edit) by DJ Gollum Feat. DJ Cap Vs. NICCO</video:description>
+            <video:publication_date>2016-03-31</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ Gollum Feat. DJ Cap Vs. NICCO</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-gollum-feat-dj-cap-emotions-in-dance-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=2NKqjV1ijPI</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/2NKqjV1ijPI</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ Gollum feat. DJ Cap - Emotions in Dance (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: DJ Gollum feat. DJ Cap - Emotions in Dance (LazerzF!ne Remix Edit) by DJ Gollum feat. DJ Cap</video:description>
+            <video:publication_date>2015-04-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ Gollum feat. DJ Cap</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-gollum-feat-dj-cap-emotions-in-dance-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-gollum-feat-dj-cap-give-me-five-lazerzf%2521ne-vs-lightfirez-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=CUGit04soeg</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/CUGit04soeg</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ Gollum feat. DJ Cap - Give Me Five (LazerzF!ne Vs. LightFirez Remix Edit)</video:title>
+            <video:description>Music video: DJ Gollum feat. DJ Cap - Give Me Five (LazerzF!ne Vs. LightFirez Remix Edit) by DJ Gollum feat. DJ Cap</video:description>
+            <video:publication_date>2014-03-16</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ Gollum feat. DJ Cap</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-gollum-feat-dj-cap-give-me-five-lazerzf%2521ne-vs-lightfirez-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-harmonics-&amp;-dj-ness-piano-land-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=IKrlrqSAMdo</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/IKrlrqSAMdo</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ Harmonics &amp; DJ Ness - Piano Land (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: DJ Harmonics &amp; DJ Ness - Piano Land (LazerzF!ne Remix Edit) by DJ Harmonics &amp; DJ Ness</video:description>
+            <video:publication_date>2014-04-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ Harmonics &amp; DJ Ness</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-harmonics-call-of-the-jungle-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-ks-&amp;-lazerzf%2521ne-still-old-school-original-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-ks-&amp;-lazerzf%2521ne-still-old-school-radio-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=5gtPwhx47kg</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/5gtPwhx47kg</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ KS &amp; LazerzF!ne - Still Old School (Radio Edit)</video:title>
+            <video:description>Music video: DJ KS &amp; LazerzF!ne - Still Old School (Radio Edit) by DJ KS &amp; LazerzF!ne</video:description>
+            <video:publication_date>2020-02-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ KS &amp; LazerzF!ne</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-spyroof-now-or-never-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/DJ%20Spyroof%20-%20Now%20Or%20Never%20%28LazerzF%21ne%20Remix%20Edit%29.mkv</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/dj-spyroof-now-or-never-lazerzf%21ne-remix-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ Spyroof - Now Or Never (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: DJ Spyroof - Now Or Never (LazerzF!ne Remix Edit) by DJ Spyroof</video:description>
+            <video:publication_date>2022-02-22</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ Spyroof</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-spyroof-now-or-never-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-tht-&amp;-alex-un-an-ensemble-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=CMIAzAOh-DM</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/CMIAzAOh-DM</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DJ THT &amp; Alex - Un An Ensemble (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: DJ THT &amp; Alex - Un An Ensemble (LazerzF!ne Remix Edit) by DJ THT &amp; Alex</video:description>
+            <video:publication_date>2011-06-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DJ THT &amp; Alex</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/danzel-stronger-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/danzel-stronger-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/deep-spirit-feat-kathy-no-cover-song-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=_VcCa44QwNI</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/_VcCa44QwNI</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Deep Spirit Feat. Kathy - No Cover Song (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Deep Spirit Feat. Kathy - No Cover Song (DJ KS &amp; LazerzF!ne Bootleg Edit) by Deep Spirit Feat. Kathy</video:description>
+            <video:publication_date>2017-01-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Deep Spirit Feat. Kathy</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/discocrew-husvagn-lazerzf%2521ne-remix-2020</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=M2r_qmz89Ic</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/M2r_qmz89Ic</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DiscoCrew - Husvagn (LazerzF!ne Remix 2020)</video:title>
+            <video:description>Music video: DiscoCrew - Husvagn (LazerzF!ne Remix 2020) by DiscoCrew</video:description>
+            <video:publication_date>2020-04-25</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DiscoCrew</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/discocrew-husvagn-lazerzf%2521ne-remix-edit-2020</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/DiscoCrew%20-%20Husvagn%20%28LazerzF%21ne%20Remix%20Edit%202020%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/discocrew-husvagn-lazerzf%21ne-remix-edit-2020</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>DiscoCrew - Husvagn (LazerzF!ne Remix Edit 2020)</video:title>
+            <video:description>Music video: DiscoCrew - Husvagn (LazerzF!ne Remix Edit 2020) by DiscoCrew</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>DiscoCrew</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/discobitch-c&apos;est-beau-la-bourgeoisie-lazerzf%2521ne-&amp;-dj-ks-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Discobitch%20-%20C%27est%20beau%20la%20bourgeoisie%20%28LazerzF%21ne%20%26%20DJ%20KS%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/discobitch-c&apos;est-beau-la-bourgeoisie-lazerzf%21ne-&amp;-dj-ks-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Discobitch - C&apos;est beau la bourgeoisie (LazerzF!ne &amp; DJ KS Bootleg Edit)</video:title>
+            <video:description>Music video: Discobitch - C&apos;est beau la bourgeoisie (LazerzF!ne &amp; DJ KS Bootleg Edit) by Discobitch</video:description>
+            <video:publication_date>2025-03-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Discobitch</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-assad-ft-alain-ramanisum-&amp;-willy-william-li-tourner-lazerzf%2521ne-&amp;-djks-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Dj%20Assad%20Ft%20Alain%20Ramanisum%20%26%20Willy%20William%20-%20Li%20Tourner%20%28LazerzF%21ne%20%26%20DJKS%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/dj-assad-ft-alain-ramanisum-&amp;-willy-william-li-tourner-lazerzf%21ne-&amp;-djks-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Dj Assad Ft Alain Ramanisum &amp; Willy William - Li Tourner (LazerzF!ne &amp; DJKS Bootleg Edit)</video:title>
+            <video:description>Music video: Dj Assad Ft Alain Ramanisum &amp; Willy William - Li Tourner (LazerzF!ne &amp; DJKS Bootleg Edit) by Dj Assad Ft Alain Ramanisum &amp; Willy William</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Dj Assad Ft Alain Ramanisum &amp; Willy William</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-barbas-hurry-up%2521-lazerzf%2521ne-vs-lightfirez-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=bHcBzMrNE6k</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/bHcBzMrNE6k</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Dj Barbas - Hurry Up! (LazerzF!ne Vs. LightFirez Remix Edit)</video:title>
+            <video:description>Music video: Dj Barbas - Hurry Up! (LazerzF!ne Vs. LightFirez Remix Edit) by Dj Barbas</video:description>
+            <video:publication_date>2012-05-17</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Dj Barbas</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-barbas-hurry-up%2521-lazerzf%2521ne-vs-lightfirez-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-barbas-presents-in-session-hurry-up%2521-lazerzf%2521ne-2017-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=d2bnLn4gWUA</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/d2bnLn4gWUA</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Dj Barbas presents. In Session - Hurry Up! (LazerzF!ne 2017 Bootleg Edit)</video:title>
+            <video:description>Music video: Dj Barbas presents. In Session - Hurry Up! (LazerzF!ne 2017 Bootleg Edit) by Dj Barbas presents. In Session</video:description>
+            <video:publication_date>2017-02-27</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Dj Barbas presents. In Session</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-barbas-presents-in-session-hurry-up%2521-lazerzf%2521ne-2017-bootleg</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-crapi-power-of-pleasure-lazerzf%2521ne-remix-edit-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=83coisOPfk0</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/83coisOPfk0</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Dj Crapi - Power Of Pleasure (LazerzF!ne Remix Edit 2K12)</video:title>
+            <video:description>Music video: Dj Crapi - Power Of Pleasure (LazerzF!ne Remix Edit 2K12) by Dj Crapi</video:description>
+            <video:publication_date>2012-07-18</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Dj Crapi</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/dj-crapi-power-of-pleasure-lazerzf%2521ne-remix-edit-unpitched-edition-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/don-omar-feat-lucenzo-danza-kuduro-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/ed-sheeran-perfect-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/ed-sheeran-perfect-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=VwNjomh-Rao</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/VwNjomh-Rao</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Ed Sheeran - Perfect (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: Ed Sheeran - Perfect (LazerzF!ne Remix) by Ed Sheeran</video:description>
+            <video:publication_date>2017-10-22</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Ed Sheeran</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/electric-callboy-tanzneid-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Electric%20Callboy%20-%20TANZNEID%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/electric-callboy-tanzneid-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Electric Callboy - TANZNEID (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Electric Callboy - TANZNEID (LazerzF!ne Bootleg Edit) by Electric Callboy</video:description>
+            <video:publication_date>2025-11-10</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Electric Callboy</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/emmy-skajagprova-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=TzDcUh0Er-M</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/TzDcUh0Er-M</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Emmy - Skajagprova (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Emmy - Skajagprova (LazerzF!ne Remix Edit) by Emmy</video:description>
+            <video:publication_date>2016-01-13</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Emmy</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/emmy-skajagprova-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/first-aid-kit-my-silver-lining-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=ovPzUWBqKys</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/ovPzUWBqKys</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>First Aid Kit - My Silver Lining (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: First Aid Kit - My Silver Lining (LazerzF!ne Bootleg Edit) by First Aid Kit</video:description>
+            <video:publication_date>2015-08-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>First Aid Kit</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/flavel-&amp;-neto-feat-anna-torres-pedida-perfeita-lazerzf%2521ne-vs-lightfirez-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=LbeIi_Vco8s</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/LbeIi_Vco8s</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Flavel &amp; Neto Feat. Anna Torres - Pedida Perfeita (LazerzF!ne Vs. LightFirez Remix Edit)</video:title>
+            <video:description>Music video: Flavel &amp; Neto Feat. Anna Torres - Pedida Perfeita (LazerzF!ne Vs. LightFirez Remix Edit) by Flavel &amp; Neto Feat. Anna Torres</video:description>
+            <video:publication_date>2013-07-12</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Flavel &amp; Neto Feat. Anna Torres</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/francky-vincent-alice-ca-glisse-lazerzf%2521ne-&amp;-dj-ks-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Francky%20Vincent%20-%20Alice%20%C3%A7a%20glisse%20%28LazerzF%21ne%20%26%20DJ%20KS%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/francky-vincent-alice-ca-glisse-lazerzf%21ne-&amp;-dj-ks-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Francky Vincent - Alice ça glisse (LazerzF!ne &amp; DJ KS Bootleg Edit)</video:title>
+            <video:description>Music video: Francky Vincent - Alice ça glisse (LazerzF!ne &amp; DJ KS Bootleg Edit) by Francky Vincent</video:description>
+            <video:publication_date>2025-11-02</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Francky Vincent</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/freedom-hang-on-lazerzf%2521ne-remix-edit-2019</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/freedom-feat-musikk-hang-on-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/freestylerz-dance-into-the-night-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=hbat4pFouMQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/hbat4pFouMQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Freestylerz - Dance Into The Night (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Freestylerz - Dance Into The Night (LazerzF!ne Remix Edit) by Freestylerz</video:description>
+            <video:publication_date>2011-01-29</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Freestylerz</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/good-vibe-crew-feat-cat-good-vibe-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=24tMjkB0_xA</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/24tMjkB0_xA</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Good Vibe Crew feat. Cat - Good Vibe (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Good Vibe Crew feat. Cat - Good Vibe (LazerzF!ne Remix Edit) by Good Vibe Crew feat. Cat</video:description>
+            <video:publication_date>2014-01-03</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Good Vibe Crew feat. Cat</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-21st-century-digital-girl-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=jnd4k2Jk5ZM</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/jnd4k2Jk5ZM</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Groove Coverage - 21st Century Digital Girl (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Groove Coverage - 21st Century Digital Girl (LazerzF!ne Bootleg Edit) by Groove Coverage</video:description>
+            <video:publication_date>2017-04-26</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Groove Coverage</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-god-is-a-girl-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Groove%20Coverage%20-%20God%20Is%20A%20Girl%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/groove-coverage-god-is-a-girl-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Groove Coverage - God Is A Girl (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Groove Coverage - God Is A Girl (LazerzF!ne Bootleg Edit) by Groove Coverage</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Groove Coverage</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-god-is-a-girl-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-poison-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=_IELfrzD92o</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/_IELfrzD92o</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Groove Coverage - Poison (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Groove Coverage - Poison (LazerzF!ne Remix Edit) by Groove Coverage</video:description>
+            <video:publication_date>2012-04-20</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Groove Coverage</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-the-end-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Groove%20Coverage%20-%20The%20End%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/groove-coverage-the-end-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Groove Coverage - The End (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Groove Coverage - The End (LazerzF!ne Bootleg Edit) by Groove Coverage</video:description>
+            <video:publication_date>2026-06-01</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Groove Coverage</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/groove-coverage-the-end-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/gunther-&amp;-the-sunshine-girls-ding-dong-song-lazerzf%2521ne-remix-2020</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/gunther-&amp;-the-sunshine-girls-ding-dong-song-lazerzf%2521ne-remix-edit-2020</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=fJ0T-ezdnkQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/fJ0T-ezdnkQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Günther &amp; The Sunshine Girls - Ding Dong Song (LazerzF!ne Remix Edit 2020)</video:title>
+            <video:description>Music video: Günther &amp; The Sunshine Girls - Ding Dong Song (LazerzF!ne Remix Edit 2020) by Günther &amp; The Sunshine Girls</video:description>
+            <video:publication_date>2020-10-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Günther &amp; The Sunshine Girls</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/inna-sun-is-up-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=FS-vY3Xg10U</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/FS-vY3Xg10U</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Inna - Sun is up (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Inna - Sun is up (LazerzF!ne Remix Edit) by Inna</video:description>
+            <video:publication_date>2011-11-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Inna</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/inna-sun-is-up-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=m3wMpexzVNo</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/m3wMpexzVNo</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Inna - Sun is up (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: Inna - Sun is up (LazerzF!ne Remix) by Inna</video:description>
+            <video:publication_date>2011-11-10</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Inna</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/jannine-weigel-heart-stop-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=0Xs9Fp7WOik</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/0Xs9Fp7WOik</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Jannine Weigel - Heart Stop (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Jannine Weigel - Heart Stop (LazerzF!ne Remix Edit) by Jannine Weigel</video:description>
+            <video:publication_date>2018-09-14</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Jannine Weigel</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/jason-derulo-in-my-head-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=6OBpoLQMkHQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/6OBpoLQMkHQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Jason Derulo - In My Head (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Jason Derulo - In My Head (LazerzF!ne Remix Edit) by Jason Derulo</video:description>
+            <video:publication_date>2012-11-13</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Jason Derulo</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/jens-o-one-more-lazerzf%2521ne-tribute-to-verano-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=hwSGiXMsWvs</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/hwSGiXMsWvs</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Jens O. - One More (LazerzF!ne Tribute To Verano Bootleg Edit)</video:title>
+            <video:description>Music video: Jens O. - One More (LazerzF!ne Tribute To Verano Bootleg Edit) by Jens O.</video:description>
+            <video:publication_date>2018-09-14</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Jens O.</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/jessy-matador-allez-ola-ole-lazerzf%2521ne-&amp;-djks-bootleg-edit-2024</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Jessy%20Matador%20-%20Allez%20Ola%20Ol%C3%A9%20%28LazerzF%21ne%20%26%20DJKS%20Bootleg%20Edit%202024%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/jessy-matador-allez-ola-ole-lazerzf%21ne-&amp;-djks-bootleg-edit-2024</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Jessy Matador - Allez Ola Olé (LazerzF!ne &amp; DJKS Bootleg Edit 2024)</video:title>
+            <video:description>Music video: Jessy Matador - Allez Ola Olé (LazerzF!ne &amp; DJKS Bootleg Edit 2024) by Jessy Matador</video:description>
+            <video:publication_date>2023-12-17</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Jessy Matador</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/jessy-matador-allez-ola-ole-lazerzf%2521ne-vs-lightfirez-remix-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=6VDsHsscdXc</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/6VDsHsscdXc</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Jessy Matador - Allez Ola Olé (LazerzF!ne Vs. LightFirez Remix 2K12)</video:title>
+            <video:description>Music video: Jessy Matador - Allez Ola Olé (LazerzF!ne Vs. LightFirez Remix 2K12) by Jessy Matador</video:description>
+            <video:publication_date>2012-08-04</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Jessy Matador</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/johank-feat-tonyt-&amp;-alba-kras-free-yourself-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/johank-feat-tonyt-&amp;-alba-kras-free-yourself-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kat-deluna-feat-busta-rhymes-run-the-show-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Kat%20DeLuna%20Feat.%20Busta%20Rhymes%20-%20Run%20The%20Show%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/kat-deluna-feat-busta-rhymes-run-the-show-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Kat DeLuna Feat. Busta Rhymes - Run The Show (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Kat DeLuna Feat. Busta Rhymes - Run The Show (LazerzF!ne Bootleg Edit) by Kat DeLuna Feat. Busta Rhymes</video:description>
+            <video:publication_date>2024-09-09</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Kat DeLuna Feat. Busta Rhymes</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kat-deluna-feat-elephant-man-whine-up-lazerzf%2521ne-&amp;-dj-ks-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Kat%20DeLuna%20Feat.%20Elephant%20Man%20-%20Whine%20Up%20%28LazerzF%21ne%20%26%20DJ%20KS%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/kat-deluna-feat-elephant-man-whine-up-lazerzf%21ne-&amp;-dj-ks-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Kat DeLuna Feat. Elephant Man - Whine Up (LazerzF!ne &amp; DJ KS Bootleg Edit)</video:title>
+            <video:description>Music video: Kat DeLuna Feat. Elephant Man - Whine Up (LazerzF!ne &amp; DJ KS Bootleg Edit) by Kat DeLuna Feat. Elephant Man</video:description>
+            <video:publication_date>2025-08-12</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Kat DeLuna Feat. Elephant Man</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kat-deluna-feat-elephant-man-whine-up-lazerzf%2521ne-&amp;-dj-ks-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kelly-clarkson-behind-these-hazel-eyes-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Kelly%20Clarkson%20-%20Behind%20These%20Hazel%20Eyes%20%28DJ%20KS%20%26%20LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/kelly-clarkson-behind-these-hazel-eyes-dj-ks-&amp;-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Kelly Clarkson - Behind These Hazel Eyes (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Kelly Clarkson - Behind These Hazel Eyes (DJ KS &amp; LazerzF!ne Bootleg Edit) by Kelly Clarkson</video:description>
+            <video:publication_date>2026-05-16</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Kelly Clarkson</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kick-fest-hos-mig-lazerzf%2521ne-club-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=wljhVHe1Mxk</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/wljhVHe1Mxk</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Kick - Fest Hos Mig (LazerzF!ne Club Mix)</video:title>
+            <video:description>Music video: Kick - Fest Hos Mig (LazerzF!ne Club Mix) by Kick</video:description>
+            <video:publication_date>2011-03-04</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Kick</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/krewella-enjoy-the-ride-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=hruGkmCSf5c</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/hruGkmCSf5c</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Krewella - Enjoy The Ride (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Krewella - Enjoy The Ride (LazerzF!ne Bootleg Edit) by Krewella</video:description>
+            <video:publication_date>2014-04-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Krewella</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/kygo-&amp;-selena-gomez-it-ain&apos;t-me-dj-ks-and-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=SaONRkmTTZ0</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/SaONRkmTTZ0</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Kygo &amp; Selena Gomez - It Ain&apos;t Me (DJ KS and LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Kygo &amp; Selena Gomez - It Ain&apos;t Me (DJ KS and LazerzF!ne Bootleg Edit) by Kygo &amp; Selena Gomez</video:description>
+            <video:publication_date>2017-04-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Kygo &amp; Selena Gomez</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lfz-&amp;-meikal-eye-opener-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=k_QgqP2ILQU</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/k_QgqP2ILQU</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>LFZ &amp; Meikal - Eye Opener (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: LFZ &amp; Meikal - Eye Opener (LazerzF!ne Remix Edit) by LFZ &amp; Meikal</video:description>
+            <video:publication_date>2020-11-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>LFZ &amp; Meikal</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lfz-&amp;-meikal-eye-opener-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lady-antebellum-compass-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=WFpREYfMADY</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/WFpREYfMADY</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Lady Antebellum - Compass (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Lady Antebellum - Compass (DJ KS &amp; LazerzF!ne Bootleg Edit) by Lady Antebellum</video:description>
+            <video:publication_date>2017-03-18</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Lady Antebellum</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lady-gaga-alejandro-wavefirez-&amp;-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lady-gaga-alejandro-wavelazer-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=CiwYa6ijY60</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/CiwYa6ijY60</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Lady Gaga - Alejandro (Wavelazer Remix Edit)</video:title>
+            <video:description>Music video: Lady Gaga - Alejandro (Wavelazer Remix Edit) by Lady Gaga</video:description>
+            <video:publication_date>2015-09-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Lady Gaga</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-bamboo-lover-extended-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-bamboo-lover-radio-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=eB0OTVG5mdA</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/eB0OTVG5mdA</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>LazerzF!ne - Bamboo Lover (Radio Edit)</video:title>
+            <video:description>Music video: LazerzF!ne - Bamboo Lover (Radio Edit) by LazerzF!ne</video:description>
+            <video:publication_date>2019-05-29</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>LazerzF!ne</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-lick-on-me-radio-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=o9H-aub_pc8</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/o9H-aub_pc8</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>LazerzF!ne - Lick On Me (Radio Edit)</video:title>
+            <video:description>Music video: LazerzF!ne - Lick On Me (Radio Edit) by LazerzF!ne</video:description>
+            <video:publication_date>2020-06-12</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>LazerzF!ne</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-palm-trees-in-california</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=ai8HCO1gv_4</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/ai8HCO1gv_4</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>LazerzF!ne - Palm Trees In California</video:title>
+            <video:description>Music video: LazerzF!ne - Palm Trees In California by LazerzF!ne</video:description>
+            <video:publication_date>2017-07-06</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>LazerzF!ne</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-up-&amp;-down-extended-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-up-&amp;-down-radio-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lazerzf%2521ne-up-&amp;-down-wavefirez-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lightfirez-summer-feelings-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=Bz4oxgGQg0Q</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/Bz4oxgGQg0Q</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>LightFirez - Summer Feelings (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: LightFirez - Summer Feelings (LazerzF!ne Remix Edit) by LightFirez</video:description>
+            <video:publication_date>2011-08-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>LightFirez</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lightfirez-summer-feelings-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-big-&amp;-little-sis-nora-hardstyle-fish-lazerzf%2521ne-bootleg-club-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-big-&amp;-little-sis-nora-hardstyle-fish-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Little%20Big%20%26%20Little%20Sis%20Nora%20-%20Hardstyle%20Fish%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/little-big-&amp;-little-sis-nora-hardstyle-fish-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Little Big &amp; Little Sis Nora - Hardstyle Fish (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Little Big &amp; Little Sis Nora - Hardstyle Fish (LazerzF!ne Bootleg Edit) by Little Big &amp; Little Sis Nora</video:description>
+            <video:publication_date>2024-02-09</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Little Big &amp; Little Sis Nora</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-sis-nora-limousine-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Little%20Sis%20Nora%20-%20Limousine%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/little-sis-nora-limousine-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Little Sis Nora - Limousine (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Little Sis Nora - Limousine (LazerzF!ne Bootleg Edit) by Little Sis Nora</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Little Sis Nora</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-sis-nora-limousine-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-sis-nora-mdma-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Little%20Sis%20Nora%20-%20MDMA%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/little-sis-nora-mdma-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Little Sis Nora - MDMA (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Little Sis Nora - MDMA (LazerzF!ne Bootleg Edit) by Little Sis Nora</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Little Sis Nora</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-sis-nora-mdma-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/little-sis-nora-samurai-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=hClvAnOpf34</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/hClvAnOpf34</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Little Sis Nora - Samurai (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Little Sis Nora - Samurai (LazerzF!ne Bootleg Edit) by Little Sis Nora</video:description>
+            <video:publication_date>2022-11-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Little Sis Nora</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lolita-jolie-garcon-lazerzf%2521ne-oldschool-bootleg-edit-2014</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=8v3j1-0WqjI</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/8v3j1-0WqjI</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Lolita - Jolie Garçon (LazerzF!ne Oldschool Bootleg Edit 2014)</video:title>
+            <video:description>Music video: Lolita - Jolie Garçon (LazerzF!ne Oldschool Bootleg Edit 2014) by Lolita</video:description>
+            <video:publication_date>2014-03-22</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Lolita</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lolita-jolie-garcon-lazerzf%2521ne-oldschool-bootleg-mix-2014</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/lucenzo-feat-don-omar-danza-kuduro-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=dLRBaMtoV_U</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/dLRBaMtoV_U</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Lucenzo feat Don Omar - Danza Kuduro (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Lucenzo feat Don Omar - Danza Kuduro (LazerzF!ne Remix Edit) by Lucenzo feat Don Omar</video:description>
+            <video:publication_date>2012-11-10</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Lucenzo feat Don Omar</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/luis-fonsi-ft-daddy-yankee-despacito-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=_QiNgyfYk80</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/_QiNgyfYk80</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Luis Fonsi ft. Daddy Yankee - Despacito (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Luis Fonsi ft. Daddy Yankee - Despacito (DJ KS &amp; LazerzF!ne Bootleg Edit) by Luis Fonsi ft. Daddy Yankee</video:description>
+            <video:publication_date>2017-07-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Luis Fonsi ft. Daddy Yankee</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/luis-fonsi-ft-daddy-yankee-despacito-dj-ks-&amp;-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/manian-welcome-to-the-uk-lazerzf%2521ne-bootleg-mix-2014</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=A2QbB7oqLSw</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/A2QbB7oqLSw</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Manian - Welcome To The UK (LazerzF!ne Bootleg Mix 2014)</video:title>
+            <video:description>Music video: Manian - Welcome To The UK (LazerzF!ne Bootleg Mix 2014) by Manian</video:description>
+            <video:publication_date>2014-10-04</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Manian</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/martin-tungevaag-wicked-wonderland-lazerzf%2521ne-vs-lightfirez-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=u7jX8db8IEA</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/u7jX8db8IEA</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Martin Tungevaag - Wicked Wonderland (LazerzF!ne vs LightFirez Bootleg Edit)</video:title>
+            <video:description>Music video: Martin Tungevaag - Wicked Wonderland (LazerzF!ne vs LightFirez Bootleg Edit) by Martin Tungevaag</video:description>
+            <video:publication_date>2014-09-13</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Martin Tungevaag</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/martin-tungevaag-wicked-wonderland-lazerzf%2521ne-vs-lightfirez-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/master-blaster-everywhere-lazerzf%2521ne-2011-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=AQubUHJYQIc</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/AQubUHJYQIc</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Master Blaster - Everywhere (LazerzF!ne 2011 Remix Edit)</video:title>
+            <video:description>Music video: Master Blaster - Everywhere (LazerzF!ne 2011 Remix Edit) by Master Blaster</video:description>
+            <video:publication_date>2011-02-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Master Blaster</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/mike-candys-feat-evelyn-and-tony-t-everybody-lazerzf%2521ne-tribute-to-boosterz-inc-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=F7STdPgBiGw</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/F7STdPgBiGw</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Mike Candys Feat. Evelyn and Tony T. - Everybody (LazerzF!ne Tribute To Boosterz Inc. Bootleg Edit)</video:title>
+            <video:description>Music video: Mike Candys Feat. Evelyn and Tony T. - Everybody (LazerzF!ne Tribute To Boosterz Inc. Bootleg Edit) by Mike Candys Feat. Evelyn and Tony T.</video:description>
+            <video:publication_date>2013-11-19</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Mike Candys Feat. Evelyn and Tony T.</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/mike-perry-the-ocean-romy-wave-cover-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=m_fy8VEq5_0</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/m_fy8VEq5_0</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Mike Perry - The Ocean (Romy Wave Cover) (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Mike Perry - The Ocean (Romy Wave Cover) (DJ KS &amp; LazerzF!ne Bootleg Edit) by Mike Perry</video:description>
+            <video:publication_date>2017-02-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Mike Perry</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/noa-kirel-thought-about-that-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Noa%20Kirel%20-%20Thought%20About%20That%20%28DJ%20KS%20%26%20LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/noa-kirel-thought-about-that-dj-ks-&amp;-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Noa Kirel - Thought About That (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Noa Kirel - Thought About That (DJ KS &amp; LazerzF!ne Bootleg Edit) by Noa Kirel</video:description>
+            <video:publication_date>2022-04-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Noa Kirel</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/nordic-star-jump-jump-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=k4B6wHDuPao</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/k4B6wHDuPao</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Nordic Star - Jump Jump (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: Nordic Star - Jump Jump (LazerzF!ne Remix) by Nordic Star</video:description>
+            <video:publication_date>2012-05-01</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Nordic Star</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/nuit-incolore-depasse-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Nuit%20Incolore%20-%20D%C3%A9pass%C3%A9%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/nuit-incolore-depasse-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Nuit Incolore - Dépassé (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Nuit Incolore - Dépassé (LazerzF!ne Bootleg Edit) by Nuit Incolore</video:description>
+            <video:publication_date>2023-08-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Nuit Incolore</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/omfg-ez-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=uo8s5cCrQsk</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/uo8s5cCrQsk</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>OMFG - EZ (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: OMFG - EZ (LazerzF!ne Bootleg Edit) by OMFG</video:description>
+            <video:publication_date>2019-05-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>OMFG</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/omfg-meant-for-you-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=uuG86r94Afo</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/uuG86r94Afo</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>OMFG - Meant for You (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: OMFG - Meant for You (LazerzF!ne Bootleg Edit) by OMFG</video:description>
+            <video:publication_date>2019-02-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>OMFG</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/ph-electro-feat-andy-reznik-gloria-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=lOeJFVpZumo</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/lOeJFVpZumo</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>PH Electro feat. Andy Reznik - Gloria (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: PH Electro feat. Andy Reznik - Gloria (LazerzF!ne Bootleg Edit) by PH Electro feat. Andy Reznik</video:description>
+            <video:publication_date>2014-03-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>PH Electro feat. Andy Reznik</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/ph-electro-feat-andy-reznik-gloria-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/pitbull-ft-chris-brown-international-love-lazerzf%2521ne-bootleg-edit-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=iI7YgsTchYk</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/iI7YgsTchYk</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Pitbull Ft. Chris Brown - International Love (LazerzF!ne Bootleg Edit 2k12)</video:title>
+            <video:description>Music video: Pitbull Ft. Chris Brown - International Love (LazerzF!ne Bootleg Edit 2k12) by Pitbull Ft. Chris Brown</video:description>
+            <video:publication_date>2012-05-27</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Pitbull Ft. Chris Brown</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/pitbull-ft-chris-brown-international-love-lazerzf%2521ne-bootleg-mix-2k12</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/rio-ft-nicco-party-shaker-lazerzf%2521ne-vs-lightfirez-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=fkjOfay3mtY</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/fkjOfay3mtY</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>R.I.O ft Nicco - Party Shaker (LazerzF!ne vs LightFirez Remix Edit)</video:title>
+            <video:description>Music video: R.I.O ft Nicco - Party Shaker (LazerzF!ne vs LightFirez Remix Edit) by R.I.O ft Nicco</video:description>
+            <video:publication_date>2012-11-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>R.I.O ft Nicco</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/rave-ryders-techno-power-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/rave-ryders-techno-power-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/redmoon-&amp;-meron-ryan-heavyweight-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=SpdTY8z2PZQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/SpdTY8z2PZQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>RedMoon &amp; Meron Ryan - Heavyweight (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: RedMoon &amp; Meron Ryan - Heavyweight (LazerzF!ne Bootleg Edit) by RedMoon &amp; Meron Ryan</video:description>
+            <video:publication_date>2015-09-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>RedMoon &amp; Meron Ryan</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/redmoon-&amp;-meron-ryan-heavyweight-lazerzf%2521ne-bootleg</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/reik-&amp;-rocco-hunt-&amp;-ana-mena-a-un-paso-de-la-luna-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Reik%20%26%20Rocco%20Hunt%20%26%20Ana%20Mena%20-%20A%20Un%20Paso%20De%20La%20Luna%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/reik-&amp;-rocco-hunt-&amp;-ana-mena-a-un-paso-de-la-luna-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Reik &amp; Rocco Hunt &amp; Ana Mena - A Un Paso De La Luna (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Reik &amp; Rocco Hunt &amp; Ana Mena - A Un Paso De La Luna (LazerzF!ne Bootleg Edit) by Reik &amp; Rocco Hunt &amp; Ana Mena</video:description>
+            <video:publication_date>2022-02-21</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Reik &amp; Rocco Hunt &amp; Ana Mena</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/reik-&amp;-rocco-hunt-&amp;-ana-mena-a-un-paso-de-la-luna-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/sandra-gee-sommar-ragg-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=r9iYePBMNdw</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/r9iYePBMNdw</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Sandra Gee - Sommar Ragg (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: Sandra Gee - Sommar Ragg (LazerzF!ne Remix) by Sandra Gee</video:description>
+            <video:publication_date>2013-08-11</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Sandra Gee</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/sean-paul-temperature-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Sean%20Paul%20-%20Temperature%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/sean-paul-temperature-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Sean Paul - Temperature (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Sean Paul - Temperature (LazerzF!ne Bootleg Edit) by Sean Paul</video:description>
+            <video:publication_date>2024-08-25</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Sean Paul</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/shakira-whenever-wherever-lazerzf%2521ne-remix-edit-2017</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=WeiOfy_g0DQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/WeiOfy_g0DQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Shakira - Whenever Wherever (LazerzF!ne Remix Edit 2017)</video:title>
+            <video:description>Music video: Shakira - Whenever Wherever (LazerzF!ne Remix Edit 2017) by Shakira</video:description>
+            <video:publication_date>2017-09-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Shakira</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/sia-ft-sean-paul-cheap-thrills-dj-ks-&amp;-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=VDLYlMw5lio</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/VDLYlMw5lio</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Sia ft. Sean Paul - Cheap Thrills (DJ KS &amp; LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Sia ft. Sean Paul - Cheap Thrills (DJ KS &amp; LazerzF!ne Bootleg Edit) by Sia ft. Sean Paul</video:description>
+            <video:publication_date>2016-04-30</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Sia ft. Sean Paul</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/sia-ft-sean-paul-cheap-thrills-dj-ks-&amp;-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/steyyx-feat-robbie-rosen-somebody-loves-you-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=VVC3ootjLME</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/VVC3ootjLME</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Steyyx feat. Robbie Rosen - Somebody Loves You (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Steyyx feat. Robbie Rosen - Somebody Loves You (LazerzF!ne Remix Edit) by Steyyx feat. Robbie Rosen</video:description>
+            <video:publication_date>2020-12-05</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Steyyx feat. Robbie Rosen</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/sun-kidz-feat-destiny-wake-up-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=-GZT5ve5TsQ</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/-GZT5ve5TsQ</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Sun Kidz Feat Destiny - Wake Up (LazerzF!ne Remix)</video:title>
+            <video:description>Music video: Sun Kidz Feat Destiny - Wake Up (LazerzF!ne Remix) by Sun Kidz Feat Destiny</video:description>
+            <video:publication_date>2011-09-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Sun Kidz Feat Destiny</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/twiins-boys-boys-boys-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=fglGbuqUIgA</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/fglGbuqUIgA</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>TWiiNS - Boys Boys Boys (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: TWiiNS - Boys Boys Boys (LazerzF!ne Remix Edit) by TWiiNS</video:description>
+            <video:publication_date>2012-06-14</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>TWiiNS</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/twiins-boys-boys-boys-lazerzf%2521ne-remix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/twiins-feat-carlprit-boys-boys-boys-dj-ks-&amp;-lazerzf%2521ne-remix-2022</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/twiins-feat-carlprit-boys-boys-boys-dj-ks-&amp;-lazerzf%2521ne-remix-edit-2022</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/TWiiNS%20feat.%20Carlprit%20-%20Boys%20Boys%20Boys%20%28DJ%20KS%20%26%20LazerzF%21ne%20Remix%20Edit%202022%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/twiins-feat-carlprit-boys-boys-boys-dj-ks-&amp;-lazerzf%21ne-remix-edit-2022</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>TWiiNS feat. Carlprit - Boys Boys Boys (DJ KS &amp; LazerzF!ne Remix Edit 2022)</video:title>
+            <video:description>Music video: TWiiNS feat. Carlprit - Boys Boys Boys (DJ KS &amp; LazerzF!ne Remix Edit 2022) by TWiiNS feat. Carlprit</video:description>
+            <video:publication_date>2022-07-24</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>TWiiNS feat. Carlprit</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/thefatrat-feat-laura-brehm-monody-lazerzf%2521ne-epic-&amp;-makina-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=GQpldJf76OU</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/GQpldJf76OU</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>TheFatRat feat. Laura Brehm - Monody (LazerzF!ne Epic &amp; Makina Remix Edit)</video:title>
+            <video:description>Music video: TheFatRat feat. Laura Brehm - Monody (LazerzF!ne Epic &amp; Makina Remix Edit) by TheFatRat feat. Laura Brehm</video:description>
+            <video:publication_date>2020-09-04</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>TheFatRat feat. Laura Brehm</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/tronix-dj-vs-basslouder-ft-gemma-b-i&apos;m-your-best-fantasy-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=FLbUGol4RBY</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/FLbUGol4RBY</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Tronix DJ Vs Basslouder ft. Gemma B - I&apos;m Your Best Fantasy (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Tronix DJ Vs Basslouder ft. Gemma B - I&apos;m Your Best Fantasy (LazerzF!ne Bootleg Edit) by Tronix DJ Vs Basslouder ft. Gemma B</video:description>
+            <video:publication_date>2020-03-20</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Tronix DJ Vs Basslouder ft. Gemma B</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/vengaboys-boom,-boom,-boom,-boom%2521%2521-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/Vengaboys%20-%20Boom%2C%20Boom%2C%20Boom%2C%20Boom%21%21%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/vengaboys-boom,-boom,-boom,-boom%21%21-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Vengaboys - Boom, Boom, Boom, Boom!! (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Vengaboys - Boom, Boom, Boom, Boom!! (LazerzF!ne Bootleg Edit) by Vengaboys</video:description>
+            <video:publication_date>2023-01-15</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Vengaboys</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/w-sound-&amp;-beele-&amp;-ovy-on-the-drums-la-plena-w-sound-05-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/W%20Sound%20%26%20Be%C3%A9le%20%26%20Ovy%20On%20The%20Drums%20-%20La%20Plena%20%28W%20Sound%2005%29%20%28LazerzF%21ne%20Bootleg%20Edit%29.mp4</video:content_loc>
+            <video:player_loc>https://www.lazerzfine.com/track/w-sound-&amp;-beele-&amp;-ovy-on-the-drums-la-plena-w-sound-05-lazerzf%21ne-bootleg-edit</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>W Sound &amp; Beéle &amp; Ovy On The Drums - La Plena (W Sound 05) (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: W Sound &amp; Beéle &amp; Ovy On The Drums - La Plena (W Sound 05) (LazerzF!ne Bootleg Edit) by W Sound &amp; Beéle &amp; Ovy On The Drums</video:description>
+            <video:publication_date>2025-03-17</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>W Sound &amp; Beéle &amp; Ovy On The Drums</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/walk-the-moon-one-foot-lazerzf%2521ne-bootleg-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=7hrFFWnoB38</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/7hrFFWnoB38</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Walk the moon - One Foot (LazerzF!ne Bootleg Edit)</video:title>
+            <video:description>Music video: Walk the moon - One Foot (LazerzF!ne Bootleg Edit) by Walk the moon</video:description>
+            <video:publication_date>2019-02-23</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Walk the moon</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/walk-the-moon-one-foot-lazerzf%2521ne-bootleg-mix</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/zeetros-ta-min-hand-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=bZeTN5MwLdY</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/bZeTN5MwLdY</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>Zeetros - Ta Min Hand (LazerzF!ne Remix Edit)</video:title>
+            <video:description>Music video: Zeetros - Ta Min Hand (LazerzF!ne Remix Edit) by Zeetros</video:description>
+            <video:publication_date>2012-04-08</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>Zeetros</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
     <url>
         <loc>https://www.lazerzfine.com/track/浜田ばみゅばみゅ-なんでやねんねん-lazerzf%2521ne-remix-edit</loc>
-        <lastmod>2026-06-06</lastmod>
+        <lastmod>2026-06-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+        <video:video>
+            <video:content_loc>https://www.youtube.com/watch?v=qurd7seEt88</video:content_loc>
+            <video:player_loc>https://www.youtube-nocookie.com/embed/qurd7seEt88</video:player_loc>
+            <video:thumbnail_loc>https://www.lazerzfine.com/images/default-cover.jpg</video:thumbnail_loc>
+            <video:title>浜田ばみゅばみゅ - なんでやねんねん -LazerzF!ne Remix Edit-</video:title>
+            <video:description>Music video: 浜田ばみゅばみゅ - なんでやねんねん -LazerzF!ne Remix Edit- by 浜田ばみゅばみゅ</video:description>
+            <video:publication_date>2015-12-28</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>
+            <video:tag>浜田ばみゅばみゅ</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>
+        </video:video>
     </url>
 </urlset>

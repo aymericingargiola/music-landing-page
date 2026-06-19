@@ -1,25 +1,55 @@
 const fs = require('fs');
 const path = require('path');
 
-// Chemin vers votre fichier playlist.json
+// Paths
 const playlistPath = path.join(__dirname, '..', '..', '..', 'public', 'jsons', 'playlist.json');
-// Chemin où le sitemap sera sauvegardé
+const playlistVideoPath = path.join(__dirname, '..', '..', '..', 'public', 'jsons', 'playlistVideo.json');
+const playlistExtraPath = path.join(__dirname, '..', '..', '..', 'public', 'jsons', 'playlistExtra.json');
 const sitemapPath = path.join(__dirname, '..', '..', '..', 'public', 'sitemap.xml');
 
-// Lire le fichier playlist.json
-fs.readFile(playlistPath, 'utf8', (err, data) => {
-    if (err) {
-        console.error('Erreur lors de la lecture du fichier playlist.json:', err);
+// Read all data files
+let playlists = [], videoTracks = [], extraTracks = [];
+let filesRead = 0;
+
+function readNextFile() {
+    if (filesRead >= 3) {
+        generateSitemap();
         return;
     }
-
-    try {
-        const playlists = JSON.parse(data);
-        generateSitemap(playlists);
-    } catch (parseErr) {
-        console.error('Erreur lors du parsing du JSON:', parseErr);
+    
+    const files = [
+        { path: playlistPath, store: (data) => { playlists = data; } },
+        { path: playlistVideoPath, store: (data) => { videoTracks = data; } },
+        { path: playlistExtraPath, store: (data) => { extraTracks = data; } }
+    ];
+    
+    if (filesRead >= files.length) {
+        generateSitemap();
+        return;
     }
-});
+    
+    const file = files[filesRead];
+    fs.readFile(file.path, 'utf8', (err, data) => {
+        if (err) {
+            console.error(`Error reading ${file.path}:`, err);
+            filesRead++;
+            readNextFile();
+            return;
+        }
+        try {
+            file.store(JSON.parse(data));
+            filesRead++;
+            readNextFile();
+        } catch (parseErr) {
+            console.error(`Error parsing ${file.path}:`, parseErr);
+            filesRead++;
+            readNextFile();
+        }
+    });
+}
+
+// Start reading files
+readNextFile();
 
 function escapeXml(unsafe) {
     return unsafe.replace(/[<>&'""]/g, function (c) {
@@ -46,14 +76,61 @@ function urlEncodeSpecialChars(url) {
     });
 }
 
-function generateSitemap(playlists) {
-    // Définir la date actuelle pour lastmod
+function getVideoMetadata(track) {
+    const slug = track.slug || '';
+    const id = track.id || '';
+    const name = track.name || '';
+    
+    // Check playlistVideo.json first (self-hosted videos)
+    let videoTrack = videoTracks.find(vt => (vt.slug || '').toLowerCase() === slug.toLowerCase());
+    if (!videoTrack) {
+        videoTrack = videoTracks.find(vt => (vt.id || '').toLowerCase() === id.toLowerCase());
+    }
+    if (!videoTrack) {
+        videoTrack = videoTracks.find(vt => (vt.name || '').toLowerCase() === name.toLowerCase());
+    }
+    
+    if (videoTrack && videoTrack.url) {
+        return {
+            content_loc: videoTrack.url,
+            player_loc: `https://www.lazerzfine.com/track/${videoTrack.slug || slug}`,
+            thumbnail_loc: 'https://www.lazerzfine.com/images/default-cover.jpg',
+            title: escapeXml(videoTrack.name || name),
+            description: escapeXml(`Music video: ${videoTrack.name || name} by ${videoTrack.artist || track.artist || ''}`),
+            publication_date: videoTrack.modified ? new Date(videoTrack.modified).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
+        };
+    }
+    
+    // Check playlistExtra.json for YouTube videos
+    let extraTrack = extraTracks.find(et => (et.slug || '').toLowerCase() === slug.toLowerCase());
+    if (!extraTrack) {
+        extraTrack = extraTracks.find(et => (et.id || '').toLowerCase() === id.toLowerCase());
+    }
+    if (!extraTrack) {
+        extraTrack = extraTracks.find(et => (et.name || '').toLowerCase() === name.toLowerCase());
+    }
+    
+    if (extraTrack && extraTrack.youtubeId) {
+        return {
+            content_loc: `https://www.youtube.com/watch?v=${extraTrack.youtubeId}`,
+            player_loc: `https://www.youtube-nocookie.com/embed/${extraTrack.youtubeId}`,
+            thumbnail_loc: 'https://www.lazerzfine.com/images/default-cover.jpg',
+            title: escapeXml(extraTrack.name || name),
+            description: escapeXml(`Music video: ${extraTrack.name || name} by ${extraTrack.artist || track.artist || ''}`),
+            publication_date: extraTrack.releaseTimestamp ? new Date(extraTrack.releaseTimestamp * 1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
+        };
+    }
+    
+    return null;
+}
+
+function generateSitemap() {
     const currentDate = new Date().toISOString().split('T')[0];
 
-    // Créer le contenu du sitemap
     let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- URL de la page d'accueil -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <!-- Homepage -->
     <url>
         <loc>https://www.lazerzfine.com/</loc>
         <lastmod>${currentDate}</lastmod>
@@ -61,30 +138,58 @@ function generateSitemap(playlists) {
         <priority>1.0</priority>
     </url>`;
 
-    // Ajouter les URLs des tracks
     playlists.forEach(track => {
         const trackUrl = `https://www.lazerzfine.com/track/${track.slug}`;
         const encodedUrl = urlEncodeSpecialChars(trackUrl);
         const escapedUrl = escapeXml(encodedUrl);
+        const videoMetadata = getVideoMetadata(track);
+        
         sitemapContent += `
     <url>
         <loc>${escapedUrl}</loc>
         <lastmod>${currentDate}</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.8</priority>`;
+        
+        if (videoMetadata) {
+            const publicationDate = videoMetadata.publication_date || currentDate;
+            const artist = track.artist || track.artistfilter || '';
+            const title = track.name || '';
+            
+            sitemapContent += `
+        <video:video>
+            <video:content_loc>${escapeXml(videoMetadata.content_loc)}</video:content_loc>
+            <video:player_loc>${escapeXml(videoMetadata.player_loc)}</video:player_loc>
+            <video:thumbnail_loc>${escapeXml(videoMetadata.thumbnail_loc)}</video:thumbnail_loc>
+            <video:title>${videoMetadata.title}</video:title>
+            <video:description>${videoMetadata.description}</video:description>
+            <video:publication_date>${publicationDate}</video:publication_date>
+            <video:family_friendly>yes</video:family_friendly>`;
+            
+            if (artist) {
+                sitemapContent += `
+            <video:tag>${escapeXml(artist)}</video:tag>
+            <video:tag>Music</video:tag>
+            <video:tag>Remix</video:tag>
+            <video:tag>Bootleg</video:tag>`;
+            }
+            
+            sitemapContent += `
+        </video:video>`;
+        }
+        
+        sitemapContent += `
     </url>`;
     });
 
-    // Fermer le sitemap
     sitemapContent += `
 </urlset>`;
 
-    // Écrire le sitemap dans un fichier
     fs.writeFile(sitemapPath, sitemapContent, 'utf8', (err) => {
         if (err) {
-            console.error('Erreur lors de l\'écriture du sitemap:', err);
+            console.error('Error writing sitemap:', err);
             return;
         }
-        console.log('Sitemap généré avec succès:', sitemapPath);
+        console.log('Sitemap generated successfully:', sitemapPath);
     });
 }
