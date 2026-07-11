@@ -8,48 +8,71 @@
         <h2>Latest tracks</h2>
       </div>
       <div class="content">
-        <transition-group
-          name="playlist-items"
-          tag="ul"
+        <swiper
+          :modules="modules"
+          :slides-per-view="1"
+          :space-between="24"
+          :breakpoints="{
+            '320': {
+              slidesPerView: 1,
+              spaceBetween: 24
+            },
+            '640': {
+              slidesPerView: 2,
+              spaceBetween: 24
+            },
+            '992': {
+              slidesPerView: 3,
+              spaceBetween: 24
+            }
+          }"
+          :navigation="true"
+          :loop="false"
+          :grab-cursor="true"
+          :centered-slides="false"
+          :watch-slides-progress="true"
+          class="latest-tracks-swiper"
         >
-          <template
+          <swiper-slide
             v-for="music in itemsOrderedByReleaseDate"
             :key="music.id"
           >
-            <li class="col-12 col-lg-4">
-              <div class="content">
-                <div class="date">
-                  {{ releaseDate(music.releaseTimestamp) }}
+            <div
+              class="track-card"
+              :class="{selected: selectedContent === music.id}"
+              @click="updateSelectedContent(music.id)"
+            >
+              <div class="date">
+                {{ releaseDate(music.releaseTimestamp) }}
+              </div>
+              <div class="track-name">
+                <div class="artist">
+                  {{ music.artist }}
                 </div>
-                <div class="track-name">
-                  <div class="artist">
-                    {{ music.artist }}
-                  </div>
-                  <div class="title">
-                    {{ music.title }}
-                  </div>
-                </div>
-                <div class="links">
-                  <a
-                    v-if="getMp3Url(music.id)"
-                    :href="getMp3Url(music.id)"
-                    target="_blank"
-                  >MP3</a>
-                  <a
-                    v-if="getWavUrl(music.id)"
-                    :href="getWavUrl(music.id)"
-                    target="_blank"
-                  >WAV</a>
-                  <a
-                    v-if="getVideoUrl(music.id)"
-                    :href="getVideoUrl(music.id)"
-                    target="_blank"
-                  >Video</a>
+                <div class="title">
+                  {{ music.title }}
                 </div>
               </div>
-            </li>
-          </template>
-        </transition-group>
+              <div class="links">
+                <a
+                  v-if="getMp3Url(music.id)"
+                  :href="getMp3Url(music.id)"
+                  target="_blank"
+                >MP3</a>
+                <a
+                  v-if="getWavUrl(music.id)"
+                  :href="getWavUrl(music.id)"
+                  target="_blank"
+                >WAV</a>
+                <a
+                  v-if="getVideoUrl(music.id)"
+                  :href="getVideoUrl(music.id)"
+                  target="_blank"
+                >Video</a>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
   </div>
@@ -57,6 +80,10 @@
 
 <script setup>
 import { computed, defineProps } from 'vue';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
 
 const props = defineProps({
   playlists: Object,
@@ -64,10 +91,23 @@ const props = defineProps({
   filtering: Boolean,
 });
 
+const emit = defineEmits(['update:selectedContent']);
+
+// Swiper modules setup
+const modules = [Navigation];
+
+const updateSelectedContent = (id) => {
+  if (!props.selectedContent || props.selectedContent !== id) {
+    emit('update:selectedContent', id);
+  } else if (props.selectedContent === id) {
+    emit('update:selectedContent', null);
+  }
+};
+
 const itemsOrderedByReleaseDate = computed(() => {
   if (!props.playlists.extra || props.playlists.extra.length < 1) return [];
   const extras = [...props.playlists.extra];
-  return extras.sort((a, b) => b.releaseTimestamp - a.releaseTimestamp).slice(0, 3);
+  return extras.sort((a, b) => b.releaseTimestamp - a.releaseTimestamp).slice(0, 24);
 });
 
 const getMp3Url = (id) => props.playlists.mp3?.find((m) => m.id === id)?.url;
@@ -102,46 +142,92 @@ const releaseDate = (timestamp) => {
     }
   }
   .content {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -12px;
-      li {
-        margin-top: 18px;
-        padding: 0px 12px;
-        .content {
-          background: $background;
-          padding: 15px;
-          border-radius: 5px;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          .date {
-            font-size: 12px;
+    .swiper {
+      overflow: visible;
+    }
+    .latest-tracks-swiper {
+      padding: 20px 40px;
+      .swiper-slide {
+        height: auto;
+        transition: opacity 0.3s ease;
+        will-change: opacity;
+      }
+      .swiper-slide:not(.swiper-slide-visible) {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.95);
+      }
+      .track-card {
+        background: $background;
+        padding: 15px;
+        border-radius: 5px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+        .date {
+          font-size: 12px;
+          font-weight: bold;
+          margin-bottom: 8px;
+          opacity: 0.6;
+        }
+        .track-name {
+          margin-bottom: 8px;
+          .artist {
             font-weight: bold;
             margin-bottom: 8px;
-            opacity: 0.6;
           }
-          .track-name {
-            margin-bottom: 8px;
-            .artist {
-              font-weight: bold;
-              margin-bottom: 8px;
-            }
-            .title {
-              font-size: 14px;
+          .title {
+            font-size: 14px;
+          }
+        }
+        .links {
+          margin-top: auto;
+          a {
+            &:not(:first-child) {
+              margin-left: 8px;
             }
           }
+        }
+        &:hover {
+          background-color: color($color: $background2);
+          transform: translateY(-2px) scale(1.01);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        &.selected {
+          background-color: color($color: $active-purple-hover);
           .links {
-            margin-top: auto;
             a {
-              &:not(:first-child) {
-                margin-left: 8px;
-              }
+              color: color($color: $text);
             }
           }
         }
       }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: color($color: $text, $opacity: 0.7);
+      background-color: rgba($background, 0.5);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      &:after {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: rgba($background, 0.8);
+        color: $active-purple;
+      }
+    }
+    .swiper-button-next {
+      right: -12px;
+    }
+    .swiper-button-prev {
+      left: -12px;
     }
   }
 }

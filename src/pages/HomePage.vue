@@ -25,6 +25,8 @@
             video: playlists.video,
             extra: playlists.extra
           }"
+          :selected-content="selectedContent"
+          @update:selected-content="updateSelectedContent($event)"
         />
       </Transition>
     </div>
