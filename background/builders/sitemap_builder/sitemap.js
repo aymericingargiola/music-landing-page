@@ -94,7 +94,7 @@ function getVideoMetadata(track) {
         return {
             content_loc: videoTrack.url,
             player_loc: `https://www.lazerzfine.com/track/${videoTrack.slug || slug}`,
-            thumbnail_loc: 'https://www.lazerzfine.com/images/default-cover.jpg',
+            thumbnail_loc: `https://www.lazerzfine.com/imgs/heroes/${videoTrack.id || id}.webp`,
             title: escapeXml(videoTrack.name || name),
             description: escapeXml(`Music video: ${videoTrack.name || name} by ${videoTrack.artist || track.artist || ''}`),
             publication_date: videoTrack.modified ? new Date(videoTrack.modified).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
@@ -114,7 +114,7 @@ function getVideoMetadata(track) {
         return {
             content_loc: `https://www.youtube.com/watch?v=${extraTrack.youtubeId}`,
             player_loc: `https://www.youtube-nocookie.com/embed/${extraTrack.youtubeId}`,
-            thumbnail_loc: 'https://www.lazerzfine.com/images/default-cover.jpg',
+            thumbnail_loc: `https://www.lazerzfine.com/imgs/heroes/${extraTrack.id || id}.webp`,
             title: escapeXml(extraTrack.name || name),
             description: escapeXml(`Music video: ${extraTrack.name || name} by ${extraTrack.artist || track.artist || ''}`),
             publication_date: extraTrack.releaseTimestamp ? new Date(extraTrack.releaseTimestamp * 1000).toISOString().split('T')[0] : new Date().toISOString().split('T')[0]
@@ -129,7 +129,8 @@ function generateSitemap() {
 
     let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:audio="http://www.google.com/schemas/sitemap-audio/1.1">
     <!-- Homepage -->
     <url>
         <loc>https://www.lazerzfine.com/</loc>
@@ -155,7 +156,9 @@ function generateSitemap() {
             const publicationDate = videoMetadata.publication_date || currentDate;
             const artist = track.artist || track.artistfilter || '';
             const title = track.name || '';
+            const audioUrl = track.url || '';
             
+            // Add video metadata
             sitemapContent += `
         <video:video>
             <video:content_loc>${escapeXml(videoMetadata.content_loc)}</video:content_loc>
@@ -176,6 +179,56 @@ function generateSitemap() {
             
             sitemapContent += `
         </video:video>`;
+            
+            // Also add audio metadata since the page has an audio player too
+            if (audioUrl) {
+                sitemapContent += `
+        <audio:audio>
+            <audio:title>${escapeXml(title)}</audio:title>
+            <audio:artist>${escapeXml(artist)}</audio:artist>
+            <audio:audio_file>${escapeXml(audioUrl)}</audio:audio_file>
+            <audio:duration>${track.size || ''}</audio:duration>
+            <audio:publication_date>${currentDate}</audio:publication_date>
+            <audio:family_friendly>yes</audio:family_friendly>`;
+            
+                if (artist) {
+                    sitemapContent += `
+            <audio:tag>${escapeXml(artist)}</audio:tag>
+            <audio:tag>Music</audio:tag>
+            <audio:tag>Remix</audio:tag>
+            <audio:tag>Bootleg</audio:tag>`;
+                }
+            
+                sitemapContent += `
+        </audio:audio>`;
+            }
+        } else {
+            // Add audio metadata for tracks without video
+            const artist = track.artist || track.artistfilter || '';
+            const title = track.name || '';
+            const audioUrl = track.url || '';
+            
+            if (audioUrl) {
+                sitemapContent += `
+        <audio:audio>
+            <audio:title>${escapeXml(title)}</audio:title>
+            <audio:artist>${escapeXml(artist)}</audio:artist>
+            <audio:audio_file>${escapeXml(audioUrl)}</audio:audio_file>
+            <audio:duration>${track.size || ''}</audio:duration>
+            <audio:publication_date>${currentDate}</audio:publication_date>
+            <audio:family_friendly>yes</audio:family_friendly>`;
+            
+            if (artist) {
+                sitemapContent += `
+            <audio:tag>${escapeXml(artist)}</audio:tag>
+            <audio:tag>Music</audio:tag>
+            <audio:tag>Remix</audio:tag>
+            <audio:tag>Bootleg</audio:tag>`;
+            }
+            
+            sitemapContent += `
+        </audio:audio>`;
+            }
         }
         
         sitemapContent += `
