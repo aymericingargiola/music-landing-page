@@ -1,8 +1,16 @@
 {
     "userSettings": {
-        "defaultUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne/",
-        "losslessUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Lossless/",
-        "videoUrl": "https://talos.feralhosting.com/aymeric000/links/music/LazerzF%21ne%20Music%20Videos/",
+        "mediaUrls": {
+            "mp3": "https://media.lazerzfine.com/audio/mp3",
+            "wav": "https://media.lazerzfine.com/audio/wav",
+            "videoDownload": "https://media.lazerzfine.com/video/download",
+            "videoStream": "https://media.lazerzfine.com/video/stream"
+        },
+        "mediaDirectories": {
+            "mp3": "Y:\\LazerzF!ne\\LazerzF!ne",
+            "wav": "Y:\\LazerzF!ne\\LazerzF!ne Lossless",
+            "video": "Y:\\LazerzF!ne\\LazerzF!ne Music Videos"
+        },
         "saveJsonPath": "playlist.json",
         "losslessSaveJsonPath": "playlistLossless.json",
         "videoSaveJsonPath": "playlistVideo.json",

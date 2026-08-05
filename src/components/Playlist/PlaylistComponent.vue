@@ -8,7 +8,7 @@
         <h3>
           MP3 ({{ playlists.mp3.length }})
           <a
-            href="https://talos.feralhosting.com/aymeric000/links/music/mp3.zip"
+            href="https://media.lazerzfine.com/downloads/mp3.zip"
             class="download-all"
           >Download all</a>
         </h3>
@@ -42,7 +42,7 @@
         <h3>
           Lossless ({{ playlists.wav.length }})
           <a
-            href="https://talos.feralhosting.com/aymeric000/links/music/wav.zip"
+            href="https://media.lazerzfine.com/downloads/wav.zip"
             class="download-all"
           >Download all</a>
         </h3>

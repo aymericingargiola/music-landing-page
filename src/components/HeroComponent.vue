@@ -51,12 +51,13 @@
                     v-else-if="currentItemVideo
                       && currentItemExtra
                       && currentItemExtra.optiweb
+                      && currentItemVideo.streamUrl
                       && backgroundImage
                       && !backgroundImageLoading"
                     :key="backgroundImageLoading && backgroundImage"
                     :poster="backgroundImage"
                     :sources="[
-                      {src:optiWebVideoUrl,type:`video/mp4`}
+                      {src:streamVideoUrl,type:`video/mp4`}
                     ]"
                   />
                   <iframe
@@ -236,11 +237,7 @@ watch(
   },
 );
 
-const optiWebVideoUrl = computed(() => {
-  const videoUrl = currentItemVideo?.value?.url;
-  const optUrl = `${videoUrl?.replace(/.([^.]*)$/, '%20_optweb')}.mp4`;
-  return optUrl;
-});
+const streamVideoUrl = computed(() => currentItemVideo?.value?.streamUrl);
 
 const parallaxBackground = () => {
   if (
