@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require("path");
+const { execFile } = require('child_process');
+const { promisify } = require('util');
 const globalFunctions = require('../../global-functions');
 const config = require('./config.json');
 const mediaUrls = config.userSettings.mediaUrls;
@@ -9,6 +11,52 @@ const losslessSaveJsonPath = config.userSettings.losslessSaveJsonPath;
 const videoSaveJsonPath = config.userSettings.videoSaveJsonPath;
 const buildSavePath = config.userSettings.buildSavePath;
 const distSavePath = config.userSettings.distSavePath;
+
+let musicMetadata;
+const execFileAsync = promisify(execFile);
+
+function normalizeDuration(duration) {
+    return Number.isFinite(duration) && duration > 0 ? Math.round(duration * 1000) / 1000 : null;
+}
+
+async function getVideoDuration(filePath) {
+    const { stdout } = await execFileAsync('ffprobe', [
+        '-v', 'error',
+        '-show_entries', 'format=duration',
+        '-of', 'default=noprint_wrappers=1:nokey=1',
+        filePath,
+    ]);
+    return normalizeDuration(Number.parseFloat(stdout));
+}
+
+async function getDuration(filePath, fileName) {
+    let error;
+    try {
+        musicMetadata ??= import('music-metadata');
+        const { parseFile } = await musicMetadata;
+        const metadata = await parseFile(filePath, { duration: true, skipCovers: true });
+        const duration = normalizeDuration(metadata.format.duration);
+        if (duration) {
+            return duration;
+        }
+    } catch (parseError) {
+        error = parseError;
+    }
+
+    if (['.mp4', '.mkv'].includes(path.extname(filePath).toLowerCase())) {
+        try {
+            const duration = await getVideoDuration(filePath);
+            if (duration) {
+                return duration;
+            }
+        } catch (probeError) {
+            error = probeError;
+        }
+    }
+
+    console.warn(`Unable to read duration for ${fileName}${error ? `: ${error.message}` : ''}`);
+    return null;
+}
 
 const formatSettings = {
     mp3: {
@@ -97,7 +145,7 @@ async function buildJson(filelist) {
     console.time("Json build");
     var newFileList = [];
     await globalFunctions.asyncForEach(filelist, async function (item) {
-        let name, cleanName, extension, artist, artistfilter, titlefilter, title, filter, url, bytes, modified;
+        let name, cleanName, extension, artist, artistfilter, titlefilter, title, filter, url, bytes, modified, duration;
         name = item.name.replace(/ +/g, " ").replace(/\n/g, "").trim();
         cleanName = name.lastIndexOf(".") != -1 ? name.substr(0, name.lastIndexOf(".")).trim() : name;
         filter = cleanName.normalize("NFD").replace(/[\u0300-\u036f-.()]/g, "").replace(/ +/g, ' ').toLowerCase();
@@ -105,6 +153,7 @@ async function buildJson(filelist) {
         url = item.url;
         bytes = item.stats.size;
         modified = item.stats.mtime.toUTCString();
+        duration = await getDuration(item.path, name);
         if (extension.match(/^(mp3|wav|ogg|flac|wma|mid|mp4|mkv)$/)) {
             if (/[-]+/.test(cleanName)) {
                 artist = cleanName.match(/[^-]*/i)[0].trim();
@@ -130,7 +179,8 @@ async function buildJson(filelist) {
             "streamUrl": item.streamUrl,
             "bytes": bytes,
             "size": globalFunctions.bytesToSize(bytes),
-            "modified": modified
+            "modified": modified,
+            "duration": duration
         }
         newFileList.push(itemDatas);
     });
